@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Leo</string>
+    <!-- Strings related to login -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="not_a_user_register">Not a User? Register</string>
+    <string name="login">Login</string>
+    <string name="precautions">Precautions</string>
+    <string name="i_am_in_trouble">I am in Trouble</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="ready_to_help">Ready To Help</string>
+    <string name="update_emergency_contact">Update Emergency Contact</string>
+    <string name="logout">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location_permission">Location Permission</string>
+    <string name="sms_permission">SMS Permission</string>
+    <string name="sms_permission_is_required">SMS permission is required</string>
+    <string name="location_permission_is_required">Location permission is required</string>
+</resources>
