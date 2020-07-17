@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.rohit2810.leo_kotlin.ui.otp.VerifyOtpViewModel" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.otp.VerifyOtpFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/intro_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="0dp"
+                android:text="Account Verification!"
+                android:textAlignment="center"
+                android:textColor="@color/intro_title_color"
+                android:textSize="32dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/intro_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="OTP is sent to your registered email address. Verify your account to proceed further" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/edit_text_style"
+            android:drawableStart="@drawable/login_password"
+            android:drawableLeft="@drawable/login_password"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/colorAccent"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="Enter the OTP"
+            android:inputType="number"
+            android:text="@={viewmodel.otp}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/login_button_style"
+            android:elevation="10dp"
+            android:onClick="@{() -> viewmodel.verifyOTP()}"
+            android:text="Verify OTP"
+            android:textColor="#fff"
+            android:visibility="@{viewmodel.isProgressBarVisible ? view.GONE: view.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Resend OTP"
+            android:onClick="@{() -> viewmodel.resendOTP()}"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            app:layout_constraintEnd_toEndOf="@+id/editText"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

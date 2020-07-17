@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.leo_kotlin",
+  "applicationId": "com.rohit2810.leo_kotlin",
   "variantName": "release",
   "elements": [
     {

@@ -1,126 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
-            type="com.example.leo_kotlin.ui.register.RegisterViewModel" />
+            type="com.rohit2810.leo_kotlin.ui.register.RegisterViewModel" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Activity.RegisterActivity">
+        android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/edit_text_username"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="12dp"
-            android:background="@drawable/edit_text_style"
-            android:ems="10"
-            android:text="@={viewmodel.username}"
-            android:inputType="text"
-            android:hint="@string/username"
-            app:layout_constraintBottom_toTopOf="@+id/edit_text_pass"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Activity.RegisterActivity">
 
-        <EditText
-            android:id="@+id/edit_text_pass"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/edit_text_style"
-            android:ems="10"
-            android:text="@={viewmodel.password}"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/button_register"
-            android:layout_width="125dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:background="@drawable/login_button_style"
-            android:text="@string/register"
-            android:onClick="@{() -> viewmodel.navigateToEmergencyNumbers()}"
-            android:textColor="#fff"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_phone" />
+                <TextView
+                    android:id="@+id/intro_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Lets Get Started!"
+                    android:textColor="@color/intro_title_color"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edit_text_name"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:ems="10"
-            android:text="@={viewmodel.name}"
-            android:inputType="textPersonName"
-            android:background="@drawable/edit_text_style"
-            android:hint="@string/name"
-            app:layout_constraintBottom_toTopOf="@+id/edit_text_username"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/intro_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="16dp"
+                    android:text="Create an account to Leo to get all features" />
+            </LinearLayout>
 
-        <EditText
-            android:id="@+id/edit_text_pass2"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:text="@={viewmodel.confirmPassword}"
-            android:background="@drawable/edit_text_style"
-            android:hint="@string/confirm_password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_pass" />
+            <EditText
+                android:id="@+id/edit_text_name"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/edit_text_style"
+                android:drawableStart="@drawable/login_person"
+                android:drawableLeft="@drawable/login_person"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:text="@={viewmodel.name}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-        <EditText
-            android:id="@+id/edit_text_phone"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:ems="10"
-            android:inputType="phone"
-            android:text="@={viewmodel.phone}"
-            android:hint="@string/mobile_number"
-            android:background="@drawable/edit_text_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_text_pass2" />
+            <EditText
+                android:id="@+id/edit_text_username"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edit_text_style"
+                android:drawableStart="@drawable/login_person"
+                android:drawableLeft="@drawable/login_person"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:text="@={viewmodel.username}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_name" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/edit_text_style"
+                android:drawableStart="@drawable/login_mail"
+                android:drawableLeft="@drawable/login_mail"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:text="@={viewmodel.email}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_username" />
+
+            <EditText
+                android:id="@+id/edit_text_pass"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/colorAccent"
+                android:background="@drawable/edit_text_style"
+                android:drawableStart="@drawable/login_password"
+                android:drawableLeft="@drawable/login_password"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.password}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/login_button_style"
+                android:visibility="@{viewmodel.isProgressBarVisible ? view.GONE : view.VISIBLE}"
+                android:elevation="10dp"
+                android:onClick="@{() -> viewmodel.navigateToEmergencyNumbers()}"
+                android:text="@string/register"
+                android:textColor="#fff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_phone" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:visibility="@{viewmodel.isProgressBarVisible ? view.VISIBLE : view.INVISIBLE}"
+                app:layout_constraintEnd_toEndOf="@+id/button_register"
+                app:layout_constraintStart_toStartOf="@+id/button_register"
+                app:layout_constraintTop_toTopOf="@+id/button_register" />
+
+            <EditText
+                android:id="@+id/edit_text_pass2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edit_text_style"
+                android:drawableStart="@drawable/login_password"
+                android:drawableLeft="@drawable/login_password"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorAccent"
+                android:drawableTint="@color/colorAccent"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.confirmPassword}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_pass" />
+
+            <EditText
+                android:id="@+id/edit_text_phone"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edit_text_style"
+                android:drawableStart="@drawable/login_phone"
+                android:drawableLeft="@drawable/login_phone"
+                android:drawablePadding="10dp"
+                android:textColor="@color/colorAccent"
+                android:drawableTint="@color/colorAccent"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                android:text="@={viewmodel.phone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_pass2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

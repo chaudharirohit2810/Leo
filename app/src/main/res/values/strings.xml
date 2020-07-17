@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Leo</string>
     <!-- Strings related to login -->
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="not_a_user_register">Not a User? Register</string>
     <string name="login">Login</string>
     <string name="precautions">Precautions</string>
@@ -15,10 +14,22 @@
     <string name="ready_to_help">Ready To Help</string>
     <string name="update_emergency_contact">Update Emergency Contact</string>
     <string name="logout">Logout</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="location_permission">Location Permission</string>
     <string name="sms_permission">SMS Permission</string>
     <string name="sms_permission_is_required">SMS permission is required</string>
     <string name="location_permission_is_required">Location permission is required</string>
+    <string name="unmark_trouble">UnMark Trouble</string>
+    <string name="settings">Settings</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>

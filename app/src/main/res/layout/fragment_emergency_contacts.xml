@@ -2,151 +2,206 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="viewmodel"
-            type="com.example.leo_kotlin.ui.emergencyContacts.EmergencyContactsViewModel" />
+            type="com.rohit2810.leo_kotlin.ui.emergencyContacts.EmergencyContactsViewModel" />
+
         <variable
             name="view"
             type="android.view.View" />
     </data>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
-        android:text="Add Emergency Contacts"
-        android:textSize="24sp"
-        android:textColor="@color/colorPrimary"
-        android:textFontWeight="700"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/contacts_etPhone1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:hint="Emrgency Contact Number"
-        android:text="@={viewmodel.phone1}"
-        android:background="@drawable/edit_text_style"
-        android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/contacts_etPhone2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:inputType="phone"
-        android:text="@={viewmodel.phone2}"
-        android:background="@drawable/edit_text_style"
-        android:hint="Emrgency Contact Number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone1" />
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="32dp"
+                android:paddingBottom="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/contacts_etPhone3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="Emrgency Contact Number"
-        android:text="@={viewmodel.phone3}"
-        android:background="@drawable/edit_text_style"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone2" />
+                <TextView
+                    android:id="@+id/intro_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:textAlignment="center"
+                    android:text="Add Emergency Contacts!"
+                    android:textColor="@color/intro_title_color"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/contacts_etPhone4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="Emrgency Contact Number"
-        android:text="@={viewmodel.phone4}"
-        android:background="@drawable/edit_text_style"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone3" />
+                <TextView
+                    android:id="@+id/intro_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Please enter at least 3 emergency contacts to notify your peers when you are in trouble" />
+            </LinearLayout>
 
-    <EditText
-        android:id="@+id/contacts_etPhone5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:background="@drawable/edit_text_style"
-        android:hint="Emrgency Contact Number"
-        android:text="@={viewmodel.phone5}"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone4" />
+            <EditText
+                android:id="@+id/contacts_etPhone1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:elevation="10dp"
+                android:textColor="@color/colorAccent"
+                android:ems="10"
+                android:hint="Emergency Contact Number"
+                android:drawableStart="@drawable/login_phone"
+                android:drawableLeft="@drawable/login_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:inputType="phone"
+                android:text="@={viewmodel.phone1}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout3" />
 
-    <Button
-        android:id="@+id/contacts_btnSubmit"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/login_button_style"
-        android:text="Submit"
-        android:onClick="@{() -> viewmodel.addUserAndNavigateToMain()}"
-        android:visibility="@{viewmodel.isProgressBarVisible ? view.INVISIBLE: view.VISIBLE}"
-        android:textColor="#fff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone5" />
+            <EditText
+                android:id="@+id/contacts_etPhone2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Emergency Contact Number"
+                android:drawableStart="@drawable/login_phone"
+                android:drawableLeft="@drawable/login_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:inputType="phone"
+                android:text="@={viewmodel.phone2}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone1" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:visibility="@{viewmodel.isProgressBarVisible ? view.VISIBLE: view.GONE}"
-        app:layout_constraintBottom_toBottomOf="@+id/contacts_btnSubmit"
-        app:layout_constraintEnd_toEndOf="@+id/contacts_btnSubmit"
-        app:layout_constraintStart_toStartOf="@+id/contacts_btnSubmit"
-        app:layout_constraintTop_toTopOf="@+id/contacts_btnSubmit" />
+            <EditText
+                android:id="@+id/contacts_etPhone3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Emergency Contact Number"
+                android:drawableStart="@drawable/login_phone"
+                android:drawableLeft="@drawable/login_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:inputType="phone"
+                android:text="@={viewmodel.phone3}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:id="@+id/contacts_etPhone4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Emergency Contact Number"
+                android:drawableStart="@drawable/login_phone"
+                android:drawableLeft="@drawable/login_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:inputType="phone"
+                android:text="@={viewmodel.phone4}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone3" />
+
+            <EditText
+                android:id="@+id/contacts_etPhone5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Emergency Contact Number"
+                android:drawableStart="@drawable/login_phone"
+                android:drawableLeft="@drawable/login_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/colorAccent"
+                android:inputType="phone"
+                android:text="@={viewmodel.phone5}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone4" />
+
+            <Button
+                android:id="@+id/contacts_btnSubmit"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/login_button_style"
+                android:onClick="@{() -> viewmodel.addUserAndNavigateToMain()}"
+                android:text="Submit"
+                android:textColor="#fff"
+                android:visibility="@{viewmodel.isProgressBarVisible ? view.INVISIBLE: view.VISIBLE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contacts_etPhone5" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:visibility="@{viewmodel.isProgressBarVisible ? view.VISIBLE: view.GONE}"
+                app:layout_constraintBottom_toBottomOf="@+id/contacts_btnSubmit"
+                app:layout_constraintEnd_toEndOf="@+id/contacts_btnSubmit"
+                app:layout_constraintStart_toStartOf="@+id/contacts_btnSubmit"
+                app:layout_constraintTop_toTopOf="@+id/contacts_btnSubmit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

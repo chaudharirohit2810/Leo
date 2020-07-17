@@ -58,7 +58,7 @@
             android:text="@string/ready_to_help"
             android:textColor="@color/colorPrimary"
             android:textSize="22sp"
-            android:textStyle="italic" />
+            />
 
     </LinearLayout>
 
