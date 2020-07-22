@@ -39,11 +39,7 @@ fun addUserToCache(context: Context, user: User) {
         sharedPreferencesEditor.putString(NAME, user.name)
         sharedPreferencesEditor.putString(EMAIL, user.email)
         if (!user.emergencyContacts.isNullOrEmpty()) {
-            sharedPreferencesEditor.putString(PHONE1, user.emergencyContacts[0])
-            sharedPreferencesEditor.putString(PHONE2, user.emergencyContacts[1])
-            sharedPreferencesEditor.putString(PHONE3, user.emergencyContacts[2])
-            sharedPreferencesEditor.putString(PHONE4, user.emergencyContacts[3])
-            sharedPreferencesEditor.putString(PHONE5, user.emergencyContacts[4])
+            addEmergencyContactsToCache(user.emergencyContacts, sharedPreferencesEditor)
         }
         sharedPreferencesEditor.apply()
         Timber.d("user added successfully")
@@ -52,6 +48,16 @@ fun addUserToCache(context: Context, user: User) {
         Timber.d(e.localizedMessage)
     }
 
+}
+
+fun addEmergencyContactsToCache(contacts: MutableList<String?>, editor: SharedPreferences.Editor) {
+    var i = 1;
+    for (contact in contacts) {
+        if (!contact.isNullOrEmpty()) {
+            editor.putString("phone${i}", contact)
+            i++
+        }
+    }
 }
 
 fun getUserFromCache(context: Context): User? {

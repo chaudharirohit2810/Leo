@@ -69,6 +69,4 @@ interface UserServiceApi{
     @PUT("updateEC")
     fun updateEmergencyContacts(@Body emergencyContactsModel: EmergencyContactsModel): Deferred<Any>
 
-
-
 }

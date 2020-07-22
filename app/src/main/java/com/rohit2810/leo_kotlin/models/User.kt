@@ -23,4 +23,8 @@ data class User(
     fun printUtil() : String{
         return "Username: ${username} name: ${name} inTrouble: ${inTrouble} phone: ${phone}"
     }
+
+    fun convertToTroubleString() {
+
+    }
 }
