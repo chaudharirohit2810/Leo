@@ -5,6 +5,7 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.net.wifi.WifiManager
 import android.net.wifi.p2p.*
 import android.os.Binder
 import android.os.Handler
@@ -57,6 +58,10 @@ class WiFiP2PServiceLeo() : Service() {
         var intent1 = Intent(this, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent1, 0)
 
+        var wifi = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
+        wifi.setWifiEnabled(true)
+
+
 
         var intentFilter = IntentFilter()
         intentFilter.addAction(WifiP2pManager.WIFI_P2P_STATE_CHANGED_ACTION)
@@ -88,9 +93,9 @@ class WiFiP2PServiceLeo() : Service() {
                 Timber.d("Connection Info is available")
                 info?.let { it ->
                     val inetAddress = it.groupOwnerAddress
-//                    port += 1
+                    Timber.d(it.toString())
                     if (it.groupFormed && it.isGroupOwner) {
-                        Timber.d("Server")
+                        Timber.d("Client")
                         serverClass = ServerClass()
                         serverClass!!.start()
                     } else if (it.groupFormed) {
@@ -98,7 +103,7 @@ class WiFiP2PServiceLeo() : Service() {
                         val socket = Socket()
                         clientClass =
                             ClientClass(hostAdd = inetAddress.hostAddress, socket = socket)
-                        Thread.sleep(1000)
+//                        Thread.sleep(1000)
                         clientClass!!.start()
                     }
                 }
@@ -156,9 +161,19 @@ class WiFiP2PServiceLeo() : Service() {
                     this@WiFiP2PServiceLeo.showToast("Message Received")
                     coroutineScope.launch {
                         TroubleRepository.getInstance(this@WiFiP2PServiceLeo).markTroubleP2P(
-                            stringToTrouble(newMsg)!!
-                        )
+                            stringToTrouble(newMsg)!!)
                     }
+//                    var wifi = applicationContext.getSystemService(Context.WIFI_P2P_SERVICE) as WifiP2pManager
+                    manager?.cancelConnect(channel, object : WifiP2pManager.ActionListener {
+                        override fun onSuccess() {
+                            Timber.d("Devices disconnected")
+                        }
+
+                        override fun onFailure(reason: Int) {
+                            Timber.d("Device disconnection failed ${reason}")
+                        }
+
+                    })
                 }
                 else -> {
                     Timber.d("No message found")
@@ -173,11 +188,8 @@ class WiFiP2PServiceLeo() : Service() {
     inner class ClientClass(val hostAdd: String, val socket: Socket) : Thread() {
         override fun run() {
             try {
-                Thread.sleep(1000)
-//                if (!clientSocket?.isConnected!!) {
                 Timber.d("Socket is not connected")
-                socket.connect(InetSocketAddress(hostAdd, port), 1000)
-//                }
+                socket.connect(InetSocketAddress(hostAdd, 9029), 1000)
                 Timber.d("Inside client class connected")
                 var sendReceive = SendReceive(socket)
                 sendReceive.start()
@@ -187,7 +199,7 @@ class WiFiP2PServiceLeo() : Service() {
                 var userMsg =
                     user?.username + "\n" + getLatitudeFromCache(this@WiFiP2PServiceLeo) + "\n" + getLongitudeFromCache(
                         this@WiFiP2PServiceLeo
-                    ) + "\n"
+                    ) + "\n" + user?.token + "\n"
                 for (contact in user?.emergencyContacts!!) {
                     if (!contact.isNullOrEmpty()) {
                         userMsg += contact
@@ -196,7 +208,6 @@ class WiFiP2PServiceLeo() : Service() {
                 }
                 Timber.d("Sending message to server")
                 sendReceive.write(userMsg.toByteArray())
-
             } catch (e: Exception) {
                 Timber.d(e)
                 Timber.d(e.localizedMessage)
@@ -215,7 +226,7 @@ class WiFiP2PServiceLeo() : Service() {
     inner class ServerClass : Thread() {
         override fun run() {
             try {
-                var serverSocket = ServerSocket(port)
+                var serverSocket = ServerSocket(9029)
                 var socket = serverSocket.accept()
                 Timber.d("Accepted by server now receiving data")
                 var sendReceive = SendReceive(socket)

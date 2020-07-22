@@ -22,6 +22,7 @@ class WifiP2PReceiver(
                 when (state) {
                     WifiP2pManager.WIFI_P2P_STATE_ENABLED -> {
                         Timber.d("Wifi is enabled")
+                        manager.requestPeers(channel, listener)
                     }
                     else -> {
                         Timber.d("Wifi is disabled")

@@ -26,6 +26,7 @@ private const val IS_INTRO_OPENED = "isIntroOpened"
 private const val FALL_DETECTION_SERVICE = "isFallDetectionServiceEnabled"
 private const val IS_IN_TROUBLE = "is_in_trouble"
 private const val TEMP_INTRO = "temp_intro"
+private const val JWT_TOKEN = "jwt_token"
 
 
 fun addUserToCache(context: Context, user: User) {
@@ -38,6 +39,7 @@ fun addUserToCache(context: Context, user: User) {
         sharedPreferencesEditor.putString(PHONE, user.phone)
         sharedPreferencesEditor.putString(NAME, user.name)
         sharedPreferencesEditor.putString(EMAIL, user.email)
+        sharedPreferencesEditor.putString(JWT_TOKEN, user.token)
         if (!user.emergencyContacts.isNullOrEmpty()) {
             addEmergencyContactsToCache(user.emergencyContacts, sharedPreferencesEditor)
         }
@@ -47,7 +49,6 @@ fun addUserToCache(context: Context, user: User) {
         Timber.d(e)
         Timber.d(e.localizedMessage)
     }
-
 }
 
 fun addEmergencyContactsToCache(contacts: MutableList<String?>, editor: SharedPreferences.Editor) {
@@ -72,6 +73,7 @@ fun getUserFromCache(context: Context): User? {
                 name = sharedPreferences.getString(
                     NAME, null
                 ),
+                token = sharedPreferences.getString(JWT_TOKEN, null),
                 emergencyContacts = getEmergencyContactFromCache(context).toMutableList(),
                 email = sharedPreferences.getString(
                     EMAIL, null

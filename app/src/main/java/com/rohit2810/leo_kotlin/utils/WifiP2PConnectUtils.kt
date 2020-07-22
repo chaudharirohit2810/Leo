@@ -41,7 +41,7 @@ fun stringToTrouble(msg: String): Trouble?{
     var contact = mutableListOf<String?>()
     var i = 0
     for (item in list) {
-        if (i < 3) {
+        if (i < 4) {
             i++
         }else {
             contact.add(item)
@@ -54,6 +54,7 @@ fun stringToTrouble(msg: String): Trouble?{
             inTrouble = true,
             latitude = list[1].toDouble() ?: 0.0,
             longitude = list[2].toDouble() ?: 0.0,
+            token = list[3],
             emergencyContacts = contact
         )
     }

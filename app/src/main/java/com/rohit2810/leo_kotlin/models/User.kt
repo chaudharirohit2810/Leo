@@ -17,7 +17,8 @@ data class User(
     var latitude: Double? = 0.0,
     var area: String? = "",
     var inTrouble: Boolean = false,
-    var emergencyContacts : MutableList<String?> = mutableListOf<String?>()
+    var emergencyContacts : MutableList<String?> = mutableListOf<String?>(),
+    var token: String? = ""
 ) : Parcelable {
 
     fun printUtil() : String{

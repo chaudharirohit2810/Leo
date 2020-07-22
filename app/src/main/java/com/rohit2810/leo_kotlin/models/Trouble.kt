@@ -8,5 +8,6 @@ data class Trouble(
     val latitude: Double? = 0.0,
     val longitude: Double? = 0.0,
     val inTrouble: Boolean,
-    var emergencyContacts : MutableList<String?> = mutableListOf<String?>()
+    var emergencyContacts : MutableList<String?> = mutableListOf<String?>(),
+    val token: String
 )

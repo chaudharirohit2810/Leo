@@ -21,6 +21,12 @@ data class Username(
     var username: String
 )
 
+data class UnMarkTrouble(
+    @Json(name = "user_name")
+    var username: String,
+    var token: String
+)
+
 data class EmergencyContactsModel(
     @Json(name = "user_name")
     var username: String,
@@ -28,5 +34,6 @@ data class EmergencyContactsModel(
     var ec2: String? = "",
     var ec3: String? = "",
     var ec4: String? = "",
-    var ec5: String? = ""
+    var ec5: String? = "",
+    var token: String
 )

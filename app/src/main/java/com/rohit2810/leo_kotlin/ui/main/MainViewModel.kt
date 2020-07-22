@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
+import com.rohit2810.leo_kotlin.utils.connectP2P
 import com.rohit2810.leo_kotlin.utils.getIsInTrouble
 import com.rohit2810.leo_kotlin.utils.getUserFromCache
 import kotlinx.coroutines.*
@@ -126,11 +127,16 @@ class MainViewModel(
                     repository.markTrouble(user)
                     delay(3 * 1000)
                     _isProgressBarVisible.value = false
+                    _showNotInTrouble.value = true
                     _toastMsg.value = "You've marked yourself in trouble. Help is on the way!!"
                 }else {
-                    throw Exception("Trouble request canceled")
+                    _isNotInTroubleVisible.value = false
+                    _isProgressBarVisible.value = false
+                    _undoTrouble.value = false
+//                    _toastMsg.value = e.localizedMessage
                 }
             } catch (e: Exception) {
+//                context.connectP2P()
                 _isNotInTroubleVisible.value = false
                 _isProgressBarVisible.value = false
                 _toastMsg.value = e.localizedMessage
