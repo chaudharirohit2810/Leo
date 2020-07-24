@@ -47,6 +47,13 @@ class RegisterFragment : Fragment() {
             }
         })
 
+        viewModel.navigateToLogin.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                this.findNavController().navigateUp()
+                viewModel.doneNavigateToLogin()
+            }
+        })
+
         viewModel.toastMsg.observe(viewLifecycleOwner, Observer {
             it?.let {
                 activity?.showToast(it)

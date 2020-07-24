@@ -1,18 +1,18 @@
 package com.rohit2810.leo_kotlin.ui.main
 
-import android.content.ComponentName
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.content.ServiceConnection
 import android.location.LocationManager
 import android.os.Bundle
-import android.os.IBinder
 import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -26,8 +26,10 @@ import com.rohit2810.leo_kotlin.services.wifidirect.WiFiP2PServiceLeo
 import com.rohit2810.leo_kotlin.ui.BottomSheetDialogLeo
 import com.rohit2810.leo_kotlin.utils.connectP2P
 import com.rohit2810.leo_kotlin.utils.getFallDetectionPrefs
+import com.rohit2810.leo_kotlin.utils.showNotificationWithFullScreenIntent
 import com.rohit2810.leo_kotlin.utils.showToast
 import timber.log.Timber
+
 
 class MainFragment : Fragment() {
 
@@ -109,6 +111,8 @@ class MainFragment : Fragment() {
         viewmodel.showPrecautionsDialog.observe(viewLifecycleOwner, Observer {
             it?.let {
                 BottomSheetDialogLeo().show(activity?.supportFragmentManager!!, "Precautions Bottom Sheet")
+//                requireActivity().applicationContext.showNotificationWithFullScreenIntent(true)
+
                 viewmodel.doneShowPrecautionsDialog()
             }
         })

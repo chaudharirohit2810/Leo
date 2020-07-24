@@ -164,14 +164,12 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="32dp"
                 android:background="@drawable/login_button_style"
-                android:visibility="@{viewmodel.isProgressBarVisible ? view.GONE : view.VISIBLE}"
                 android:elevation="10dp"
                 android:onClick="@{() -> viewmodel.navigateToEmergencyNumbers()}"
                 android:text="@string/register"
                 android:textColor="#fff"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="@{viewmodel.isProgressBarVisible ? view.INVISIBLE : view.VISIBLE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_phone" />
@@ -235,6 +233,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/edit_text_pass2" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:onClick="@{() -> viewmodel.navigateToLogin()}"
+                android:text="Already have an account? Login"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_register" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

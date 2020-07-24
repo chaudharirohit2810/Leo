@@ -21,6 +21,10 @@ class RegisterViewModel(var context: Context) : ViewModel() {
     val phone = MutableLiveData<String>()
     val name = MutableLiveData<String>()
 
+    private val _navigateToLogin = MutableLiveData<Boolean>()
+    val navigateToLogin: LiveData<Boolean>
+        get() = _navigateToLogin
+
     private val _isProgressBarVisible = MutableLiveData<Boolean>()
     val isProgressBarVisible: LiveData<Boolean>
         get() = _isProgressBarVisible
@@ -89,6 +93,14 @@ class RegisterViewModel(var context: Context) : ViewModel() {
         } else {
             _toastMsg.value = "Please fill all the fields"
         }
+    }
+
+    fun navigateToLogin() {
+        _navigateToLogin.value = true
+    }
+
+    fun doneNavigateToLogin() {
+        _navigateToLogin.value = null
     }
 
 

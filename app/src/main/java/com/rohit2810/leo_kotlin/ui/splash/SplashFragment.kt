@@ -9,12 +9,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.rohit2810.leo_kotlin.Application
 import com.rohit2810.leo_kotlin.R
+import kotlinx.android.synthetic.main.fragment_splash_anim.*
 
 class SplashFragment : Fragment() {
 
@@ -34,6 +36,9 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        var view =  inflater.inflate(R.layout.fragment_splash, container, false)
+
 
         splashViewModelFactory = SplashViewModelFactory(activity?.applicationContext!!)
         viewModel = ViewModelProvider(this, splashViewModelFactory).get(SplashViewModel::class.java)
@@ -57,7 +62,7 @@ class SplashFragment : Fragment() {
         })
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+        return view
     }
 
     private fun markSMSPermission(): Boolean{

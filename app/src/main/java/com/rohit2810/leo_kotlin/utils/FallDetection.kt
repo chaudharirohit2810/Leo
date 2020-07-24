@@ -22,6 +22,10 @@ fun detectFall(event: SensorEvent): Boolean {
         val precision = DecimalFormat("0.00")
         val ldAccRound = precision.format(loAccelerationReader).toDouble()
 
+        if (ldAccRound > 0.2 && ldAccRound < 0.4) {
+            Timber.d("Main Accuracy: $ldAccRound")
+        }
+
         // Fall Detected
         if (ldAccRound > 0.2 && ldAccRound < 0.3) {
             Timber.d("Main Accuracy: $ldAccRound")

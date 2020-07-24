@@ -18,8 +18,14 @@ class Application: Application() {
                 "Service Channel",
                 NotificationManager.IMPORTANCE_HIGH
             )
+            var channel2 = NotificationChannel(
+                "FallDetection",
+                "Full Screen Notification Channel",
+                NotificationManager.IMPORTANCE_HIGH
+            )
             val manager = getSystemService(NotificationManager::class.java)
             manager!!.createNotificationChannel(channel)
+            manager!!.createNotificationChannel(channel2)
         }
     }
 
