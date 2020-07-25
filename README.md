@@ -54,6 +54,16 @@ Include logo/demo screenshot etc.
   - Detecting trouble when mobile falls using algorithm applied on data received through accelerometer sensor.
 - Quick Settings Tile
   - Quick settings tile in system panel to easily notify when you are in trouble.
+  
+### Leo App for Designated Responsible Operators
+
+- All Marked Users
+  - Shows list of all users in trouble
+  - Notifies when new user is detected in trouble
+- Unmark Trouble
+  - Unmark trouble when certain actions are taken
+- SMS Receiver
+  - Marks trouble when sms message is received with specific leo format on DRO phone.
 
 ## API Documentation
 
