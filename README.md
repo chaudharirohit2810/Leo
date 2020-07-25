@@ -61,14 +61,49 @@ Not available
 
 ## Directory structure
 
-Use `tree -L 2` (increase the level if your project goes deeper) and paste it's output and try to explain your logic of how you modularised the project
-
-Example
-
 ```
-src/   --> Source files
-docs/  --> Documents
-bin/   --> Binaries and executables
+.
+├── app ->  Containes the application relevant files.
+│   ├── build.gradle(app-level) ->  to automate and manage the build process.
+│   ├── debug -> contains debug version of apk.
+│   ├── release -> Contains release version of apk.
+│   └── src -> Contains source files for the application.
+│       ├── main ->contains all the source code files.
+│       │   ├── AndroidManifest.xml -> describes essential information about app.
+│       │   ├── java/com/rohit2810/leo_kotlin
+│       │   │    ├── Application.kt -> base class containing components like Activities and Services
+│       │   │    ├── MainActivity.kt -> base activity for all fragments
+│       │   │    ├── database -> contains all the database related files.
+│       │   │    ├── models -> contains all the model classes.
+│       │   │    ├── network -> contains interfaces to simplify api calls.
+│       │   │    ├── receivers -> contains receivers for power button and notifications.
+│       │   │    ├── repository -> contains design patterns that isolates data sources from the rest of the app.
+│       │   │    ├── services
+│       │   │    ├── ui -> contains the ui files for every fragments
+│       │   │    │   ├── emergencyContacts
+│       │   │    │   ├── intro
+│       │   │    │   ├── login
+│       │   │    │   ├── main
+│       │   │    │   ├── map
+│       │   │    │   ├── news
+│       │   │    │   ├── otp
+│       │   │    │   ├── permissionRequest
+│       │   │    │   ├── register
+│       │   │    │   ├── settings
+│       │   │    │   └── splash
+│       │   │    └── utils -> contains the utility functions
+│       │   └── res -> Contains resource files written in xml for the application.
+│       │       ├── anim -> contains animation files.
+│       │       ├── drawable -> contains logos and vector assets.
+│       │       ├── layout -> contains layout files for every fragment.
+│       │       ├── menu -> contains layout file for menu.
+│       │       ├── navigation -> contains navigation graph.
+│       │       ├── raw -> contains lottie animation files.
+│       │       ├── values -> contains values of colors, strings etc.
+│       │       └── xml-> contains xml file for network security config.
+└── build.gradle -> to automate and manage the build process.
+
+
 ```
 
 ## Deployment
@@ -90,6 +125,7 @@ Click on the icon on the right with the 3 dots ("..."), which will open up a nav
 - [Lottie](https://github.com/airbnb/lottie-android) -  Mobile library for Android and iOS that parses Adobe After Effects animations
 - [Glide](https://github.com/bumptech/glide) - Fast and efficient open source media management and image loading framework
 - [Room Persistence](https://developer.android.com/topic/libraries/architecture/room) - Provides an abstraction layer over SQLite.
+- [Data Binding](https://developer.android.com/topic/libraries/data-binding) - Support library that allows to bind UI components in layouts to data sources in app
 
 ## Contributing
 
