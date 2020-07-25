@@ -32,13 +32,28 @@ Include logo/demo screenshot etc.
 
 ## Features
 
-- Feature1
-  - First point explaining it
-  - Second point explaining it
-- Feature2
-  - First point explaining it
-  - Second point explaining it
-    and so on
+### Leo App for Users
+
+- Travel Safe
+  - Intuitive map of crime hotspots in your region.
+  - Crime hotspots are colored according to frequency of crimes in region.
+- Recent Crime News
+  - Get to know recent crime incidents in your region.
+- Live location Tracking
+  - The location is stored locally on your smartphone.
+  - Remembers your last location. 
+  - User can explicity share your location via different platforms. 
+  - Location is implicitly shared only when trouble is detected.
+- SMS Notification
+  - Peers are notified via SMS when detected in trouble
+- Power Button Detection
+  - Trouble is detected when power button is pressed 5 times.
+- WiFi Direct
+  - To create p2p connections with nearby peers so trouble detection can seamlessly work even when there is no cellular reception.
+- Fall Detection
+  - Detecting trouble when mobile falls using algorithm applied on data received through accelerometer sensor.
+- Quick Settings Tile
+  - Quick settings tile in system panel to easily notify when you are in trouble.
 
 ## API Documentation
 
