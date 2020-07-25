@@ -1,6 +1,14 @@
 # Leo App
 
-A little info about your project and/ or overview that explains **what** the project is about.
+Leo App consists of an Android app for both users and Designated responsible operator.
+
+### Leo App for Users
+The app is written in Kotlin and based on [MVVM(Model-View-ViewModel)](https://developer.android.com/jetpack/guide) architecture. Users can view crime precautions and news in their region and can mark or unmark themselves in trouble. The app also provides crime hotspots in particular region.
+
+### Leo App for Designated Responsible Operators
+The app is written in Java and provides designated responsible operator list of users in trouble. The designated responsible operator can see user details and unmark user from trouble.
+
+
 
 ## Installation
 
