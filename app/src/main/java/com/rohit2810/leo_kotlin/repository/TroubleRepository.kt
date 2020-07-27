@@ -80,6 +80,7 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun updateUser(user: User) {
         try {
+            Timber.d(user.toString())
             var emergencyContactsModel =
                 EmergencyContactsModel(
                     username = user.username,
@@ -103,6 +104,7 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun markTrouble(user: User) {
         try {
+            Timber.d(user.toString())
             var latitude = getLatitudeFromCache(context).toDouble()
             var longitude = getLongitudeFromCache(context).toDouble()
             var trouble =
@@ -122,9 +124,7 @@ class TroubleRepository private constructor(private val context: Context) {
             saveIsInTrouble(context, !getIsInTrouble(context))
         }
         catch (e: Exception) {
-//            Timber.d(e)
             context.connectP2P()
-//            delay(4 * 1000)
             Timber.d(e.localizedMessage)
             throw Exception("Trying to connect to peers!!")
         }
@@ -132,22 +132,9 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun markTroubleP2P(trouble: Trouble) {
         try {
-//            var latitude = getLatitudeFromCache(context).toDouble()
-//            var longitude = getLongitudeFromCache(context).toDouble()
-//            var trouble =
-//                Trouble(
-//                    user.username,
-//                    latitude = latitude,
-//                    longitude = longitude,
-//                    inTrouble = true,
-//                    emergencyContacts = user.emergencyContacts
-//                )
-//            playAudio()
-//            sendMessage(trouble.latitude, trouble., getEmergencyContactFromCache(context))
             val deferredUser = service.markTrouble(trouble)
             val user2 = deferredUser.await()
             Timber.d(user2.toString())
-//            saveIsInTrouble(context, !getIsInTrouble(context))
         }
         catch (e: Exception) {
             Timber.d(e.localizedMessage)

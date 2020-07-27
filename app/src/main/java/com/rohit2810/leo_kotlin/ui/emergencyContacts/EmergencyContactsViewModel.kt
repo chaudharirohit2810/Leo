@@ -29,6 +29,10 @@ class EmergencyContactsViewModel(
     val isProgressBarVisible: LiveData<Boolean>
         get() = _isProgressBarVisible
 
+    private val _isPickingFromPhone = MutableLiveData<Int>()
+    val isPickingFromPhone: LiveData<Int>
+        get() = _isPickingFromPhone
+
 
     val phone1 = MutableLiveData<String>()
     val phone2 = MutableLiveData<String>()
@@ -197,6 +201,14 @@ class EmergencyContactsViewModel(
             }
 
         }
+    }
+
+    fun pickFromPhone(num: Int) {
+        _isPickingFromPhone.value = num
+    }
+
+    fun donePickingFromPhone() {
+        _isPickingFromPhone.value = null
     }
 
 

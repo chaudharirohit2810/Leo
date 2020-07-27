@@ -56,8 +56,10 @@ fun addEmergencyContactsToCache(contacts: MutableList<String?>, editor: SharedPr
     for (contact in contacts) {
         if (!contact.isNullOrEmpty()) {
             editor.putString("phone${i}", contact)
-            i++
+        }else {
+            editor.remove("phone${i}")
         }
+        i++
     }
 }
 

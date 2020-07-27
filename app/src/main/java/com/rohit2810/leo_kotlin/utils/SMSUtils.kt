@@ -22,6 +22,7 @@ fun sendMessage(latitude: Double, longitude: Double, contacts: List<String?>) {
 }
 
 fun sendIntroMessage(username: String, contacts: List<String?>) {
+    //TODO: Add Website and App link later in msg
     val msg ="Welcome to Leo Platform!! \n${username} has added you in his emergency contact list on Leo"
     for(contact in contacts) {
         Timber.d(contact)
