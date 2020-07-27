@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -14,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.rohit2810.leo_kotlin.databinding.FragmentSettingsBinding
 import com.rohit2810.leo_kotlin.services.LocationService
 import com.rohit2810.leo_kotlin.services.FallDetectionService
+import com.rohit2810.leo_kotlin.services.wifidirect.WiFiP2PServiceLeo
 import com.rohit2810.leo_kotlin.utils.getFallDetectionPrefs
 import com.rohit2810.leo_kotlin.utils.getUserFromCache
 import com.rohit2810.leo_kotlin.utils.saveFallDetectionPrefs
@@ -97,6 +97,8 @@ class SettingsFragment : Fragment() {
         stopFallDetectionService()
         val intent2 = Intent(activity?.applicationContext!!, LocationService::class.java)
         activity?.stopService(intent2)
+        val intent3 = Intent(activity?.applicationContext!!, WiFiP2PServiceLeo::class.java)
+        activity?.stopService(intent3)
     }
 
     fun startFallDetectionService() {

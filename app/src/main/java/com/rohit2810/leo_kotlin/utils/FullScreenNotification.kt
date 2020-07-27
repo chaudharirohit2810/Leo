@@ -15,9 +15,8 @@ import com.rohit2810.leo_kotlin.receivers.NotificationReceiver
 fun Context.showNotificationWithFullScreenIntent(
     isLockScreen: Boolean = false,
     channelId: String = CHANNEL_ID,
-    title: String = "Title",
-    description: String = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
+    title: String = "Trouble",
+    description: String = "You've marked yourself in trouble"
 ) {
 
     val broadcastIntent = Intent(this, NotificationReceiver::class.java)
@@ -32,14 +31,11 @@ fun Context.showNotificationWithFullScreenIntent(
         .setPriority(NotificationCompat.PRIORITY_HIGH)
         .setFullScreenIntent(getFullScreenIntent(isLockScreen), true)
 
-
     val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
     with(notificationManager) {
         buildChannel()
-
         val notification = builder.build()
-
         notify(0, notification)
     }
 }

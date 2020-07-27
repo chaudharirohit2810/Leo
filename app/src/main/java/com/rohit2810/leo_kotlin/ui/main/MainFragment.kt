@@ -1,5 +1,7 @@
 package com.rohit2810.leo_kotlin.ui.main
 
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.location.LocationManager
@@ -7,24 +9,27 @@ import android.os.Bundle
 import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.rohit2810.leo_kotlin.R
 import com.rohit2810.leo_kotlin.databinding.LayourMainBinding
 import com.rohit2810.leo_kotlin.services.FallDetectionService
 import com.rohit2810.leo_kotlin.services.LocationService
+import com.rohit2810.leo_kotlin.services.wifidirect.WiFiP2PServiceLeo
 import com.rohit2810.leo_kotlin.ui.BottomSheetDialogLeo
+import com.rohit2810.leo_kotlin.utils.connectP2P
 import com.rohit2810.leo_kotlin.utils.getFallDetectionPrefs
+import com.rohit2810.leo_kotlin.utils.showNotificationWithFullScreenIntent
 import com.rohit2810.leo_kotlin.utils.showToast
+import timber.log.Timber
+
 
 class MainFragment : Fragment() {
 
@@ -41,7 +46,6 @@ class MainFragment : Fragment() {
         if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             buildAlertMessageNoGps();
         }
-
 
     }
 
@@ -60,7 +64,6 @@ class MainFragment : Fragment() {
         val callback = object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 requireActivity().finish()
-//                System.exit(0)
             }
         }
 
@@ -108,6 +111,8 @@ class MainFragment : Fragment() {
         viewmodel.showPrecautionsDialog.observe(viewLifecycleOwner, Observer {
             it?.let {
                 BottomSheetDialogLeo().show(activity?.supportFragmentManager!!, "Precautions Bottom Sheet")
+//                requireActivity().applicationContext.showNotificationWithFullScreenIntent(true)
+
                 viewmodel.doneShowPrecautionsDialog()
             }
         })
@@ -137,9 +142,18 @@ class MainFragment : Fragment() {
             })
         })
 
+        viewmodel.connectToP2P.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                Timber.d("Inside viewmodel p2p")
+                requireActivity().connectP2P()
+                viewmodel.doneConnectToP2P()
+            }
+        })
+
 
         return binding.root
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu, menu)
@@ -163,6 +177,8 @@ class MainFragment : Fragment() {
         }
         val intent2 = Intent(activity?.applicationContext, LocationService::class.java)
         ContextCompat.startForegroundService(activity?.applicationContext!!, intent2)
+        val intent3 = Intent(activity?.applicationContext, WiFiP2PServiceLeo::class.java)
+        ContextCompat.startForegroundService(activity?.applicationContext!!, intent3)
     }
 
     private fun buildAlertMessageNoGps() {

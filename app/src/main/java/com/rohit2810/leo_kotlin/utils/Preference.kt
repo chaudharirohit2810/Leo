@@ -26,6 +26,7 @@ private const val IS_INTRO_OPENED = "isIntroOpened"
 private const val FALL_DETECTION_SERVICE = "isFallDetectionServiceEnabled"
 private const val IS_IN_TROUBLE = "is_in_trouble"
 private const val TEMP_INTRO = "temp_intro"
+private const val JWT_TOKEN = "jwt_token"
 
 
 fun addUserToCache(context: Context, user: User) {
@@ -38,12 +39,9 @@ fun addUserToCache(context: Context, user: User) {
         sharedPreferencesEditor.putString(PHONE, user.phone)
         sharedPreferencesEditor.putString(NAME, user.name)
         sharedPreferencesEditor.putString(EMAIL, user.email)
+        sharedPreferencesEditor.putString(JWT_TOKEN, user.token)
         if (!user.emergencyContacts.isNullOrEmpty()) {
-            sharedPreferencesEditor.putString(PHONE1, user.emergencyContacts[0])
-            sharedPreferencesEditor.putString(PHONE2, user.emergencyContacts[1])
-            sharedPreferencesEditor.putString(PHONE3, user.emergencyContacts[2])
-            sharedPreferencesEditor.putString(PHONE4, user.emergencyContacts[3])
-            sharedPreferencesEditor.putString(PHONE5, user.emergencyContacts[4])
+            addEmergencyContactsToCache(user.emergencyContacts, sharedPreferencesEditor)
         }
         sharedPreferencesEditor.apply()
         Timber.d("user added successfully")
@@ -51,7 +49,16 @@ fun addUserToCache(context: Context, user: User) {
         Timber.d(e)
         Timber.d(e.localizedMessage)
     }
+}
 
+fun addEmergencyContactsToCache(contacts: MutableList<String?>, editor: SharedPreferences.Editor) {
+    var i = 1;
+    for (contact in contacts) {
+        if (!contact.isNullOrEmpty()) {
+            editor.putString("phone${i}", contact)
+            i++
+        }
+    }
 }
 
 fun getUserFromCache(context: Context): User? {
@@ -66,6 +73,7 @@ fun getUserFromCache(context: Context): User? {
                 name = sharedPreferences.getString(
                     NAME, null
                 ),
+                token = sharedPreferences.getString(JWT_TOKEN, null),
                 emergencyContacts = getEmergencyContactFromCache(context).toMutableList(),
                 email = sharedPreferences.getString(
                     EMAIL, null

@@ -6,8 +6,8 @@ import com.rohit2810.leo_kotlin.models.*
 import com.rohit2810.leo_kotlin.network.UserApi
 import com.rohit2810.leo_kotlin.utils.*
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-import org.json.JSONObject
 import timber.log.Timber
 import java.lang.Exception
 
@@ -23,6 +23,7 @@ class TroubleRepository private constructor(private val context: Context) {
             val deferredUser = service.loginUser(user)
             val user2 = deferredUser.await()
             user2.password = pass
+            Timber.d(user2.toString())
             addUserToCache(context, user2)
             saveIsInTrouble(context, user2.inTrouble)
         } catch (e: NoConnectivityException) {
@@ -81,9 +82,9 @@ class TroubleRepository private constructor(private val context: Context) {
                 ec2 = user.emergencyContacts[1],
                 ec3 = user.emergencyContacts[2],
                 ec4 = user.emergencyContacts[3],
-                ec5 = user.emergencyContacts[4]
+                ec5 = user.emergencyContacts[4],
+                token = user.token!!
             )
-            // TODO: For updating the user use update emergency contacts
             val deferredUser = service.updateEmergencyContacts(emergencyContactsModel)
             Timber.d(deferredUser.await().toString())
             addUserToCache(context, user)
@@ -105,28 +106,54 @@ class TroubleRepository private constructor(private val context: Context) {
                     latitude = latitude,
                     longitude = longitude,
                     inTrouble = true,
-                    emergencyContacts = user.emergencyContacts
+                    emergencyContacts = user.emergencyContacts,
+                    token = user.token!!
                 )
             playAudio()
             sendMessage(latitude, longitude, getEmergencyContactFromCache(context))
             val deferredUser = service.markTrouble(trouble)
             val user2 = deferredUser.await()
+            Timber.d(user2.toString())
             saveIsInTrouble(context, !getIsInTrouble(context))
-        }catch (e: NoConnectivityException) {
-            throw NoConnectivityException()
+        }
+        catch (e: Exception) {
+//            Timber.d(e)
+            context.connectP2P()
+//            delay(4 * 1000)
+            Timber.d(e.localizedMessage)
+            throw Exception("Trying to connect to peers!!")
+        }
+    }
+
+    suspend fun markTroubleP2P(trouble: Trouble) {
+        try {
+//            var latitude = getLatitudeFromCache(context).toDouble()
+//            var longitude = getLongitudeFromCache(context).toDouble()
+//            var trouble =
+//                Trouble(
+//                    user.username,
+//                    latitude = latitude,
+//                    longitude = longitude,
+//                    inTrouble = true,
+//                    emergencyContacts = user.emergencyContacts
+//                )
+//            playAudio()
+//            sendMessage(trouble.latitude, trouble., getEmergencyContactFromCache(context))
+            val deferredUser = service.markTrouble(trouble)
+            val user2 = deferredUser.await()
+            Timber.d(user2.toString())
+//            saveIsInTrouble(context, !getIsInTrouble(context))
         }
         catch (e: Exception) {
             Timber.d(e.localizedMessage)
-            throw Exception("Something went wrong!!")
         }
     }
 
     suspend fun unMarkTrouble(user: User) {
         try {
-            var def = service.unmarkTrouble(Username(user.username))
+            var def = service.unmarkTrouble(UnMarkTrouble(user.username, user.token!!))
             Timber.d(def.await().toString())
             saveIsInTrouble(context, !getIsInTrouble(context))
-            // TODO: Change the route later to unMarkTrouble
         }catch (e: NoConnectivityException) {
             throw  NoConnectivityException()
         }
@@ -141,7 +168,7 @@ class TroubleRepository private constructor(private val context: Context) {
             user.password = sha256(user.password)
             val deferredUser = service.loginUser(user)
             val user2 = deferredUser.await()
-            Timber.d(user2.printUtil())
+            Timber.d(user2.toString())
             saveIsInTrouble(context, user2.inTrouble)
         } catch (e: Exception) {
             throw Exception(e.localizedMessage)

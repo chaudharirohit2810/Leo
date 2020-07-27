@@ -103,7 +103,6 @@ class IntroActivity : AppCompatActivity() {
         })
 
         btn_get_started.setOnClickListener {
-            // TODO: Move to Login Page
             startActivity(Intent(this, MainActivity::class.java))
             saveIntroPrefs(this)
             Application.shouldShowSplash = false
@@ -121,7 +120,6 @@ class IntroActivity : AppCompatActivity() {
         tv_skip.visibility = View.INVISIBLE
         tab_indicator.visibility = View.INVISIBLE
 
-        //TODO: Setup Button Animation
         btn_get_started.animation = btnAnim
     }
 }

@@ -4,11 +4,13 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import com.rohit2810.leo_kotlin.utils.showNotificationWithFullScreenIntent
+import timber.log.Timber
 
 private const val LOCK_SCREEN_KEY = "lockScreenKey"
 
 class NotificationReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
+        Timber.d(intent.action)
         if(intent.getBooleanExtra(LOCK_SCREEN_KEY, true)) {
             context.showNotificationWithFullScreenIntent(true)
         } else {

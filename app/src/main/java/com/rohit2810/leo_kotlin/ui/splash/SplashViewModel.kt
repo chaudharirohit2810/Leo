@@ -33,12 +33,11 @@ class SplashViewModel(private val context: Context) : ViewModel() {
 //                Timber.d("Entered checkLogin")
                 val user = getUserFromCache(context) ?: throw Exception("Nothing in cache")
                 Timber.d(user.toString())
-                delay(500)
+                delay(750)
                 repository.checkLogin(user)
                 _navigateToMain.value = true
             } catch (e: Exception) {
-                delay(750)
-//                Timber.d(e)
+                delay(1000)
                 Timber.d(e.localizedMessage)
                 _navigateToMain.value = false
             }

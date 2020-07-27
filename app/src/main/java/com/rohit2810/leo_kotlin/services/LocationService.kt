@@ -2,9 +2,11 @@ package com.rohit2810.leo_kotlin.services
 
 import android.app.PendingIntent
 import android.app.Service
+import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.location.Location
+import android.net.wifi.p2p.WifiP2pManager
 import android.os.Build
 import android.os.IBinder
 import android.os.Looper
@@ -15,6 +17,7 @@ import com.rohit2810.leo_kotlin.utils.addLocationinCache
 import com.rohit2810.leo_kotlin.utils.foregroundNotification
 import com.google.android.gms.location.*
 import com.rohit2810.leo_kotlin.receivers.PowerButtonReceiver
+import com.rohit2810.leo_kotlin.receivers.WifiP2PReceiver
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
@@ -38,6 +41,8 @@ class LocationService : Service() {
     private lateinit var powerButtonFilter: IntentFilter
 
 
+
+
     override fun onBind(intent: Intent?): IBinder? {
         return null
     }
@@ -51,6 +56,7 @@ class LocationService : Service() {
         val intent1 = Intent(this, MainActivity::class.java)
         val pendingIntent = PendingIntent.getActivity(this, 0, intent1, 0)
 
+        // Get location provider client
         // Get location provider client
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
@@ -146,5 +152,7 @@ class LocationService : Service() {
 
         internal const val EXTRA_LOCATION = "$PACKAGE_NAME.extra.LOCATION"
     }
+
+
 
 }

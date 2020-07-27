@@ -55,7 +55,7 @@ interface UserServiceApi{
     fun markTrouble(@Body trouble: Trouble): Deferred<Any>
 
     @PUT("unmarkTrouble")
-    fun unmarkTrouble(@Body username: Username): Deferred<Any>
+    fun unmarkTrouble(@Body username: UnMarkTrouble): Deferred<Any>
 
     @POST("otp")
     fun sendOtp(@Body otp: OTP): Deferred<Any>
@@ -68,7 +68,5 @@ interface UserServiceApi{
 
     @PUT("updateEC")
     fun updateEmergencyContacts(@Body emergencyContactsModel: EmergencyContactsModel): Deferred<Any>
-
-
 
 }

@@ -5,10 +5,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
+import com.rohit2810.leo_kotlin.utils.connectP2P
 import com.rohit2810.leo_kotlin.utils.getIsInTrouble
 import com.rohit2810.leo_kotlin.utils.getUserFromCache
 import kotlinx.coroutines.*
-import java.lang.Exception
+import timber.log.Timber
 
 class MainViewModel(
     private val context: Context
@@ -44,12 +45,16 @@ class MainViewModel(
         get() = _undoTrouble
 
     private val _navigateToNews = MutableLiveData<Boolean>()
-    val navigateToNews : LiveData<Boolean>
+    val navigateToNews: LiveData<Boolean>
         get() = _navigateToNews
 
     private val _isNotInTroubleVisible = MutableLiveData<Boolean>()
     val isNotInTroubleVisible: LiveData<Boolean>
         get() = _isNotInTroubleVisible
+
+    private val _connectToP2P = MutableLiveData<Boolean>()
+    val connectToP2P: LiveData<Boolean>
+        get() = _connectToP2P
 
     init {
         _isProgressBarVisible.value = false
@@ -106,33 +111,42 @@ class MainViewModel(
 
 
     fun markTrouble() {
-        _isProgressBarVisible.value = true
+
         coroutineScope.launch {
             try {
-                _toastMsg.value = "You can click on I am not in trouble button, if you mistakenly pressed the button"
+                _undoTrouble.value = false
+                _isProgressBarVisible.value = true
+                _toastMsg.value =
+                    "You can click on I am not in trouble button, if you mistakenly pressed the button"
                 _isNotInTroubleVisible.value = true
                 delay(5 * 1000)
                 _isNotInTroubleVisible.value = false
-                if (!undoTrouble.value!!) {
+                if (!_undoTrouble.value!!) {
+                    Timber.d("Marking in trouble")
                     val user = getUserFromCache(context) ?: throw Exception("Some error occured")
                     repository.markTrouble(user)
                     delay(3 * 1000)
                     _isProgressBarVisible.value = false
-
+                    _showNotInTrouble.value = true
                     _toastMsg.value = "You've marked yourself in trouble. Help is on the way!!"
-
-                } else {
+                }else {
+                    _isNotInTroubleVisible.value = false
                     _isProgressBarVisible.value = false
                     _undoTrouble.value = false
-                    _isNotInTroubleVisible.value = false
+//                    _toastMsg.value = e.localizedMessage
                 }
             } catch (e: Exception) {
+//                context.connectP2P()
                 _isNotInTroubleVisible.value = false
                 _isProgressBarVisible.value = false
                 _toastMsg.value = e.localizedMessage
             }
 
         }
+    }
+
+    fun doneConnectToP2P() {
+        _connectToP2P.value = null
     }
 
     fun unMarkTrouble() {
