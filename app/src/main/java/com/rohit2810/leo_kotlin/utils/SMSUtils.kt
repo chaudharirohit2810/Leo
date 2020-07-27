@@ -20,3 +20,17 @@ fun sendMessage(latitude: Double, longitude: Double, contacts: List<String?>) {
         }
     }
 }
+
+fun sendIntroMessage(username: String, contacts: List<String?>) {
+    val msg ="Welcome to Leo Platform!! \n${username} has added you in his emergency contact list on Leo"
+    for(contact in contacts) {
+        Timber.d(contact)
+        contact?.let {
+            try {
+                smsManager.sendTextMessage(contact, null, msg , null, null)
+            }catch (e: Exception){
+                Timber.d(e.localizedMessage)
+            }
+        }
+    }
+}

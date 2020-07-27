@@ -24,10 +24,7 @@ import com.rohit2810.leo_kotlin.services.FallDetectionService
 import com.rohit2810.leo_kotlin.services.LocationService
 import com.rohit2810.leo_kotlin.services.wifidirect.WiFiP2PServiceLeo
 import com.rohit2810.leo_kotlin.ui.BottomSheetDialogLeo
-import com.rohit2810.leo_kotlin.utils.connectP2P
-import com.rohit2810.leo_kotlin.utils.getFallDetectionPrefs
-import com.rohit2810.leo_kotlin.utils.showNotificationWithFullScreenIntent
-import com.rohit2810.leo_kotlin.utils.showToast
+import com.rohit2810.leo_kotlin.utils.*
 import timber.log.Timber
 
 
@@ -110,7 +107,10 @@ class MainFragment : Fragment() {
         //Show precautions Dialog
         viewmodel.showPrecautionsDialog.observe(viewLifecycleOwner, Observer {
             it?.let {
-                BottomSheetDialogLeo().show(activity?.supportFragmentManager!!, "Precautions Bottom Sheet")
+                BottomSheetDialogLeo().show(
+                    activity?.supportFragmentManager!!,
+                    "Precautions Bottom Sheet"
+                )
 //                requireActivity().applicationContext.showNotificationWithFullScreenIntent(true)
 
                 viewmodel.doneShowPrecautionsDialog()
@@ -119,7 +119,8 @@ class MainFragment : Fragment() {
 
         viewmodel.navigateToNews.observe(viewLifecycleOwner, Observer {
             it?.let {
-                this.findNavController().navigate(MainFragmentDirections.actionMainFragmentToNewsFragment())
+                this.findNavController()
+                    .navigate(MainFragmentDirections.actionMainFragmentToNewsFragment())
                 viewmodel.doneNavigateToNews()
             }
         })
@@ -132,11 +133,11 @@ class MainFragment : Fragment() {
             }
         })
 
-        viewmodel.showNotInTrouble.observe(viewLifecycleOwner, Observer { trou->
-            viewmodel.isProgressBarVisible.observe(viewLifecycleOwner, Observer { prog->
-                if(!(prog || trou)) {
+        viewmodel.showNotInTrouble.observe(viewLifecycleOwner, Observer { trou ->
+            viewmodel.isProgressBarVisible.observe(viewLifecycleOwner, Observer { prog ->
+                if (!(prog || trou)) {
                     binding.btnTrouble.visibility = View.VISIBLE
-                }else {
+                } else {
                     binding.btnTrouble.visibility = View.GONE
                 }
             })
@@ -154,6 +155,19 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
+    fun shareLocation() {
+        val msg = "Hi I am ${getUserFromCache(activity?.applicationContext!!)?.name}. " + "\n" + "My live location is : \n"
+        val title =
+            "https://www.google.com/maps/@${getLatitudeFromCache(activity?.applicationContext!!)},${getLongitudeFromCache(
+                activity?.applicationContext!!
+            )},15z"
+        var intent = Intent()
+        intent.setAction(Intent.ACTION_SEND)
+        intent.setType("text/plain")
+        intent.putExtra(Intent.EXTRA_TEXT, msg + title)
+        activity?.startActivity(intent)
+    }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.main_menu, menu)
@@ -165,6 +179,9 @@ class MainFragment : Fragment() {
             R.id.main_menu_settings -> {
                 this.findNavController()
                     .navigate(MainFragmentDirections.actionMainFragmentToSettingsFragment())
+            }
+            R.id.main_menu_share -> {
+                shareLocation()
             }
         }
         return true
@@ -196,7 +213,6 @@ class MainFragment : Fragment() {
         val alert: AlertDialog = builder.create();
         alert.show();
     }
-
 
 
 }

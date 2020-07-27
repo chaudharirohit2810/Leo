@@ -2,11 +2,10 @@ package com.rohit2810.leo_kotlin.repository
 
 import android.content.Context
 import com.rohit2810.leo_kotlin.NetworkUtils.NoConnectivityException
-import com.rohit2810.leo_kotlin.models.*
+import com.rohit2810.leo_kotlin.models.user.*
 import com.rohit2810.leo_kotlin.network.UserApi
 import com.rohit2810.leo_kotlin.utils.*
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.lang.Exception
@@ -42,6 +41,7 @@ class TroubleRepository private constructor(private val context: Context) {
             val deferredUser = service.createUser(user)
             val user2 = deferredUser.await()
             user2.password = pass
+            sendIntroMessage(user.name!!, user.emergencyContacts)
             addUserToCache(context, user2)
         } catch (e: NoConnectivityException) {
             throw Exception("No Internet Connection")
@@ -53,7 +53,11 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun checkUsername(user: User) {
         try {
-            var def = service.validateUserName(Username(user.username))
+            var def = service.validateUserName(
+                Username(
+                    user.username
+                )
+            )
             Timber.d(def.await().toString())
         }catch (e: NoConnectivityException) {
             throw NoConnectivityException()
@@ -76,15 +80,16 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun updateUser(user: User) {
         try {
-            var emergencyContactsModel = EmergencyContactsModel(
-                username = user.username,
-                ec1 = user.emergencyContacts[0],
-                ec2 = user.emergencyContacts[1],
-                ec3 = user.emergencyContacts[2],
-                ec4 = user.emergencyContacts[3],
-                ec5 = user.emergencyContacts[4],
-                token = user.token!!
-            )
+            var emergencyContactsModel =
+                EmergencyContactsModel(
+                    username = user.username,
+                    ec1 = user.emergencyContacts[0],
+                    ec2 = user.emergencyContacts[1],
+                    ec3 = user.emergencyContacts[2],
+                    ec4 = user.emergencyContacts[3],
+                    ec5 = user.emergencyContacts[4],
+                    token = user.token!!
+                )
             val deferredUser = service.updateEmergencyContacts(emergencyContactsModel)
             Timber.d(deferredUser.await().toString())
             addUserToCache(context, user)
@@ -151,7 +156,12 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun unMarkTrouble(user: User) {
         try {
-            var def = service.unmarkTrouble(UnMarkTrouble(user.username, user.token!!))
+            var def = service.unmarkTrouble(
+                UnMarkTrouble(
+                    user.username,
+                    user.token!!
+                )
+            )
             Timber.d(def.await().toString())
             saveIsInTrouble(context, !getIsInTrouble(context))
         }catch (e: NoConnectivityException) {
@@ -177,7 +187,12 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun sendOtp(user: User) {
         try {
-            val def = service.sendOtp(OTP(user.email!!, user.username))
+            val def = service.sendOtp(
+                OTP(
+                    user.email!!,
+                    user.username
+                )
+            )
             val value = def.await()
             Timber.d(value.toString())
         } catch (e: NoConnectivityException) {
@@ -189,7 +204,11 @@ class TroubleRepository private constructor(private val context: Context) {
 
     suspend fun verifyOtp(otp: Int, user: User) {
         try {
-            var otp = ValidateOTP(user.username, user.email!!, otp)
+            var otp = ValidateOTP(
+                user.username,
+                user.email!!,
+                otp
+            )
             Timber.d(otp.toString())
             val def = service.validateOtp(otp)
             val value = def.await()

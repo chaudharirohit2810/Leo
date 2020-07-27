@@ -12,6 +12,14 @@
         android:orderInCategory="100"
         app:showAsAction="always"
         android:title="@string/settings" />
+    <item
+        android:id="@+id/main_menu_share"
+        app:showAsAction="always"
+        android:orderInCategory="50"
+        android:icon="@drawable/leo_share"
+        android:title="Share Live Location">
+
+    </item>
 
 <!--    <item-->
 <!--        android:id="@+id/main_menu_logout"-->

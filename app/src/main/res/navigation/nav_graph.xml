@@ -93,7 +93,7 @@
         android:label="EmergencyContactsFragment" >
         <argument
             android:name="registeredUser"
-            app:argType="com.rohit2810.leo_kotlin.models.User"/>
+            app:argType="com.rohit2810.leo_kotlin.models.user.User"/>
         <argument
             android:name="isFromMain"
             app:argType="boolean" />
@@ -175,7 +175,7 @@
         android:label="VerifyOtpFragment" >
         <argument
             android:name="registeredUser"
-            app:argType="com.rohit2810.leo_kotlin.models.User"/>
+            app:argType="com.rohit2810.leo_kotlin.models.user.User"/>
         <action
             android:id="@+id/action_verifyOtpFragment_to_emergencyContactsFragment"
             app:destination="@id/emergencyContactsFragment"

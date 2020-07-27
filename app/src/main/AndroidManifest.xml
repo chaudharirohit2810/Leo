@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
@@ -37,7 +38,6 @@
         android:roundIcon="@drawable/leo2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ui.fullScreen.FullScreenActivity"></activity>
         <activity android:name=".ui.intro.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,6 +63,21 @@
         <service android:name=".services.LocationService" />
         <service android:name=".services.wifidirect.WiFiP2PServiceLeo" />
 
+        <service
+            android:name=".ui.quicksettings.LeoToggle"
+            android:icon="@drawable/leo2"
+            android:label="@string/i_am_in_trouble"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+
         <receiver
             android:name=".receivers.LocationUpdatesReceiver"
             android:exported="true">
@@ -74,6 +89,8 @@
             android:name=".receivers.NotificationReceiver"
             android:enabled="true"
             android:exported="true" />
+        <receiver android:name=".receivers.TroubleReceiver" android:enabled="true" android:exported="true"/>
     </application>
+
 
 </manifest>

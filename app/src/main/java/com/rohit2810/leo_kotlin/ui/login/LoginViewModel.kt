@@ -6,10 +6,9 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.rohit2810.leo_kotlin.models.User
+import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
 import com.rohit2810.leo_kotlin.utils.getUserFromCache
-import com.rohit2810.leo_kotlin.utils.sha256
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -74,7 +73,10 @@ class LoginViewModel(private val context: Context) : ViewModel() {
                     _isProgressVisible.value = true
                     try {
 //                        Timber.d(sha256(password.value!!))
-                        val user = User(username.value!!, password = password.value!!)
+                        val user = User(
+                            username.value!!,
+                            password = password.value!!
+                        )
                         Timber.d(user.username)
                         repository.loginUser(user)
                         _snackbarMsg.value = "Welcome ${getUserFromCache(context)?.name}!!"

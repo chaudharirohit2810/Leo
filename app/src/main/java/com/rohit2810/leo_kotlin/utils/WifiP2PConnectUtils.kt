@@ -3,15 +3,12 @@ package com.rohit2810.leo_kotlin.utils
 import android.content.Context
 import android.net.wifi.p2p.WifiP2pConfig
 import android.net.wifi.p2p.WifiP2pManager
-import android.os.AsyncTask
 import com.rohit2810.leo_kotlin.Application
 import com.rohit2810.leo_kotlin.Application.Companion.channel
 import com.rohit2810.leo_kotlin.Application.Companion.connectionInfoListener
-import com.rohit2810.leo_kotlin.Application.Companion.isConnected
 import com.rohit2810.leo_kotlin.Application.Companion.manager
-import com.rohit2810.leo_kotlin.models.Trouble
+import com.rohit2810.leo_kotlin.models.user.Trouble
 import timber.log.Timber
-import java.net.ServerSocket
 
 fun Context.connectP2P() {
     Timber.d("Trying to connect")

@@ -1,4 +1,4 @@
-package com.rohit2810.leo_kotlin.models
+package com.rohit2810.leo_kotlin.models.user
 
 import android.os.Parcelable
 import com.squareup.moshi.Json

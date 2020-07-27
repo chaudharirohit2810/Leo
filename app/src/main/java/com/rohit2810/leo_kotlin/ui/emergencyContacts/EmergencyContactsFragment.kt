@@ -6,17 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
-import com.rohit2810.leo_kotlin.R
 import com.rohit2810.leo_kotlin.databinding.FragmentEmergencyContactsBinding
-import com.rohit2810.leo_kotlin.models.User
+import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
-import com.google.android.material.snackbar.Snackbar
 import com.rohit2810.leo_kotlin.utils.showToast
 
 class EmergencyContactsFragment : Fragment() {

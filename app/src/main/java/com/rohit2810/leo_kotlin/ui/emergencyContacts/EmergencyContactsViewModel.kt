@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.rohit2810.leo_kotlin.models.User
+import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
 import com.rohit2810.leo_kotlin.utils.getEmergencyContactFromCache
 import kotlinx.coroutines.CoroutineScope

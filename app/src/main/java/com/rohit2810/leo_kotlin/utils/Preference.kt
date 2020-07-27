@@ -5,7 +5,7 @@ import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import android.location.Location
 //import androidx.test.core.app.ApplicationProvider.getApplicationContext
-import com.rohit2810.leo_kotlin.models.User
+import com.rohit2810.leo_kotlin.models.user.User
 import timber.log.Timber
 
 

@@ -3,7 +3,7 @@ package com.rohit2810.leo_kotlin.ui.emergencyContacts
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.rohit2810.leo_kotlin.models.User
+import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
 import java.lang.IllegalArgumentException
 

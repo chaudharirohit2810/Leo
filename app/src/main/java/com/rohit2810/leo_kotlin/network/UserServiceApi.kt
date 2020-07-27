@@ -3,12 +3,11 @@ package com.rohit2810.leo_kotlin.network
 import android.content.Context
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.rohit2810.leo_kotlin.NetworkUtils.NetworkConnectionInterceptor
-import com.rohit2810.leo_kotlin.models.*
+import com.rohit2810.leo_kotlin.models.user.*
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
-import org.json.JSONObject
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.*
@@ -19,13 +18,6 @@ private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()
 
-
-
-//private val retrofit = Retrofit.Builder()
-//    .addConverterFactory(MoshiConverterFactory.create(moshi))
-//    .addCallAdapterFactory(CoroutineCallAdapterFactory())
-//    .baseUrl(BASE_URL)
-//    .build()
 
 object UserApi {
     fun retrofitService(context: Context): UserServiceApi {

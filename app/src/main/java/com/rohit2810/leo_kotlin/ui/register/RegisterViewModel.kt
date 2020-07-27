@@ -4,9 +4,8 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.rohit2810.leo_kotlin.models.User
+import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
-import com.rohit2810.leo_kotlin.utils.sha256
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -20,6 +19,7 @@ class RegisterViewModel(var context: Context) : ViewModel() {
     val email = MutableLiveData<String>()
     val phone = MutableLiveData<String>()
     val name = MutableLiveData<String>()
+    var isTermsConditionsAgreed = MutableLiveData<Boolean>()
 
     private val _navigateToLogin = MutableLiveData<Boolean>()
     val navigateToLogin: LiveData<Boolean>
@@ -31,6 +31,7 @@ class RegisterViewModel(var context: Context) : ViewModel() {
 
     init {
         _isProgressBarVisible.value = false
+        isTermsConditionsAgreed.value = false
     }
 
     private val viewModelJob = Job()
@@ -101,6 +102,10 @@ class RegisterViewModel(var context: Context) : ViewModel() {
 
     fun doneNavigateToLogin() {
         _navigateToLogin.value = null
+    }
+
+    fun setTermsConditions() {
+        isTermsConditionsAgreed.value = !isTermsConditionsAgreed.value!!
     }
 
 

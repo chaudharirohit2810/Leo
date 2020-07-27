@@ -1,0 +1,2330 @@
+1 [error opening dir]
+.
+├── app
+│   ├── build
+│   │   ├── generated
+│   │   │   ├── ap_generated_sources
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── data_binding_base_class_source_out
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           └── com
+│   │   │   │               └── rohit2810
+│   │   │   │                   └── leo_kotlin
+│   │   │   │                       └── databinding
+│   │   │   │                           ├── FragmentEmergencyContactsBinding.java
+│   │   │   │                           ├── FragmentLoginBinding.java
+│   │   │   │                           ├── FragmentMainBinding.java
+│   │   │   │                           ├── FragmentPermissionRequestBinding.java
+│   │   │   │                           ├── FragmentRegisterBinding.java
+│   │   │   │                           ├── FragmentSettingsBinding.java
+│   │   │   │                           ├── FragmentVerifyOtpBinding.java
+│   │   │   │                           └── LayourMainBinding.java
+│   │   │   ├── res
+│   │   │   │   ├── pngs
+│   │   │   │   │   └── debug
+│   │   │   │   │       ├── drawable-anydpi-v21
+│   │   │   │   │       │   ├── ic_baseline_arrow_forward_24.xml
+│   │   │   │   │       │   ├── ic_settings_black_24dp.xml
+│   │   │   │   │       │   ├── leo_logout_24.xml
+│   │   │   │   │       │   ├── leo_settings_24.xml
+│   │   │   │   │       │   ├── leo_share.xml
+│   │   │   │   │       │   ├── leo_update_24.xml
+│   │   │   │   │       │   ├── login_mail.xml
+│   │   │   │   │       │   ├── login_password.xml
+│   │   │   │   │       │   ├── login_person.xml
+│   │   │   │   │       │   ├── login_phone.xml
+│   │   │   │   │       │   ├── not_in_trouble_main.xml
+│   │   │   │   │       │   ├── precautions_main.xml
+│   │   │   │   │       │   ├── recent_crime_news_main.xml
+│   │   │   │   │       │   ├── settings_fall.xml
+│   │   │   │   │       │   └── travel_safe.xml
+│   │   │   │   │       ├── drawable-hdpi
+│   │   │   │   │       │   ├── ic_baseline_arrow_forward_24.png
+│   │   │   │   │       │   ├── ic_settings_black_24dp.png
+│   │   │   │   │       │   ├── leo_logout_24.png
+│   │   │   │   │       │   ├── leo_settings_24.png
+│   │   │   │   │       │   ├── leo_share.png
+│   │   │   │   │       │   ├── leo_update_24.png
+│   │   │   │   │       │   ├── login_mail.png
+│   │   │   │   │       │   ├── login_password.png
+│   │   │   │   │       │   ├── login_person.png
+│   │   │   │   │       │   ├── login_phone.png
+│   │   │   │   │       │   ├── not_in_trouble_main.png
+│   │   │   │   │       │   ├── precautions_main.png
+│   │   │   │   │       │   ├── recent_crime_news_main.png
+│   │   │   │   │       │   ├── settings_fall.png
+│   │   │   │   │       │   └── travel_safe.png
+│   │   │   │   │       ├── drawable-ldpi
+│   │   │   │   │       │   ├── ic_baseline_arrow_forward_24.png
+│   │   │   │   │       │   ├── ic_settings_black_24dp.png
+│   │   │   │   │       │   ├── leo_logout_24.png
+│   │   │   │   │       │   ├── leo_settings_24.png
+│   │   │   │   │       │   ├── leo_share.png
+│   │   │   │   │       │   ├── leo_update_24.png
+│   │   │   │   │       │   ├── login_mail.png
+│   │   │   │   │       │   ├── login_password.png
+│   │   │   │   │       │   ├── login_person.png
+│   │   │   │   │       │   ├── login_phone.png
+│   │   │   │   │       │   ├── not_in_trouble_main.png
+│   │   │   │   │       │   ├── precautions_main.png
+│   │   │   │   │       │   ├── recent_crime_news_main.png
+│   │   │   │   │       │   ├── settings_fall.png
+│   │   │   │   │       │   └── travel_safe.png
+│   │   │   │   │       ├── drawable-mdpi
+│   │   │   │   │       │   ├── ic_baseline_arrow_forward_24.png
+│   │   │   │   │       │   ├── ic_settings_black_24dp.png
+│   │   │   │   │       │   ├── leo_logout_24.png
+│   │   │   │   │       │   ├── leo_settings_24.png
+│   │   │   │   │       │   ├── leo_share.png
+│   │   │   │   │       │   ├── leo_update_24.png
+│   │   │   │   │       │   ├── login_mail.png
+│   │   │   │   │       │   ├── login_password.png
+│   │   │   │   │       │   ├── login_person.png
+│   │   │   │   │       │   ├── login_phone.png
+│   │   │   │   │       │   ├── not_in_trouble_main.png
+│   │   │   │   │       │   ├── precautions_main.png
+│   │   │   │   │       │   ├── recent_crime_news_main.png
+│   │   │   │   │       │   ├── settings_fall.png
+│   │   │   │   │       │   └── travel_safe.png
+│   │   │   │   │       ├── drawable-xhdpi
+│   │   │   │   │       │   ├── ic_baseline_arrow_forward_24.png
+│   │   │   │   │       │   ├── ic_settings_black_24dp.png
+│   │   │   │   │       │   ├── leo_logout_24.png
+│   │   │   │   │       │   ├── leo_settings_24.png
+│   │   │   │   │       │   ├── leo_share.png
+│   │   │   │   │       │   ├── leo_update_24.png
+│   │   │   │   │       │   ├── login_mail.png
+│   │   │   │   │       │   ├── login_password.png
+│   │   │   │   │       │   ├── login_person.png
+│   │   │   │   │       │   ├── login_phone.png
+│   │   │   │   │       │   ├── not_in_trouble_main.png
+│   │   │   │   │       │   ├── precautions_main.png
+│   │   │   │   │       │   ├── recent_crime_news_main.png
+│   │   │   │   │       │   ├── settings_fall.png
+│   │   │   │   │       │   └── travel_safe.png
+│   │   │   │   │       ├── drawable-xxhdpi
+│   │   │   │   │       │   ├── ic_baseline_arrow_forward_24.png
+│   │   │   │   │       │   ├── ic_settings_black_24dp.png
+│   │   │   │   │       │   ├── leo_logout_24.png
+│   │   │   │   │       │   ├── leo_settings_24.png
+│   │   │   │   │       │   ├── leo_share.png
+│   │   │   │   │       │   ├── leo_update_24.png
+│   │   │   │   │       │   ├── login_mail.png
+│   │   │   │   │       │   ├── login_password.png
+│   │   │   │   │       │   ├── login_person.png
+│   │   │   │   │       │   ├── login_phone.png
+│   │   │   │   │       │   ├── not_in_trouble_main.png
+│   │   │   │   │       │   ├── precautions_main.png
+│   │   │   │   │       │   ├── recent_crime_news_main.png
+│   │   │   │   │       │   ├── settings_fall.png
+│   │   │   │   │       │   └── travel_safe.png
+│   │   │   │   │       └── drawable-xxxhdpi
+│   │   │   │   │           ├── ic_baseline_arrow_forward_24.png
+│   │   │   │   │           ├── ic_settings_black_24dp.png
+│   │   │   │   │           ├── leo_logout_24.png
+│   │   │   │   │           ├── leo_settings_24.png
+│   │   │   │   │           ├── leo_share.png
+│   │   │   │   │           ├── leo_update_24.png
+│   │   │   │   │           ├── login_mail.png
+│   │   │   │   │           ├── login_password.png
+│   │   │   │   │           ├── login_person.png
+│   │   │   │   │           ├── login_phone.png
+│   │   │   │   │           ├── not_in_trouble_main.png
+│   │   │   │   │           ├── precautions_main.png
+│   │   │   │   │           ├── recent_crime_news_main.png
+│   │   │   │   │           ├── settings_fall.png
+│   │   │   │   │           └── travel_safe.png
+│   │   │   │   └── resValues
+│   │   │   │       └── debug
+│   │   │   └── source
+│   │   │       ├── buildConfig
+│   │   │       │   └── debug
+│   │   │       │       └── com
+│   │   │       │           └── rohit2810
+│   │   │       │               └── leo_kotlin
+│   │   │       │                   └── BuildConfig.java
+│   │   │       ├── dataBinding
+│   │   │       │   └── trigger
+│   │   │       │       └── debug
+│   │   │       │           └── com
+│   │   │       │               └── rohit2810
+│   │   │       │                   └── leo_kotlin
+│   │   │       │                       └── DataBindingInfo.java
+│   │   │       ├── kapt
+│   │   │       │   └── debug
+│   │   │       │       ├── androidx
+│   │   │       │       │   └── databinding
+│   │   │       │       │       ├── DataBinderMapperImpl.java
+│   │   │       │       │       ├── DataBindingComponent.java
+│   │   │       │       │       └── library
+│   │   │       │       │           └── baseAdapters
+│   │   │       │       │               └── BR.java
+│   │   │       │       └── com
+│   │   │       │           └── rohit2810
+│   │   │       │               └── leo_kotlin
+│   │   │       │                   ├── BR.java
+│   │   │       │                   ├── DataBinderMapperImpl.java
+│   │   │       │                   ├── database
+│   │   │       │                   │   ├── LeoDatabase_Impl.java
+│   │   │       │                   │   └── UserDao_Impl.java
+│   │   │       │                   ├── databinding
+│   │   │       │                   │   ├── FragmentEmergencyContactsBindingImpl.java
+│   │   │       │                   │   ├── FragmentLoginBindingImpl.java
+│   │   │       │                   │   ├── FragmentMainBindingImpl.java
+│   │   │       │                   │   ├── FragmentPermissionRequestBindingImpl.java
+│   │   │       │                   │   ├── FragmentRegisterBindingImpl.java
+│   │   │       │                   │   ├── FragmentSettingsBindingImpl.java
+│   │   │       │                   │   ├── FragmentVerifyOtpBindingImpl.java
+│   │   │       │                   │   └── LayourMainBindingImpl.java
+│   │   │       │                   └── generated
+│   │   │       │                       └── callback
+│   │   │       │                           └── OnClickListener.java
+│   │   │       ├── kaptKotlin
+│   │   │       │   ├── debug
+│   │   │       │   ├── debugAndroidTest
+│   │   │       │   ├── debugUnitTest
+│   │   │       │   ├── release
+│   │   │       │   └── releaseUnitTest
+│   │   │       └── navigation-args
+│   │   │           └── debug
+│   │   │               └── com
+│   │   │                   └── rohit2810
+│   │   │                       └── leo_kotlin
+│   │   │                           └── ui
+│   │   │                               ├── emergencyContacts
+│   │   │                               │   ├── EmergencyContactsFragmentArgs.kt
+│   │   │                               │   └── EmergencyContactsFragmentDirections.kt
+│   │   │                               ├── login
+│   │   │                               │   └── LoginFragmentDirections.kt
+│   │   │                               ├── main
+│   │   │                               │   └── MainFragmentDirections.kt
+│   │   │                               ├── otp
+│   │   │                               │   ├── VerifyOtpFragmentArgs.kt
+│   │   │                               │   └── VerifyOtpFragmentDirections.kt
+│   │   │                               ├── permissionRequest
+│   │   │                               │   └── PermissionRequestFragmentDirections.kt
+│   │   │                               ├── register
+│   │   │                               │   └── RegisterFragmentDirections.kt
+│   │   │                               ├── settings
+│   │   │                               │   └── SettingsFragmentDirections.kt
+│   │   │                               └── splash
+│   │   │                                   └── SplashFragmentDirections.kt
+│   │   ├── intermediates
+│   │   │   ├── annotation_processor_list
+│   │   │   │   └── debug
+│   │   │   │       └── annotationProcessors.json
+│   │   │   ├── blame
+│   │   │   │   └── res
+│   │   │   │       └── debug
+│   │   │   │           ├── multi-v2
+│   │   │   │           │   ├── debug.json
+│   │   │   │           │   ├── values-af.json
+│   │   │   │           │   ├── values-am.json
+│   │   │   │           │   ├── values-ar.json
+│   │   │   │           │   ├── values-as.json
+│   │   │   │           │   ├── values-az.json
+│   │   │   │           │   ├── values-b+sr+Latn.json
+│   │   │   │           │   ├── values-be.json
+│   │   │   │           │   ├── values-bg.json
+│   │   │   │           │   ├── values-bn.json
+│   │   │   │           │   ├── values-bs.json
+│   │   │   │           │   ├── values-ca.json
+│   │   │   │           │   ├── values-cs.json
+│   │   │   │           │   ├── values-da.json
+│   │   │   │           │   ├── values-de.json
+│   │   │   │           │   ├── values-el.json
+│   │   │   │           │   ├── values-en-rAU.json
+│   │   │   │           │   ├── values-en-rCA.json
+│   │   │   │           │   ├── values-en-rGB.json
+│   │   │   │           │   ├── values-en-rIN.json
+│   │   │   │           │   ├── values-en-rXC.json
+│   │   │   │           │   ├── values-es-rUS.json
+│   │   │   │           │   ├── values-es.json
+│   │   │   │           │   ├── values-et.json
+│   │   │   │           │   ├── values-eu.json
+│   │   │   │           │   ├── values-fa.json
+│   │   │   │           │   ├── values-fi.json
+│   │   │   │           │   ├── values-fr-rCA.json
+│   │   │   │           │   ├── values-fr.json
+│   │   │   │           │   ├── values-gl.json
+│   │   │   │           │   ├── values-gu.json
+│   │   │   │           │   ├── values-h360dp-land-v13.json
+│   │   │   │           │   ├── values-h480dp-land-v13.json
+│   │   │   │           │   ├── values-h720dp-v13.json
+│   │   │   │           │   ├── values-hdpi-v4.json
+│   │   │   │           │   ├── values-hi.json
+│   │   │   │           │   ├── values-hr.json
+│   │   │   │           │   ├── values-hu.json
+│   │   │   │           │   ├── values-hy.json
+│   │   │   │           │   ├── values-in.json
+│   │   │   │           │   ├── values-is.json
+│   │   │   │           │   ├── values-it.json
+│   │   │   │           │   ├── values-iw.json
+│   │   │   │           │   ├── values-ja.json
+│   │   │   │           │   ├── values-ka.json
+│   │   │   │           │   ├── values-kk.json
+│   │   │   │           │   ├── values-km.json
+│   │   │   │           │   ├── values-kn.json
+│   │   │   │           │   ├── values-ko.json
+│   │   │   │           │   ├── values-ky.json
+│   │   │   │           │   ├── values-land.json
+│   │   │   │           │   ├── values-large-v4.json
+│   │   │   │           │   ├── values-ldltr-v21.json
+│   │   │   │           │   ├── values-lo.json
+│   │   │   │           │   ├── values-lt.json
+│   │   │   │           │   ├── values-lv.json
+│   │   │   │           │   ├── values-mk.json
+│   │   │   │           │   ├── values-ml.json
+│   │   │   │           │   ├── values-mn.json
+│   │   │   │           │   ├── values-mr.json
+│   │   │   │           │   ├── values-ms.json
+│   │   │   │           │   ├── values-my.json
+│   │   │   │           │   ├── values-nb.json
+│   │   │   │           │   ├── values-ne.json
+│   │   │   │           │   ├── values-night-v8.json
+│   │   │   │           │   ├── values-nl.json
+│   │   │   │           │   ├── values-or.json
+│   │   │   │           │   ├── values-pa.json
+│   │   │   │           │   ├── values-pl.json
+│   │   │   │           │   ├── values-port.json
+│   │   │   │           │   ├── values-pt-rBR.json
+│   │   │   │           │   ├── values-pt-rPT.json
+│   │   │   │           │   ├── values-pt.json
+│   │   │   │           │   ├── values-ro.json
+│   │   │   │           │   ├── values-ru.json
+│   │   │   │           │   ├── values-si.json
+│   │   │   │           │   ├── values-sk.json
+│   │   │   │           │   ├── values-sl.json
+│   │   │   │           │   ├── values-small-v4.json
+│   │   │   │           │   ├── values-sq.json
+│   │   │   │           │   ├── values-sr.json
+│   │   │   │           │   ├── values-sv.json
+│   │   │   │           │   ├── values-sw.json
+│   │   │   │           │   ├── values-sw600dp-v13.json
+│   │   │   │           │   ├── values-ta.json
+│   │   │   │           │   ├── values-te.json
+│   │   │   │           │   ├── values-th.json
+│   │   │   │           │   ├── values-tl.json
+│   │   │   │           │   ├── values-tr.json
+│   │   │   │           │   ├── values-uk.json
+│   │   │   │           │   ├── values-ur.json
+│   │   │   │           │   ├── values-uz.json
+│   │   │   │           │   ├── values-v16.json
+│   │   │   │           │   ├── values-v17.json
+│   │   │   │           │   ├── values-v18.json
+│   │   │   │           │   ├── values-v21.json
+│   │   │   │           │   ├── values-v22.json
+│   │   │   │           │   ├── values-v23.json
+│   │   │   │           │   ├── values-v24.json
+│   │   │   │           │   ├── values-v25.json
+│   │   │   │           │   ├── values-v26.json
+│   │   │   │           │   ├── values-v28.json
+│   │   │   │           │   ├── values-vi.json
+│   │   │   │           │   ├── values-w360dp-port-v13.json
+│   │   │   │           │   ├── values-w480dp-port-v13.json
+│   │   │   │           │   ├── values-watch-v20.json
+│   │   │   │           │   ├── values-watch-v21.json
+│   │   │   │           │   ├── values-xlarge-v4.json
+│   │   │   │           │   ├── values-zh-rCN.json
+│   │   │   │           │   ├── values-zh-rHK.json
+│   │   │   │           │   ├── values-zh-rTW.json
+│   │   │   │           │   ├── values-zu.json
+│   │   │   │           │   └── values.json
+│   │   │   │           └── single
+│   │   │   │               ├── debug.json
+│   │   │   │               └── layout.json
+│   │   │   ├── bundle_manifest
+│   │   │   │   └── debug
+│   │   │   │       └── bundle-manifest
+│   │   │   │           ├── AndroidManifest.xml
+│   │   │   │           └── output.json
+│   │   │   ├── compatible_screen_manifest
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           └── output.json
+│   │   │   ├── compile_and_runtime_not_namespaced_r_class_jar
+│   │   │   │   └── debug
+│   │   │   │       └── R.jar
+│   │   │   ├── data_binding_artifact
+│   │   │   │   └── debug
+│   │   │   │       ├── kaptDebugKotlin
+│   │   │   │       │   ├── com.rohit2810.leo_kotlin-br.bin
+│   │   │   │       │   └── com.rohit2810.leo_kotlin-setter_store.json
+│   │   │   │       └── out
+│   │   │   ├── data_binding_base_class_log_artifact
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           └── com.rohit2810.leo_kotlin-binding_classes.json
+│   │   │   ├── data_binding_base_class_logs_dependency_artifacts
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           └── androidx.databinding.library.baseAdapters-binding_classes.json
+│   │   │   ├── data_binding_dependency_artifacts
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           ├── androidx.databinding.library.baseAdapters-br.bin
+│   │   │   │           └── androidx.databinding.library.baseAdapters-setter_store.json
+│   │   │   ├── data_binding_layout_info_type_merge
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           ├── fragment_emergency_contacts-layout.xml
+│   │   │   │           ├── fragment_login-layout.xml
+│   │   │   │           ├── fragment_main-layout.xml
+│   │   │   │           ├── fragment_permission_request-layout.xml
+│   │   │   │           ├── fragment_register-layout.xml
+│   │   │   │           ├── fragment_settings-layout.xml
+│   │   │   │           ├── fragment_verify_otp-layout.xml
+│   │   │   │           └── layour_main-layout.xml
+│   │   │   ├── dex
+│   │   │   │   └── debug
+│   │   │   │       ├── mergeDexDebug
+│   │   │   │       │   ├── classes.dex
+│   │   │   │       │   ├── classes2.dex
+│   │   │   │       │   └── classes3.dex
+│   │   │   │       ├── mergeExtDexDebug
+│   │   │   │       │   ├── classes.dex
+│   │   │   │       │   └── classes2.dex
+│   │   │   │       ├── mergeLibDexDebug
+│   │   │   │       └── mergeProjectDexDebug
+│   │   │   │           └── classes.dex
+│   │   │   ├── dex_archive_input_jar_hashes
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── duplicate_classes_check
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── external_file_lib_dex_archives
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── external_libs_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── feature_data_binding_base_feature_info
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           └── all_features.json
+│   │   │   ├── incremental
+│   │   │   │   ├── dataBindingGenBaseClassesDebug
+│   │   │   │   │   └── base_builder_log.json
+│   │   │   │   ├── debug-mergeJavaRes
+│   │   │   │   │   ├── merge-state
+│   │   │   │   │   └── zip-cache
+│   │   │   │   │       ├── +7AwkN+BnVO+yLmHgxEtAVKVu_o=
+│   │   │   │   │       ├── 05f+cG4m7jRdyCKeukmLXxld8OM=
+│   │   │   │   │       ├── 0ZMsopJtutdg+K5v9xaf5DyMscI=
+│   │   │   │   │       ├── 0qH32mf6k10RCdbBcrP4_5_5j4I=
+│   │   │   │   │       ├── 2HQOqdU1UAW9OiUvmgha4ORbTZY=
+│   │   │   │   │       ├── 2TcbCz9q9b4cxIuG+XN0YXpcnSE=
+│   │   │   │   │       ├── 2Xvr4Pr2X2wzQ3UWTl4TXXmF5IA=
+│   │   │   │   │       ├── 4+vFqsro_0b4us9HvU6T+SRqTjg=
+│   │   │   │   │       ├── 58NXgUVxn_yhMdMWlFGyN5_nyOY=
+│   │   │   │   │       ├── 5L02dEMM+FjhIXeYJsY8mo1zczg=
+│   │   │   │   │       ├── 5cOz16MnjUaVCvK5waQlxwjbszo=
+│   │   │   │   │       ├── 5hgM0_A8lgo4_hTTkqeQFx8QIaU=
+│   │   │   │   │       ├── 7GgPnm0YQWR9WPqG1SuuM3oVEGY=
+│   │   │   │   │       ├── 7yr39Hd6nh12Z6byrJXZSEba7q0=
+│   │   │   │   │       ├── 8C9SUc6T+fQIJODhA8mJoOCSEAs=
+│   │   │   │   │       ├── BVJx50v02doJuEvCuXivY4q4lOQ=
+│   │   │   │   │       ├── BtqFKJTk3T1Y8VdvVeRb_QH7N5E=
+│   │   │   │   │       ├── C7uGng+SV_wlQIxKyQ7FRvEdW70=
+│   │   │   │   │       ├── CPrZgMmfJyB_bPxPilclSqXvGWY=
+│   │   │   │   │       ├── CS2vDsw4nMOF11_zlpHBpGnscNE=
+│   │   │   │   │       ├── DEYoIsWfC0E0d+eubvBXOh1OX30=
+│   │   │   │   │       ├── DfvC3+Z+SoGuxR+jA7O0GhLGuWM=
+│   │   │   │   │       ├── Ep5iLbRRa0KpnA6nCgPo8Xomav0=
+│   │   │   │   │       ├── FPqQg56WAw9FebiTrp6Qk__L8GU=
+│   │   │   │   │       ├── FQ6EiAXomFR04jMaFLqnrF9LLbI=
+│   │   │   │   │       ├── FkSMI6raxN0bwTZQTwM58bJaBs0=
+│   │   │   │   │       ├── HTs4PfM1jChw3ooVLWnl8cUQ3VA=
+│   │   │   │   │       ├── HbmCytcarRSnNehUIYnAMjM8plQ=
+│   │   │   │   │       ├── IXLubMH8cxkK7hH+aDH27HNuCvs=
+│   │   │   │   │       ├── Ixwh7fXoUIi2J3x3F2wTRkaWcNE=
+│   │   │   │   │       ├── JhQmT7+kl0i_O45ymWH_pUdOW4M=
+│   │   │   │   │       ├── KPyYM7YGMAPcRwu4g4nG2sGi7HM=
+│   │   │   │   │       ├── L_yCQNs77my8mICsESTa_x7jR5E=
+│   │   │   │   │       ├── LyHfy2f8TN9BRXvvykD7TQpwLH8=
+│   │   │   │   │       ├── MCpFY6SymTkxZEBDxKhnv_ZJz1Q=
+│   │   │   │   │       ├── MPjcknN4Q6r28wUltdYXDviU6Mc=
+│   │   │   │   │       ├── NDK_Q7nsQLCdD6AYWNLk+4k4UUU=
+│   │   │   │   │       ├── NX1r61qktN7xMEUB_6oVOdmYfko=
+│   │   │   │   │       ├── OhlZ0zzfWV+T77vetk_qr6n66EA=
+│   │   │   │   │       ├── Pj6XIJQr0z9TfQWYb1KeXonnEo8=
+│   │   │   │   │       ├── QHuCvYlv+sAANwsdZ0p51Y_hcHc=
+│   │   │   │   │       ├── QgH3CWeY3mQkeac1SxcoUzlnhNc=
+│   │   │   │   │       ├── Qqa0ycAPX35h3NKfjJMTIYhWy84=
+│   │   │   │   │       ├── RQc3fak6sCoONp180Nvl_DreYO4=
+│   │   │   │   │       ├── RqniX6zq_wXRtKfcdaC91i6QyW0=
+│   │   │   │   │       ├── RvcxnHYnN2lkMLhoUWgKFOgjhWg=
+│   │   │   │   │       ├── TKu0uxT6NAfKRBnSJ8z1dENQlSw=
+│   │   │   │   │       ├── TjjC5iihvJVAYqqjfmmmP08Y5sY=
+│   │   │   │   │       ├── Tt43kX9LY27rG+hTufd5Ge+vxIE=
+│   │   │   │   │       ├── VvSz7oNaPY8+f8TDVeCAdJXL_0k=
+│   │   │   │   │       ├── XB7RDiq5gJFJ1RhaXLgX0INuDGc=
+│   │   │   │   │       ├── XCkVgsi9pRZ9GLDzyjHtg2+a4xA=
+│   │   │   │   │       ├── XbUltYPAUBkJs5C4UCMgO+fQ_hI=
+│   │   │   │   │       ├── YEOdwnYEESZHSolv_biyBzdMxZM=
+│   │   │   │   │       ├── Yc189ScgMdpmquAa4tnS6JTupDE=
+│   │   │   │   │       ├── Yd0+LRolzNSM8MZy0sNIBtNRtyo=
+│   │   │   │   │       ├── _2NIBnHaYDYoOb5uFwAKfJFhj5Y=
+│   │   │   │   │       ├── _wAG1_s9ruz1LZiVOgdl_Qq2IHk=
+│   │   │   │   │       ├── aDTnMIot61j4LQ4IXrS5JemJHgo=
+│   │   │   │   │       ├── aplI_65U6dKKecRUSKHmC25rgMg=
+│   │   │   │   │       ├── bg71dSY4lmzky3FFHhWFSKYvwuQ=
+│   │   │   │   │       ├── boVFEaaSQL4aPLc1wPYP1PfkllY=
+│   │   │   │   │       ├── cm+ChlcR2g0f5iHksFfZlGhLMnw=
+│   │   │   │   │       ├── eJEt61Buc9wPPW1sKSUzr4BKWus=
+│   │   │   │   │       ├── ev5f6+ol9upQqP217dquPUR+Hrs=
+│   │   │   │   │       ├── foyyVrVEYb+Lyr6Vdqnr2QUvT7U=
+│   │   │   │   │       ├── gFjFnPIponJJErN_I0eNun3vyvs=
+│   │   │   │   │       ├── gw8bn83Mp40sJX2FENw0ZAzS8Ts=
+│   │   │   │   │       ├── gx1L2HsndXODqM8wcqrcDMFT5oc=
+│   │   │   │   │       ├── hEF+y+uFcRe3SOorrZ7hRjbbzAI=
+│   │   │   │   │       ├── hRRdIuKxP_OtW8CTTXzF0h6jyAc=
+│   │   │   │   │       ├── hTHN4P3hjkPJBXKHLXyklUVMMmg=
+│   │   │   │   │       ├── hsi8x0ntK53EObP8Sd+3ddcMLp0=
+│   │   │   │   │       ├── im1Ij1GSU5gA8vrmOyDTK5G7LDI=
+│   │   │   │   │       ├── kbRnh1Buioy6_MR16N+VENgT1lk=
+│   │   │   │   │       ├── lplQqfvQZi6YOzcCQ_XUSqT00Pw=
+│   │   │   │   │       ├── luq_l+0BJE+_rdjf65JLTKbtJMQ=
+│   │   │   │   │       ├── o8cKH7P9fWShl6p1wuXsWZs1FmA=
+│   │   │   │   │       ├── oziB0H+OeZC6D06yjg1oPD_fzAY=
+│   │   │   │   │       ├── p5CAFgUFC15MUEwZzAxIMGlYJ6M=
+│   │   │   │   │       ├── pYDmNMOYS98fLHw4V+oEE7aawZw=
+│   │   │   │   │       ├── pnzDA7RcK4HohPUe2tV2d8hhm2Y=
+│   │   │   │   │       ├── ppK1kftH4_v7_O3TIxOF7ZrAGZI=
+│   │   │   │   │       ├── qRANQWDGKYpRd244S8kOFE1HPrc=
+│   │   │   │   │       ├── rU1_zzjah5FAVI195cNtvVrxgXA=
+│   │   │   │   │       ├── sUIh8fGZ1r8b8Pya+6HsyMhpPXw=
+│   │   │   │   │       ├── tJareIXrXbG4_GQE25qfU1t+zak=
+│   │   │   │   │       ├── tTUgiuP0cbtu5HHVcPFVOAT7mjw=
+│   │   │   │   │       ├── uZSfXX6BYIH5oFzekzYJhp4Vi6s=
+│   │   │   │   │       ├── v4EIDxewnlLAV6stZQYGN36aNWs=
+│   │   │   │   │       ├── vd_WxVZ49jJGZzDOUpTB+7KOCZY=
+│   │   │   │   │       ├── x40bIariEV6O87G1xWL_fGQcno8=
+│   │   │   │   │       ├── x_JZYaF7zG2mOU7ZyiBBbWltNy8=
+│   │   │   │   │       ├── ykyr58wEndC60g6Frkq4rJla9Ww=
+│   │   │   │   │       ├── zKMaDvpnQFZGDwti6jAOBz8Ck4w=
+│   │   │   │   │       ├── zluqVEZrzvSWaq15_zIvxLXlov4=
+│   │   │   │   │       └── zuPPQuTuorJpbz3GVFagiLY0Pn0=
+│   │   │   │   ├── debug-mergeNativeLibs
+│   │   │   │   │   ├── merge-state
+│   │   │   │   │   └── zip-cache
+│   │   │   │   │       ├── +7AwkN+BnVO+yLmHgxEtAVKVu_o=
+│   │   │   │   │       ├── 05f+cG4m7jRdyCKeukmLXxld8OM=
+│   │   │   │   │       ├── 0ZMsopJtutdg+K5v9xaf5DyMscI=
+│   │   │   │   │       ├── 0qH32mf6k10RCdbBcrP4_5_5j4I=
+│   │   │   │   │       ├── 2HQOqdU1UAW9OiUvmgha4ORbTZY=
+│   │   │   │   │       ├── 2TcbCz9q9b4cxIuG+XN0YXpcnSE=
+│   │   │   │   │       ├── 2Xvr4Pr2X2wzQ3UWTl4TXXmF5IA=
+│   │   │   │   │       ├── 4+vFqsro_0b4us9HvU6T+SRqTjg=
+│   │   │   │   │       ├── 58NXgUVxn_yhMdMWlFGyN5_nyOY=
+│   │   │   │   │       ├── 5L02dEMM+FjhIXeYJsY8mo1zczg=
+│   │   │   │   │       ├── 5cOz16MnjUaVCvK5waQlxwjbszo=
+│   │   │   │   │       ├── 5hgM0_A8lgo4_hTTkqeQFx8QIaU=
+│   │   │   │   │       ├── 7GgPnm0YQWR9WPqG1SuuM3oVEGY=
+│   │   │   │   │       ├── 7yr39Hd6nh12Z6byrJXZSEba7q0=
+│   │   │   │   │       ├── 8C9SUc6T+fQIJODhA8mJoOCSEAs=
+│   │   │   │   │       ├── BVJx50v02doJuEvCuXivY4q4lOQ=
+│   │   │   │   │       ├── BtqFKJTk3T1Y8VdvVeRb_QH7N5E=
+│   │   │   │   │       ├── C7uGng+SV_wlQIxKyQ7FRvEdW70=
+│   │   │   │   │       ├── CPrZgMmfJyB_bPxPilclSqXvGWY=
+│   │   │   │   │       ├── CS2vDsw4nMOF11_zlpHBpGnscNE=
+│   │   │   │   │       ├── DEYoIsWfC0E0d+eubvBXOh1OX30=
+│   │   │   │   │       ├── DfvC3+Z+SoGuxR+jA7O0GhLGuWM=
+│   │   │   │   │       ├── Ep5iLbRRa0KpnA6nCgPo8Xomav0=
+│   │   │   │   │       ├── FPqQg56WAw9FebiTrp6Qk__L8GU=
+│   │   │   │   │       ├── FQ6EiAXomFR04jMaFLqnrF9LLbI=
+│   │   │   │   │       ├── FkSMI6raxN0bwTZQTwM58bJaBs0=
+│   │   │   │   │       ├── HTs4PfM1jChw3ooVLWnl8cUQ3VA=
+│   │   │   │   │       ├── HbmCytcarRSnNehUIYnAMjM8plQ=
+│   │   │   │   │       ├── IXLubMH8cxkK7hH+aDH27HNuCvs=
+│   │   │   │   │       ├── Ixwh7fXoUIi2J3x3F2wTRkaWcNE=
+│   │   │   │   │       ├── JhQmT7+kl0i_O45ymWH_pUdOW4M=
+│   │   │   │   │       ├── KPyYM7YGMAPcRwu4g4nG2sGi7HM=
+│   │   │   │   │       ├── L_yCQNs77my8mICsESTa_x7jR5E=
+│   │   │   │   │       ├── LyHfy2f8TN9BRXvvykD7TQpwLH8=
+│   │   │   │   │       ├── MCpFY6SymTkxZEBDxKhnv_ZJz1Q=
+│   │   │   │   │       ├── MPjcknN4Q6r28wUltdYXDviU6Mc=
+│   │   │   │   │       ├── NDK_Q7nsQLCdD6AYWNLk+4k4UUU=
+│   │   │   │   │       ├── NX1r61qktN7xMEUB_6oVOdmYfko=
+│   │   │   │   │       ├── OhlZ0zzfWV+T77vetk_qr6n66EA=
+│   │   │   │   │       ├── Pj6XIJQr0z9TfQWYb1KeXonnEo8=
+│   │   │   │   │       ├── QHuCvYlv+sAANwsdZ0p51Y_hcHc=
+│   │   │   │   │       ├── QgH3CWeY3mQkeac1SxcoUzlnhNc=
+│   │   │   │   │       ├── Qqa0ycAPX35h3NKfjJMTIYhWy84=
+│   │   │   │   │       ├── RQc3fak6sCoONp180Nvl_DreYO4=
+│   │   │   │   │       ├── RqniX6zq_wXRtKfcdaC91i6QyW0=
+│   │   │   │   │       ├── RvcxnHYnN2lkMLhoUWgKFOgjhWg=
+│   │   │   │   │       ├── TKu0uxT6NAfKRBnSJ8z1dENQlSw=
+│   │   │   │   │       ├── TjjC5iihvJVAYqqjfmmmP08Y5sY=
+│   │   │   │   │       ├── Tt43kX9LY27rG+hTufd5Ge+vxIE=
+│   │   │   │   │       ├── VvSz7oNaPY8+f8TDVeCAdJXL_0k=
+│   │   │   │   │       ├── XB7RDiq5gJFJ1RhaXLgX0INuDGc=
+│   │   │   │   │       ├── XCkVgsi9pRZ9GLDzyjHtg2+a4xA=
+│   │   │   │   │       ├── XbUltYPAUBkJs5C4UCMgO+fQ_hI=
+│   │   │   │   │       ├── YEOdwnYEESZHSolv_biyBzdMxZM=
+│   │   │   │   │       ├── Yc189ScgMdpmquAa4tnS6JTupDE=
+│   │   │   │   │       ├── Yd0+LRolzNSM8MZy0sNIBtNRtyo=
+│   │   │   │   │       ├── _2NIBnHaYDYoOb5uFwAKfJFhj5Y=
+│   │   │   │   │       ├── _wAG1_s9ruz1LZiVOgdl_Qq2IHk=
+│   │   │   │   │       ├── aDTnMIot61j4LQ4IXrS5JemJHgo=
+│   │   │   │   │       ├── aplI_65U6dKKecRUSKHmC25rgMg=
+│   │   │   │   │       ├── bg71dSY4lmzky3FFHhWFSKYvwuQ=
+│   │   │   │   │       ├── boVFEaaSQL4aPLc1wPYP1PfkllY=
+│   │   │   │   │       ├── cm+ChlcR2g0f5iHksFfZlGhLMnw=
+│   │   │   │   │       ├── eJEt61Buc9wPPW1sKSUzr4BKWus=
+│   │   │   │   │       ├── ev5f6+ol9upQqP217dquPUR+Hrs=
+│   │   │   │   │       ├── foyyVrVEYb+Lyr6Vdqnr2QUvT7U=
+│   │   │   │   │       ├── gFjFnPIponJJErN_I0eNun3vyvs=
+│   │   │   │   │       ├── gw8bn83Mp40sJX2FENw0ZAzS8Ts=
+│   │   │   │   │       ├── gx1L2HsndXODqM8wcqrcDMFT5oc=
+│   │   │   │   │       ├── hEF+y+uFcRe3SOorrZ7hRjbbzAI=
+│   │   │   │   │       ├── hRRdIuKxP_OtW8CTTXzF0h6jyAc=
+│   │   │   │   │       ├── hTHN4P3hjkPJBXKHLXyklUVMMmg=
+│   │   │   │   │       ├── hsi8x0ntK53EObP8Sd+3ddcMLp0=
+│   │   │   │   │       ├── im1Ij1GSU5gA8vrmOyDTK5G7LDI=
+│   │   │   │   │       ├── kbRnh1Buioy6_MR16N+VENgT1lk=
+│   │   │   │   │       ├── lplQqfvQZi6YOzcCQ_XUSqT00Pw=
+│   │   │   │   │       ├── luq_l+0BJE+_rdjf65JLTKbtJMQ=
+│   │   │   │   │       ├── o8cKH7P9fWShl6p1wuXsWZs1FmA=
+│   │   │   │   │       ├── oziB0H+OeZC6D06yjg1oPD_fzAY=
+│   │   │   │   │       ├── p5CAFgUFC15MUEwZzAxIMGlYJ6M=
+│   │   │   │   │       ├── pYDmNMOYS98fLHw4V+oEE7aawZw=
+│   │   │   │   │       ├── pnzDA7RcK4HohPUe2tV2d8hhm2Y=
+│   │   │   │   │       ├── ppK1kftH4_v7_O3TIxOF7ZrAGZI=
+│   │   │   │   │       ├── qRANQWDGKYpRd244S8kOFE1HPrc=
+│   │   │   │   │       ├── rU1_zzjah5FAVI195cNtvVrxgXA=
+│   │   │   │   │       ├── sUIh8fGZ1r8b8Pya+6HsyMhpPXw=
+│   │   │   │   │       ├── tJareIXrXbG4_GQE25qfU1t+zak=
+│   │   │   │   │       ├── tTUgiuP0cbtu5HHVcPFVOAT7mjw=
+│   │   │   │   │       ├── uZSfXX6BYIH5oFzekzYJhp4Vi6s=
+│   │   │   │   │       ├── v4EIDxewnlLAV6stZQYGN36aNWs=
+│   │   │   │   │       ├── vd_WxVZ49jJGZzDOUpTB+7KOCZY=
+│   │   │   │   │       ├── x40bIariEV6O87G1xWL_fGQcno8=
+│   │   │   │   │       ├── x_JZYaF7zG2mOU7ZyiBBbWltNy8=
+│   │   │   │   │       ├── ykyr58wEndC60g6Frkq4rJla9Ww=
+│   │   │   │   │       ├── zKMaDvpnQFZGDwti6jAOBz8Ck4w=
+│   │   │   │   │       ├── zluqVEZrzvSWaq15_zIvxLXlov4=
+│   │   │   │   │       └── zuPPQuTuorJpbz3GVFagiLY0Pn0=
+│   │   │   │   ├── generateSafeArgsDebug
+│   │   │   │   │   └── file_mappings.json
+│   │   │   │   ├── mergeDebugAssets
+│   │   │   │   │   └── merger.xml
+│   │   │   │   ├── mergeDebugJniLibFolders
+│   │   │   │   │   └── merger.xml
+│   │   │   │   ├── mergeDebugResources
+│   │   │   │   │   ├── compile-file-map.properties
+│   │   │   │   │   ├── merged.dir
+│   │   │   │   │   ├── merger.xml
+│   │   │   │   │   └── stripped.dir
+│   │   │   │   │       └── layout
+│   │   │   │   │           └── quick_settings_user_not_available_dialog.xml
+│   │   │   │   ├── mergeDebugShaders
+│   │   │   │   │   └── merger.xml
+│   │   │   │   ├── packageDebug
+│   │   │   │   │   └── tmp
+│   │   │   │   │       └── debug
+│   │   │   │   │           ├── dex-renamer-state.txt
+│   │   │   │   │           └── zip-cache
+│   │   │   │   │               ├── androidResources
+│   │   │   │   │               └── javaResources0
+│   │   │   │   └── processDebugResources
+│   │   │   ├── instant_app_manifest
+│   │   │   │   └── debug
+│   │   │   │       ├── AndroidManifest.xml
+│   │   │   │       └── output.json
+│   │   │   ├── javac
+│   │   │   │   └── debug
+│   │   │   │       └── classes
+│   │   │   │           ├── androidx
+│   │   │   │           │   └── databinding
+│   │   │   │           │       ├── DataBinderMapperImpl.class
+│   │   │   │           │       ├── DataBindingComponent.class
+│   │   │   │           │       └── library
+│   │   │   │           │           └── baseAdapters
+│   │   │   │           │               └── BR.class
+│   │   │   │           └── com
+│   │   │   │               └── rohit2810
+│   │   │   │                   └── leo_kotlin
+│   │   │   │                       ├── BR.class
+│   │   │   │                       ├── BuildConfig.class
+│   │   │   │                       ├── DataBinderMapperImpl$InnerBrLookup.class
+│   │   │   │                       ├── DataBinderMapperImpl$InnerLayoutIdLookup.class
+│   │   │   │                       ├── DataBinderMapperImpl.class
+│   │   │   │                       ├── DataBindingInfo.class
+│   │   │   │                       ├── database
+│   │   │   │                       │   ├── LeoDatabase_Impl$1.class
+│   │   │   │                       │   ├── LeoDatabase_Impl.class
+│   │   │   │                       │   ├── UserDao_Impl$1.class
+│   │   │   │                       │   ├── UserDao_Impl$2.class
+│   │   │   │                       │   ├── UserDao_Impl$3.class
+│   │   │   │                       │   └── UserDao_Impl.class
+│   │   │   │                       ├── databinding
+│   │   │   │                       │   ├── FragmentEmergencyContactsBinding.class
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$1.class
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$2.class
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$3.class
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$4.class
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$5.class
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl.class
+│   │   │   │                       │   ├── FragmentLoginBinding.class
+│   │   │   │                       │   ├── FragmentLoginBindingImpl$1.class
+│   │   │   │                       │   ├── FragmentLoginBindingImpl$2.class
+│   │   │   │                       │   ├── FragmentLoginBindingImpl.class
+│   │   │   │                       │   ├── FragmentMainBinding.class
+│   │   │   │                       │   ├── FragmentMainBindingImpl.class
+│   │   │   │                       │   ├── FragmentPermissionRequestBinding.class
+│   │   │   │                       │   ├── FragmentPermissionRequestBindingImpl.class
+│   │   │   │                       │   ├── FragmentRegisterBinding.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$1.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$2.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$3.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$4.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$5.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$6.class
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl.class
+│   │   │   │                       │   ├── FragmentSettingsBinding.class
+│   │   │   │                       │   ├── FragmentSettingsBindingImpl.class
+│   │   │   │                       │   ├── FragmentVerifyOtpBinding.class
+│   │   │   │                       │   ├── FragmentVerifyOtpBindingImpl$1.class
+│   │   │   │                       │   ├── FragmentVerifyOtpBindingImpl.class
+│   │   │   │                       │   ├── LayourMainBinding.class
+│   │   │   │                       │   └── LayourMainBindingImpl.class
+│   │   │   │                       └── generated
+│   │   │   │                           └── callback
+│   │   │   │                               ├── OnClickListener$Listener.class
+│   │   │   │                               └── OnClickListener.class
+│   │   │   ├── legacy_multidex_aapt_derived_proguard_rules
+│   │   │   │   └── debug
+│   │   │   │       └── manifest_keep.txt
+│   │   │   ├── legacy_multidex_main_dex_list
+│   │   │   │   └── debug
+│   │   │   │       └── mainDexList.txt
+│   │   │   ├── manifest_merge_blame_file
+│   │   │   │   └── debug
+│   │   │   │       └── manifest-merger-blame-debug-report.txt
+│   │   │   ├── merged_assets
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── merged_java_res
+│   │   │   │   └── debug
+│   │   │   │       └── out.jar
+│   │   │   ├── merged_jni_libs
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── merged_manifests
+│   │   │   │   └── debug
+│   │   │   │       ├── AndroidManifest.xml
+│   │   │   │       └── output.json
+│   │   │   ├── merged_native_libs
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── merged_shaders
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── metadata_application_id
+│   │   │   │   └── debug
+│   │   │   │       └── application-id.txt
+│   │   │   ├── metadata_feature_manifest
+│   │   │   │   └── debug
+│   │   │   │       └── metadata-feature
+│   │   │   │           └── output.json
+│   │   │   ├── mixed_scope_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── navigation_json
+│   │   │   │   └── debug
+│   │   │   │       └── navigation.json
+│   │   │   ├── processed_res
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           ├── output.json
+│   │   │   │           └── resources-debug.ap_
+│   │   │   ├── project_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   │           ├── 86439f05fa5e4542b34046cc9bf49f78bd573c186f9771b75148273bdf7612f8_0.jar
+│   │   │   │           ├── 86439f05fa5e4542b34046cc9bf49f78bd573c186f9771b75148273bdf7612f8_1.jar
+│   │   │   │           ├── 86439f05fa5e4542b34046cc9bf49f78bd573c186f9771b75148273bdf7612f8_2.jar
+│   │   │   │           ├── 86439f05fa5e4542b34046cc9bf49f78bd573c186f9771b75148273bdf7612f8_3.jar
+│   │   │   │           ├── androidx
+│   │   │   │           │   └── databinding
+│   │   │   │           │       ├── DataBinderMapperImpl.dex
+│   │   │   │           │       ├── DataBindingComponent.dex
+│   │   │   │           │       └── library
+│   │   │   │           │           └── baseAdapters
+│   │   │   │           │               └── BR.dex
+│   │   │   │           └── com
+│   │   │   │               └── rohit2810
+│   │   │   │                   └── leo_kotlin
+│   │   │   │                       ├── Application$Companion.dex
+│   │   │   │                       ├── Application.dex
+│   │   │   │                       ├── BR.dex
+│   │   │   │                       ├── BuildConfig.dex
+│   │   │   │                       ├── DataBinderMapperImpl$InnerBrLookup.dex
+│   │   │   │                       ├── DataBinderMapperImpl$InnerLayoutIdLookup.dex
+│   │   │   │                       ├── DataBinderMapperImpl.dex
+│   │   │   │                       ├── DataBindingInfo.dex
+│   │   │   │                       ├── MainActivity.dex
+│   │   │   │                       ├── NetworkUtils
+│   │   │   │                       │   ├── NetworkConnectionInterceptor.dex
+│   │   │   │                       │   └── NoConnectivityException.dex
+│   │   │   │                       ├── database
+│   │   │   │                       │   ├── LeoDatabase.dex
+│   │   │   │                       │   ├── LeoDatabase_Impl$1.dex
+│   │   │   │                       │   ├── LeoDatabase_Impl.dex
+│   │   │   │                       │   ├── NewsDao.dex
+│   │   │   │                       │   ├── UserDao.dex
+│   │   │   │                       │   ├── UserDaoKt$getDatabase$1$1.dex
+│   │   │   │                       │   ├── UserDaoKt.dex
+│   │   │   │                       │   ├── UserDao_Impl$1.dex
+│   │   │   │                       │   ├── UserDao_Impl$2.dex
+│   │   │   │                       │   ├── UserDao_Impl$3.dex
+│   │   │   │                       │   └── UserDao_Impl.dex
+│   │   │   │                       ├── databinding
+│   │   │   │                       │   ├── FragmentEmergencyContactsBinding.dex
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$1.dex
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$2.dex
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$3.dex
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$4.dex
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl$5.dex
+│   │   │   │                       │   ├── FragmentEmergencyContactsBindingImpl.dex
+│   │   │   │                       │   ├── FragmentLoginBinding.dex
+│   │   │   │                       │   ├── FragmentLoginBindingImpl$1.dex
+│   │   │   │                       │   ├── FragmentLoginBindingImpl$2.dex
+│   │   │   │                       │   ├── FragmentLoginBindingImpl.dex
+│   │   │   │                       │   ├── FragmentMainBinding.dex
+│   │   │   │                       │   ├── FragmentMainBindingImpl.dex
+│   │   │   │                       │   ├── FragmentPermissionRequestBinding.dex
+│   │   │   │                       │   ├── FragmentPermissionRequestBindingImpl.dex
+│   │   │   │                       │   ├── FragmentRegisterBinding.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$1.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$2.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$3.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$4.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$5.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl$6.dex
+│   │   │   │                       │   ├── FragmentRegisterBindingImpl.dex
+│   │   │   │                       │   ├── FragmentSettingsBinding.dex
+│   │   │   │                       │   ├── FragmentSettingsBindingImpl.dex
+│   │   │   │                       │   ├── FragmentVerifyOtpBinding.dex
+│   │   │   │                       │   ├── FragmentVerifyOtpBindingImpl$1.dex
+│   │   │   │                       │   ├── FragmentVerifyOtpBindingImpl.dex
+│   │   │   │                       │   ├── LayourMainBinding.dex
+│   │   │   │                       │   └── LayourMainBindingImpl.dex
+│   │   │   │                       ├── generated
+│   │   │   │                       │   └── callback
+│   │   │   │                       │       ├── OnClickListener$Listener.dex
+│   │   │   │                       │       └── OnClickListener.dex
+│   │   │   │                       ├── models
+│   │   │   │                       │   ├── Article$Creator.dex
+│   │   │   │                       │   ├── Article.dex
+│   │   │   │                       │   ├── EmergencyContactsModel.dex
+│   │   │   │                       │   ├── OTP.dex
+│   │   │   │                       │   ├── Trouble.dex
+│   │   │   │                       │   ├── UnMarkTrouble.dex
+│   │   │   │                       │   ├── User$Creator.dex
+│   │   │   │                       │   ├── User.dex
+│   │   │   │                       │   ├── UserDataBaseKt.dex
+│   │   │   │                       │   ├── UserDatabaseModule.dex
+│   │   │   │                       │   ├── Username.dex
+│   │   │   │                       │   └── ValidateOTP.dex
+│   │   │   │                       ├── network
+│   │   │   │                       │   ├── NewsApiService.dex
+│   │   │   │                       │   ├── UserApi.dex
+│   │   │   │                       │   ├── UserServiceApi.dex
+│   │   │   │                       │   └── UserServiceApiKt.dex
+│   │   │   │                       ├── receivers
+│   │   │   │                       │   ├── LocationUpdatesReceiver.dex
+│   │   │   │                       │   ├── NotificationReceiver$Companion.dex
+│   │   │   │                       │   ├── NotificationReceiver.dex
+│   │   │   │                       │   ├── NotificationReceiverKt.dex
+│   │   │   │                       │   ├── PowerButtonReceiver$checkAlert$1.dex
+│   │   │   │                       │   ├── PowerButtonReceiver.dex
+│   │   │   │                       │   ├── TroubleReceiver$onReceive$1.dex
+│   │   │   │                       │   ├── TroubleReceiver.dex
+│   │   │   │                       │   ├── UnMarkTroubleReceiver.dex
+│   │   │   │                       │   └── WifiP2PReceiver.dex
+│   │   │   │                       ├── repository
+│   │   │   │                       │   ├── TroubleRepository$Companion$getInstance$1$1.dex
+│   │   │   │                       │   ├── TroubleRepository$Companion.dex
+│   │   │   │                       │   ├── TroubleRepository$checkLogin$1.dex
+│   │   │   │                       │   ├── TroubleRepository$checkUsername$1.dex
+│   │   │   │                       │   ├── TroubleRepository$loginUser$1.dex
+│   │   │   │                       │   ├── TroubleRepository$logoutUser$2.dex
+│   │   │   │                       │   ├── TroubleRepository$markTrouble$1.dex
+│   │   │   │                       │   ├── TroubleRepository$markTroubleP2P$1.dex
+│   │   │   │                       │   ├── TroubleRepository$registerUser$1.dex
+│   │   │   │                       │   ├── TroubleRepository$sendOtp$1.dex
+│   │   │   │                       │   ├── TroubleRepository$unMarkTrouble$1.dex
+│   │   │   │                       │   ├── TroubleRepository$updateUser$1.dex
+│   │   │   │                       │   ├── TroubleRepository$verifyOtp$1.dex
+│   │   │   │                       │   └── TroubleRepository.dex
+│   │   │   │                       ├── services
+│   │   │   │                       │   ├── FallDetectionService$onSensorChanged$$inlined$let$lambda$1.dex
+│   │   │   │                       │   ├── FallDetectionService.dex
+│   │   │   │                       │   ├── LocationService$Companion.dex
+│   │   │   │                       │   ├── LocationService$onCreate$2.dex
+│   │   │   │                       │   ├── LocationService$unsubscribeToLocationUpdates$1.dex
+│   │   │   │                       │   ├── LocationService.dex
+│   │   │   │                       │   └── wifidirect
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$ClientClass.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$SendReceive.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$ServerClass.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$discoverPeers$1$onFailure$1.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$discoverPeers$1.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$handler$1$handleMessage$1.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$handler$1$handleMessage$2.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$handler$1.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$onCreate$1.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo$onCreate$2.dex
+│   │   │   │                       │       ├── WiFiP2PServiceLeo.dex
+│   │   │   │                       │       └── WiFiP2PServiceLeoKt.dex
+│   │   │   │                       ├── ui
+│   │   │   │                       │   ├── BottomSheetDialogLeo.dex
+│   │   │   │                       │   ├── emergencyContacts
+│   │   │   │                       │   │   ├── EmergencyContactsFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragment$onCreateView$3.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragment.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragmentArgs$Companion.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragmentArgs.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── EmergencyContactsFragmentDirections.dex
+│   │   │   │                       │   │   ├── EmergencyContactsViewModel$addUserAndNavigateToMain$1.dex
+│   │   │   │                       │   │   ├── EmergencyContactsViewModel.dex
+│   │   │   │                       │   │   └── EmergencyContactsViewModelFactory.dex
+│   │   │   │                       │   ├── intro
+│   │   │   │                       │   │   ├── IntroActivity$onCreate$1.dex
+│   │   │   │                       │   │   ├── IntroActivity$onCreate$2.dex
+│   │   │   │                       │   │   ├── IntroActivity$onCreate$3.dex
+│   │   │   │                       │   │   ├── IntroActivity$onCreate$4.dex
+│   │   │   │                       │   │   ├── IntroActivity.dex
+│   │   │   │                       │   │   ├── IntroViewPageAdapter.dex
+│   │   │   │                       │   │   └── ScreenItem.dex
+│   │   │   │                       │   ├── login
+│   │   │   │                       │   │   ├── LoginFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── LoginFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── LoginFragment$onCreateView$3.dex
+│   │   │   │                       │   │   ├── LoginFragment$onCreateView$4.dex
+│   │   │   │                       │   │   ├── LoginFragment$onCreateView$callback$1.dex
+│   │   │   │                       │   │   ├── LoginFragment.dex
+│   │   │   │                       │   │   ├── LoginFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── LoginFragmentDirections.dex
+│   │   │   │                       │   │   ├── LoginViewModel$navigateToMain$$inlined$let$lambda$1.dex
+│   │   │   │                       │   │   ├── LoginViewModel.dex
+│   │   │   │                       │   │   └── LoginViewModelFactory.dex
+│   │   │   │                       │   ├── main
+│   │   │   │                       │   │   ├── MainFragment$buildAlertMessageNoGps$1.dex
+│   │   │   │                       │   │   ├── MainFragment$buildAlertMessageNoGps$2.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$3.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$4.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$5.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$6.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$7$1.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$7.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$8.dex
+│   │   │   │                       │   │   ├── MainFragment$onCreateView$callback$1.dex
+│   │   │   │                       │   │   ├── MainFragment.dex
+│   │   │   │                       │   │   ├── MainFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── MainFragmentDirections.dex
+│   │   │   │                       │   │   ├── MainViewModel$markTrouble$1.dex
+│   │   │   │                       │   │   ├── MainViewModel$unMarkTrouble$1.dex
+│   │   │   │                       │   │   ├── MainViewModel.dex
+│   │   │   │                       │   │   └── MainViewModelFactory.dex
+│   │   │   │                       │   ├── map
+│   │   │   │                       │   │   ├── MapsFragment$buildAlertMessageNoGps$1.dex
+│   │   │   │                       │   │   ├── MapsFragment$buildAlertMessageNoGps$2.dex
+│   │   │   │                       │   │   ├── MapsFragment$callback$1.dex
+│   │   │   │                       │   │   ├── MapsFragment.dex
+│   │   │   │                       │   │   └── MapsViewModel.dex
+│   │   │   │                       │   ├── news
+│   │   │   │                       │   │   ├── NewsAdapter$ViewHolder$bind$1.dex
+│   │   │   │                       │   │   ├── NewsAdapter$ViewHolder.dex
+│   │   │   │                       │   │   ├── NewsAdapter.dex
+│   │   │   │                       │   │   └── NewsFragment.dex
+│   │   │   │                       │   ├── otp
+│   │   │   │                       │   │   ├── VerifyOtpFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragment.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragmentArgs$Companion.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragmentArgs.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragmentDirections$ActionVerifyOtpFragmentToEmergencyContactsFragment.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── VerifyOtpFragmentDirections.dex
+│   │   │   │                       │   │   ├── VerifyOtpViewModel$resendOTP$1.dex
+│   │   │   │                       │   │   ├── VerifyOtpViewModel$verifyOTP$1.dex
+│   │   │   │                       │   │   ├── VerifyOtpViewModel.dex
+│   │   │   │                       │   │   └── VerifyOtpViewModelFactory.dex
+│   │   │   │                       │   ├── permissionRequest
+│   │   │   │                       │   │   ├── PermissionRequestFragment$onCreateView$1$$special$$inlined$let$lambda$1.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragment$onCreateView$3.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragment$onCreateView$4.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragment.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── PermissionRequestFragmentDirections.dex
+│   │   │   │                       │   │   └── PermissionRequestViewModel.dex
+│   │   │   │                       │   ├── quicksettings
+│   │   │   │                       │   │   ├── LeoToggle$onClick$1.dex
+│   │   │   │                       │   │   ├── LeoToggle$showNotLoggedInPrompt$1.dex
+│   │   │   │                       │   │   ├── LeoToggle$showSuccessPrompt$1.dex
+│   │   │   │                       │   │   ├── LeoToggle.dex
+│   │   │   │                       │   │   └── NotLoggedIn.dex
+│   │   │   │                       │   ├── register
+│   │   │   │                       │   │   ├── RegisterFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── RegisterFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── RegisterFragment$onCreateView$3.dex
+│   │   │   │                       │   │   ├── RegisterFragment.dex
+│   │   │   │                       │   │   ├── RegisterFragmentDirections$ActionRegisterFragmentToVerifyOtpFragment2.dex
+│   │   │   │                       │   │   ├── RegisterFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── RegisterFragmentDirections.dex
+│   │   │   │                       │   │   ├── RegisterViewModel$navigateToEmergencyNumbers$1.dex
+│   │   │   │                       │   │   ├── RegisterViewModel.dex
+│   │   │   │                       │   │   └── RegisterViewModelFactory.dex
+│   │   │   │                       │   ├── settings
+│   │   │   │                       │   │   ├── SettingsFragment$onCreateView$1.dex
+│   │   │   │                       │   │   ├── SettingsFragment$onCreateView$2.dex
+│   │   │   │                       │   │   ├── SettingsFragment$onCreateView$3.dex
+│   │   │   │                       │   │   ├── SettingsFragment$onCreateView$4.dex
+│   │   │   │                       │   │   ├── SettingsFragment.dex
+│   │   │   │                       │   │   ├── SettingsFragmentDirections$ActionSettingsFragmentToEmergencyContactsFragment2.dex
+│   │   │   │                       │   │   ├── SettingsFragmentDirections$Companion.dex
+│   │   │   │                       │   │   ├── SettingsFragmentDirections.dex
+│   │   │   │                       │   │   ├── SettingsViewModel$logoutUser$1.dex
+│   │   │   │                       │   │   ├── SettingsViewModel.dex
+│   │   │   │                       │   │   └── SettingsViewModelFactory.dex
+│   │   │   │                       │   └── splash
+│   │   │   │                       │       ├── SplashFragment$onCreateView$1.dex
+│   │   │   │                       │       ├── SplashFragment.dex
+│   │   │   │                       │       ├── SplashFragmentDirections$Companion.dex
+│   │   │   │                       │       ├── SplashFragmentDirections.dex
+│   │   │   │                       │       ├── SplashViewModel$checkLogin$1.dex
+│   │   │   │                       │       ├── SplashViewModel.dex
+│   │   │   │                       │       └── SplashViewModelFactory.dex
+│   │   │   │                       └── utils
+│   │   │   │                           ├── AudioKt.dex
+│   │   │   │                           ├── FallDetectionKt.dex
+│   │   │   │                           ├── FullScreenNotificationKt.dex
+│   │   │   │                           ├── HashUtilsKt.dex
+│   │   │   │                           ├── NotificationKt.dex
+│   │   │   │                           ├── PreferenceKt.dex
+│   │   │   │                           ├── SMSUtilsKt.dex
+│   │   │   │                           ├── ToastUtilsKt.dex
+│   │   │   │                           ├── UnlockKt.dex
+│   │   │   │                           ├── WifiP2PConnectUtilsKt$connectP2P$$inlined$also$lambda$1.dex
+│   │   │   │                           └── WifiP2PConnectUtilsKt.dex
+│   │   │   ├── res
+│   │   │   │   └── merged
+│   │   │   │       └── debug
+│   │   │   │           ├── anim_button_animation.xml.flat
+│   │   │   │           ├── anim_fade_in.xml.flat
+│   │   │   │           ├── anim_slide_in_left.xml.flat
+│   │   │   │           ├── anim_slide_in_right.xml.flat
+│   │   │   │           ├── anim_slide_out_left.xml.flat
+│   │   │   │           ├── anim_slide_out_right.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_ic_baseline_arrow_forward_24.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_ic_settings_black_24dp.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_leo_logout_24.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_leo_settings_24.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_leo_share.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_leo_update_24.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_login_mail.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_login_password.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_login_person.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_login_phone.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_not_in_trouble_main.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_precautions_main.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_recent_crime_news_main.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_settings_fall.xml.flat
+│   │   │   │           ├── drawable-anydpi-v21_travel_safe.xml.flat
+│   │   │   │           ├── drawable-hdpi_ic_baseline_arrow_forward_24.png.flat
+│   │   │   │           ├── drawable-hdpi_ic_settings_black_24dp.png.flat
+│   │   │   │           ├── drawable-hdpi_leo_logout_24.png.flat
+│   │   │   │           ├── drawable-hdpi_leo_settings_24.png.flat
+│   │   │   │           ├── drawable-hdpi_leo_share.png.flat
+│   │   │   │           ├── drawable-hdpi_leo_update_24.png.flat
+│   │   │   │           ├── drawable-hdpi_login_mail.png.flat
+│   │   │   │           ├── drawable-hdpi_login_password.png.flat
+│   │   │   │           ├── drawable-hdpi_login_person.png.flat
+│   │   │   │           ├── drawable-hdpi_login_phone.png.flat
+│   │   │   │           ├── drawable-hdpi_not_in_trouble_main.png.flat
+│   │   │   │           ├── drawable-hdpi_precautions_main.png.flat
+│   │   │   │           ├── drawable-hdpi_recent_crime_news_main.png.flat
+│   │   │   │           ├── drawable-hdpi_settings_fall.png.flat
+│   │   │   │           ├── drawable-hdpi_travel_safe.png.flat
+│   │   │   │           ├── drawable-ldpi_ic_baseline_arrow_forward_24.png.flat
+│   │   │   │           ├── drawable-ldpi_ic_settings_black_24dp.png.flat
+│   │   │   │           ├── drawable-ldpi_leo_logout_24.png.flat
+│   │   │   │           ├── drawable-ldpi_leo_settings_24.png.flat
+│   │   │   │           ├── drawable-ldpi_leo_share.png.flat
+│   │   │   │           ├── drawable-ldpi_leo_update_24.png.flat
+│   │   │   │           ├── drawable-ldpi_login_mail.png.flat
+│   │   │   │           ├── drawable-ldpi_login_password.png.flat
+│   │   │   │           ├── drawable-ldpi_login_person.png.flat
+│   │   │   │           ├── drawable-ldpi_login_phone.png.flat
+│   │   │   │           ├── drawable-ldpi_not_in_trouble_main.png.flat
+│   │   │   │           ├── drawable-ldpi_precautions_main.png.flat
+│   │   │   │           ├── drawable-ldpi_recent_crime_news_main.png.flat
+│   │   │   │           ├── drawable-ldpi_settings_fall.png.flat
+│   │   │   │           ├── drawable-ldpi_travel_safe.png.flat
+│   │   │   │           ├── drawable-mdpi_ic_baseline_arrow_forward_24.png.flat
+│   │   │   │           ├── drawable-mdpi_ic_settings_black_24dp.png.flat
+│   │   │   │           ├── drawable-mdpi_leo_logout_24.png.flat
+│   │   │   │           ├── drawable-mdpi_leo_settings_24.png.flat
+│   │   │   │           ├── drawable-mdpi_leo_share.png.flat
+│   │   │   │           ├── drawable-mdpi_leo_update_24.png.flat
+│   │   │   │           ├── drawable-mdpi_login_mail.png.flat
+│   │   │   │           ├── drawable-mdpi_login_password.png.flat
+│   │   │   │           ├── drawable-mdpi_login_person.png.flat
+│   │   │   │           ├── drawable-mdpi_login_phone.png.flat
+│   │   │   │           ├── drawable-mdpi_not_in_trouble_main.png.flat
+│   │   │   │           ├── drawable-mdpi_precautions_main.png.flat
+│   │   │   │           ├── drawable-mdpi_recent_crime_news_main.png.flat
+│   │   │   │           ├── drawable-mdpi_settings_fall.png.flat
+│   │   │   │           ├── drawable-mdpi_travel_safe.png.flat
+│   │   │   │           ├── drawable-v21_ic_menu_camera.xml.flat
+│   │   │   │           ├── drawable-v21_ic_menu_gallery.xml.flat
+│   │   │   │           ├── drawable-v21_ic_menu_slideshow.xml.flat
+│   │   │   │           ├── drawable-xhdpi_ic_baseline_arrow_forward_24.png.flat
+│   │   │   │           ├── drawable-xhdpi_ic_settings_black_24dp.png.flat
+│   │   │   │           ├── drawable-xhdpi_leo_logout_24.png.flat
+│   │   │   │           ├── drawable-xhdpi_leo_settings_24.png.flat
+│   │   │   │           ├── drawable-xhdpi_leo_share.png.flat
+│   │   │   │           ├── drawable-xhdpi_leo_update_24.png.flat
+│   │   │   │           ├── drawable-xhdpi_login_mail.png.flat
+│   │   │   │           ├── drawable-xhdpi_login_password.png.flat
+│   │   │   │           ├── drawable-xhdpi_login_person.png.flat
+│   │   │   │           ├── drawable-xhdpi_login_phone.png.flat
+│   │   │   │           ├── drawable-xhdpi_not_in_trouble_main.png.flat
+│   │   │   │           ├── drawable-xhdpi_precautions_main.png.flat
+│   │   │   │           ├── drawable-xhdpi_recent_crime_news_main.png.flat
+│   │   │   │           ├── drawable-xhdpi_settings_fall.png.flat
+│   │   │   │           ├── drawable-xhdpi_travel_safe.png.flat
+│   │   │   │           ├── drawable-xxhdpi_ic_baseline_arrow_forward_24.png.flat
+│   │   │   │           ├── drawable-xxhdpi_ic_settings_black_24dp.png.flat
+│   │   │   │           ├── drawable-xxhdpi_leo_logout_24.png.flat
+│   │   │   │           ├── drawable-xxhdpi_leo_settings_24.png.flat
+│   │   │   │           ├── drawable-xxhdpi_leo_share.png.flat
+│   │   │   │           ├── drawable-xxhdpi_leo_update_24.png.flat
+│   │   │   │           ├── drawable-xxhdpi_login_mail.png.flat
+│   │   │   │           ├── drawable-xxhdpi_login_password.png.flat
+│   │   │   │           ├── drawable-xxhdpi_login_person.png.flat
+│   │   │   │           ├── drawable-xxhdpi_login_phone.png.flat
+│   │   │   │           ├── drawable-xxhdpi_not_in_trouble_main.png.flat
+│   │   │   │           ├── drawable-xxhdpi_precautions_main.png.flat
+│   │   │   │           ├── drawable-xxhdpi_recent_crime_news_main.png.flat
+│   │   │   │           ├── drawable-xxhdpi_settings_fall.png.flat
+│   │   │   │           ├── drawable-xxhdpi_travel_safe.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_ic_baseline_arrow_forward_24.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_ic_settings_black_24dp.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_leo_logout_24.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_leo_settings_24.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_leo_share.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_leo_update_24.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_login_mail.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_login_password.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_login_person.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_login_phone.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_not_in_trouble_main.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_precautions_main.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_recent_crime_news_main.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_settings_fall.png.flat
+│   │   │   │           ├── drawable-xxxhdpi_travel_safe.png.flat
+│   │   │   │           ├── drawable_btn_gradient_style.xml.flat
+│   │   │   │           ├── drawable_disable_button_style.xml.flat
+│   │   │   │           ├── drawable_edit_text_style.xml.flat
+│   │   │   │           ├── drawable_i_am_in_trouble_button_style.xml.flat
+│   │   │   │           ├── drawable_i_am_not_in_trouble_button.xml.flat
+│   │   │   │           ├── drawable_indicator_default.xml.flat
+│   │   │   │           ├── drawable_indicator_selected.xml.flat
+│   │   │   │           ├── drawable_indicator_selector.xml.flat
+│   │   │   │           ├── drawable_leo2.png.flat
+│   │   │   │           ├── drawable_login_button_style.xml.flat
+│   │   │   │           ├── drawable_side_nav_bar.xml.flat
+│   │   │   │           ├── drawable_success_button_style.xml.flat
+│   │   │   │           ├── drawable_trouble_button_style.xml.flat
+│   │   │   │           ├── layout_activity_full_screen.xml.flat
+│   │   │   │           ├── layout_activity_main.xml.flat
+│   │   │   │           ├── layout_fragment_emergency_contacts.xml.flat
+│   │   │   │           ├── layout_fragment_intro.xml.flat
+│   │   │   │           ├── layout_fragment_login.xml.flat
+│   │   │   │           ├── layout_fragment_main.xml.flat
+│   │   │   │           ├── layout_fragment_maps.xml.flat
+│   │   │   │           ├── layout_fragment_news.xml.flat
+│   │   │   │           ├── layout_fragment_permission_request.xml.flat
+│   │   │   │           ├── layout_fragment_register.xml.flat
+│   │   │   │           ├── layout_fragment_settings.xml.flat
+│   │   │   │           ├── layout_fragment_splash.xml.flat
+│   │   │   │           ├── layout_fragment_splash_anim.xml.flat
+│   │   │   │           ├── layout_fragment_verify_otp.xml.flat
+│   │   │   │           ├── layout_layour_main.xml.flat
+│   │   │   │           ├── layout_layout_screen.xml.flat
+│   │   │   │           ├── layout_news_item.xml.flat
+│   │   │   │           ├── layout_precautions_dialog.xml.flat
+│   │   │   │           ├── layout_quick_settings_user_not_available_dialog.xml.flat
+│   │   │   │           ├── layout_toast_dialog.xml.flat
+│   │   │   │           ├── menu_activity_main_drawer.xml.flat
+│   │   │   │           ├── menu_drawer.xml.flat
+│   │   │   │           ├── menu_main_menu.xml.flat
+│   │   │   │           ├── navigation_nav_graph.xml.flat
+│   │   │   │           ├── raw_trouble_loading.json.flat
+│   │   │   │           ├── values-af_values-af.arsc.flat
+│   │   │   │           ├── values-am_values-am.arsc.flat
+│   │   │   │           ├── values-ar_values-ar.arsc.flat
+│   │   │   │           ├── values-as_values-as.arsc.flat
+│   │   │   │           ├── values-az_values-az.arsc.flat
+│   │   │   │           ├── values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+│   │   │   │           ├── values-be_values-be.arsc.flat
+│   │   │   │           ├── values-bg_values-bg.arsc.flat
+│   │   │   │           ├── values-bn_values-bn.arsc.flat
+│   │   │   │           ├── values-bs_values-bs.arsc.flat
+│   │   │   │           ├── values-ca_values-ca.arsc.flat
+│   │   │   │           ├── values-cs_values-cs.arsc.flat
+│   │   │   │           ├── values-da_values-da.arsc.flat
+│   │   │   │           ├── values-de_values-de.arsc.flat
+│   │   │   │           ├── values-el_values-el.arsc.flat
+│   │   │   │           ├── values-en-rAU_values-en-rAU.arsc.flat
+│   │   │   │           ├── values-en-rCA_values-en-rCA.arsc.flat
+│   │   │   │           ├── values-en-rGB_values-en-rGB.arsc.flat
+│   │   │   │           ├── values-en-rIN_values-en-rIN.arsc.flat
+│   │   │   │           ├── values-en-rXC_values-en-rXC.arsc.flat
+│   │   │   │           ├── values-es-rUS_values-es-rUS.arsc.flat
+│   │   │   │           ├── values-es_values-es.arsc.flat
+│   │   │   │           ├── values-et_values-et.arsc.flat
+│   │   │   │           ├── values-eu_values-eu.arsc.flat
+│   │   │   │           ├── values-fa_values-fa.arsc.flat
+│   │   │   │           ├── values-fi_values-fi.arsc.flat
+│   │   │   │           ├── values-fr-rCA_values-fr-rCA.arsc.flat
+│   │   │   │           ├── values-fr_values-fr.arsc.flat
+│   │   │   │           ├── values-gl_values-gl.arsc.flat
+│   │   │   │           ├── values-gu_values-gu.arsc.flat
+│   │   │   │           ├── values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat
+│   │   │   │           ├── values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat
+│   │   │   │           ├── values-h720dp-v13_values-h720dp-v13.arsc.flat
+│   │   │   │           ├── values-hdpi-v4_values-hdpi-v4.arsc.flat
+│   │   │   │           ├── values-hi_values-hi.arsc.flat
+│   │   │   │           ├── values-hr_values-hr.arsc.flat
+│   │   │   │           ├── values-hu_values-hu.arsc.flat
+│   │   │   │           ├── values-hy_values-hy.arsc.flat
+│   │   │   │           ├── values-in_values-in.arsc.flat
+│   │   │   │           ├── values-is_values-is.arsc.flat
+│   │   │   │           ├── values-it_values-it.arsc.flat
+│   │   │   │           ├── values-iw_values-iw.arsc.flat
+│   │   │   │           ├── values-ja_values-ja.arsc.flat
+│   │   │   │           ├── values-ka_values-ka.arsc.flat
+│   │   │   │           ├── values-kk_values-kk.arsc.flat
+│   │   │   │           ├── values-km_values-km.arsc.flat
+│   │   │   │           ├── values-kn_values-kn.arsc.flat
+│   │   │   │           ├── values-ko_values-ko.arsc.flat
+│   │   │   │           ├── values-ky_values-ky.arsc.flat
+│   │   │   │           ├── values-land_values-land.arsc.flat
+│   │   │   │           ├── values-large-v4_values-large-v4.arsc.flat
+│   │   │   │           ├── values-ldltr-v21_values-ldltr-v21.arsc.flat
+│   │   │   │           ├── values-lo_values-lo.arsc.flat
+│   │   │   │           ├── values-lt_values-lt.arsc.flat
+│   │   │   │           ├── values-lv_values-lv.arsc.flat
+│   │   │   │           ├── values-mk_values-mk.arsc.flat
+│   │   │   │           ├── values-ml_values-ml.arsc.flat
+│   │   │   │           ├── values-mn_values-mn.arsc.flat
+│   │   │   │           ├── values-mr_values-mr.arsc.flat
+│   │   │   │           ├── values-ms_values-ms.arsc.flat
+│   │   │   │           ├── values-my_values-my.arsc.flat
+│   │   │   │           ├── values-nb_values-nb.arsc.flat
+│   │   │   │           ├── values-ne_values-ne.arsc.flat
+│   │   │   │           ├── values-night-v8_values-night-v8.arsc.flat
+│   │   │   │           ├── values-nl_values-nl.arsc.flat
+│   │   │   │           ├── values-or_values-or.arsc.flat
+│   │   │   │           ├── values-pa_values-pa.arsc.flat
+│   │   │   │           ├── values-pl_values-pl.arsc.flat
+│   │   │   │           ├── values-port_values-port.arsc.flat
+│   │   │   │           ├── values-pt-rBR_values-pt-rBR.arsc.flat
+│   │   │   │           ├── values-pt-rPT_values-pt-rPT.arsc.flat
+│   │   │   │           ├── values-pt_values-pt.arsc.flat
+│   │   │   │           ├── values-ro_values-ro.arsc.flat
+│   │   │   │           ├── values-ru_values-ru.arsc.flat
+│   │   │   │           ├── values-si_values-si.arsc.flat
+│   │   │   │           ├── values-sk_values-sk.arsc.flat
+│   │   │   │           ├── values-sl_values-sl.arsc.flat
+│   │   │   │           ├── values-small-v4_values-small-v4.arsc.flat
+│   │   │   │           ├── values-sq_values-sq.arsc.flat
+│   │   │   │           ├── values-sr_values-sr.arsc.flat
+│   │   │   │           ├── values-sv_values-sv.arsc.flat
+│   │   │   │           ├── values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+│   │   │   │           ├── values-sw_values-sw.arsc.flat
+│   │   │   │           ├── values-ta_values-ta.arsc.flat
+│   │   │   │           ├── values-te_values-te.arsc.flat
+│   │   │   │           ├── values-th_values-th.arsc.flat
+│   │   │   │           ├── values-tl_values-tl.arsc.flat
+│   │   │   │           ├── values-tr_values-tr.arsc.flat
+│   │   │   │           ├── values-uk_values-uk.arsc.flat
+│   │   │   │           ├── values-ur_values-ur.arsc.flat
+│   │   │   │           ├── values-uz_values-uz.arsc.flat
+│   │   │   │           ├── values-v16_values-v16.arsc.flat
+│   │   │   │           ├── values-v17_values-v17.arsc.flat
+│   │   │   │           ├── values-v18_values-v18.arsc.flat
+│   │   │   │           ├── values-v21_values-v21.arsc.flat
+│   │   │   │           ├── values-v22_values-v22.arsc.flat
+│   │   │   │           ├── values-v23_values-v23.arsc.flat
+│   │   │   │           ├── values-v24_values-v24.arsc.flat
+│   │   │   │           ├── values-v25_values-v25.arsc.flat
+│   │   │   │           ├── values-v26_values-v26.arsc.flat
+│   │   │   │           ├── values-v28_values-v28.arsc.flat
+│   │   │   │           ├── values-vi_values-vi.arsc.flat
+│   │   │   │           ├── values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat
+│   │   │   │           ├── values-w480dp-port-v13_values-w480dp-port-v13.arsc.flat
+│   │   │   │           ├── values-watch-v20_values-watch-v20.arsc.flat
+│   │   │   │           ├── values-watch-v21_values-watch-v21.arsc.flat
+│   │   │   │           ├── values-xlarge-v4_values-xlarge-v4.arsc.flat
+│   │   │   │           ├── values-zh-rCN_values-zh-rCN.arsc.flat
+│   │   │   │           ├── values-zh-rHK_values-zh-rHK.arsc.flat
+│   │   │   │           ├── values-zh-rTW_values-zh-rTW.arsc.flat
+│   │   │   │           ├── values-zu_values-zu.arsc.flat
+│   │   │   │           ├── values_values.arsc.flat
+│   │   │   │           ├── xml_fragment_splash_anim_scene.xml.flat
+│   │   │   │           └── xml_network_security_config.xml.flat
+│   │   │   ├── runtime_symbol_list
+│   │   │   │   └── debug
+│   │   │   │       └── R.txt
+│   │   │   ├── sub_project_dex_archive
+│   │   │   │   └── debug
+│   │   │   │       └── out
+│   │   │   ├── symbol_list_with_package_name
+│   │   │   │   └── debug
+│   │   │   │       └── package-aware-r.txt
+│   │   │   └── validate_signing_config
+│   │   │       └── debug
+│   │   │           └── out
+│   │   ├── kotlin
+│   │   │   ├── compileDebugKotlin
+│   │   │   │   ├── build-history.bin
+│   │   │   │   ├── caches-jvm
+│   │   │   │   │   ├── inputs
+│   │   │   │   │   │   ├── source-to-output.tab
+│   │   │   │   │   │   ├── source-to-output.tab.keystream
+│   │   │   │   │   │   ├── source-to-output.tab.keystream.len
+│   │   │   │   │   │   ├── source-to-output.tab.len
+│   │   │   │   │   │   ├── source-to-output.tab.values
+│   │   │   │   │   │   ├── source-to-output.tab.values.at
+│   │   │   │   │   │   ├── source-to-output.tab.values.s
+│   │   │   │   │   │   ├── source-to-output.tab_i
+│   │   │   │   │   │   └── source-to-output.tab_i.len
+│   │   │   │   │   ├── jvm
+│   │   │   │   │   │   └── kotlin
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab.keystream
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab.keystream.len
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab.len
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab.values.at
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab_i
+│   │   │   │   │   │       ├── class-fq-name-to-source.tab_i.len
+│   │   │   │   │   │       ├── constants.tab
+│   │   │   │   │   │       ├── constants.tab.keystream
+│   │   │   │   │   │       ├── constants.tab.keystream.len
+│   │   │   │   │   │       ├── constants.tab.len
+│   │   │   │   │   │       ├── constants.tab.values.at
+│   │   │   │   │   │       ├── constants.tab_i
+│   │   │   │   │   │       ├── constants.tab_i.len
+│   │   │   │   │   │       ├── internal-name-to-source.tab
+│   │   │   │   │   │       ├── internal-name-to-source.tab.keystream
+│   │   │   │   │   │       ├── internal-name-to-source.tab.keystream.len
+│   │   │   │   │   │       ├── internal-name-to-source.tab.len
+│   │   │   │   │   │       ├── internal-name-to-source.tab.values.at
+│   │   │   │   │   │       ├── internal-name-to-source.tab_i
+│   │   │   │   │   │       ├── internal-name-to-source.tab_i.len
+│   │   │   │   │   │       ├── java-sources-proto-map.tab
+│   │   │   │   │   │       ├── java-sources-proto-map.tab.keystream
+│   │   │   │   │   │       ├── java-sources-proto-map.tab.keystream.len
+│   │   │   │   │   │       ├── java-sources-proto-map.tab.len
+│   │   │   │   │   │       ├── java-sources-proto-map.tab.values.at
+│   │   │   │   │   │       ├── java-sources-proto-map.tab_i
+│   │   │   │   │   │       ├── java-sources-proto-map.tab_i.len
+│   │   │   │   │   │       ├── package-parts.tab
+│   │   │   │   │   │       ├── package-parts.tab.keystream
+│   │   │   │   │   │       ├── package-parts.tab.keystream.len
+│   │   │   │   │   │       ├── package-parts.tab.len
+│   │   │   │   │   │       ├── package-parts.tab.values.at
+│   │   │   │   │   │       ├── package-parts.tab_i
+│   │   │   │   │   │       ├── package-parts.tab_i.len
+│   │   │   │   │   │       ├── proto.tab
+│   │   │   │   │   │       ├── proto.tab.keystream
+│   │   │   │   │   │       ├── proto.tab.keystream.len
+│   │   │   │   │   │       ├── proto.tab.len
+│   │   │   │   │   │       ├── proto.tab.values
+│   │   │   │   │   │       ├── proto.tab.values.at
+│   │   │   │   │   │       ├── proto.tab.values.s
+│   │   │   │   │   │       ├── proto.tab_i
+│   │   │   │   │   │       ├── proto.tab_i.len
+│   │   │   │   │   │       ├── source-to-classes.tab
+│   │   │   │   │   │       ├── source-to-classes.tab.keystream
+│   │   │   │   │   │       ├── source-to-classes.tab.keystream.len
+│   │   │   │   │   │       ├── source-to-classes.tab.len
+│   │   │   │   │   │       ├── source-to-classes.tab.values.at
+│   │   │   │   │   │       ├── source-to-classes.tab_i
+│   │   │   │   │   │       ├── source-to-classes.tab_i.len
+│   │   │   │   │   │       ├── subtypes.tab
+│   │   │   │   │   │       ├── subtypes.tab.keystream
+│   │   │   │   │   │       ├── subtypes.tab.keystream.len
+│   │   │   │   │   │       ├── subtypes.tab.len
+│   │   │   │   │   │       ├── subtypes.tab.values.at
+│   │   │   │   │   │       ├── subtypes.tab_i
+│   │   │   │   │   │       ├── subtypes.tab_i.len
+│   │   │   │   │   │       ├── supertypes.tab
+│   │   │   │   │   │       ├── supertypes.tab.keystream
+│   │   │   │   │   │       ├── supertypes.tab.keystream.len
+│   │   │   │   │   │       ├── supertypes.tab.len
+│   │   │   │   │   │       ├── supertypes.tab.values.at
+│   │   │   │   │   │       ├── supertypes.tab_i
+│   │   │   │   │   │       └── supertypes.tab_i.len
+│   │   │   │   │   └── lookups
+│   │   │   │   │       ├── counters.tab
+│   │   │   │   │       ├── file-to-id.tab
+│   │   │   │   │       ├── file-to-id.tab.keystream
+│   │   │   │   │       ├── file-to-id.tab.keystream.len
+│   │   │   │   │       ├── file-to-id.tab.len
+│   │   │   │   │       ├── file-to-id.tab.values.at
+│   │   │   │   │       ├── file-to-id.tab_i
+│   │   │   │   │       ├── file-to-id.tab_i.len
+│   │   │   │   │       ├── id-to-file.tab
+│   │   │   │   │       ├── id-to-file.tab.keystream
+│   │   │   │   │       ├── id-to-file.tab.keystream.len
+│   │   │   │   │       ├── id-to-file.tab.len
+│   │   │   │   │       ├── id-to-file.tab.values.at
+│   │   │   │   │       ├── id-to-file.tab_i
+│   │   │   │   │       ├── id-to-file.tab_i.len
+│   │   │   │   │       ├── lookups.tab
+│   │   │   │   │       ├── lookups.tab.keystream
+│   │   │   │   │       ├── lookups.tab.keystream.len
+│   │   │   │   │       ├── lookups.tab.len
+│   │   │   │   │       ├── lookups.tab.values
+│   │   │   │   │       ├── lookups.tab.values.at
+│   │   │   │   │       ├── lookups.tab.values.s
+│   │   │   │   │       ├── lookups.tab_i
+│   │   │   │   │       └── lookups.tab_i.len
+│   │   │   │   └── last-build.bin
+│   │   │   └── kaptGenerateStubsDebugKotlin
+│   │   │       ├── build-history.bin
+│   │   │       ├── caches-jvm
+│   │   │       │   ├── inputs
+│   │   │       │   │   ├── source-to-output.tab
+│   │   │       │   │   ├── source-to-output.tab.keystream
+│   │   │       │   │   ├── source-to-output.tab.keystream.len
+│   │   │       │   │   ├── source-to-output.tab.len
+│   │   │       │   │   ├── source-to-output.tab.values
+│   │   │       │   │   ├── source-to-output.tab.values.at
+│   │   │       │   │   ├── source-to-output.tab.values.s
+│   │   │       │   │   ├── source-to-output.tab_i
+│   │   │       │   │   └── source-to-output.tab_i.len
+│   │   │       │   ├── jvm
+│   │   │       │   │   └── kotlin
+│   │   │       │   │       ├── class-fq-name-to-source.tab
+│   │   │       │   │       ├── class-fq-name-to-source.tab.keystream
+│   │   │       │   │       ├── class-fq-name-to-source.tab.keystream.len
+│   │   │       │   │       ├── class-fq-name-to-source.tab.len
+│   │   │       │   │       ├── class-fq-name-to-source.tab.values.at
+│   │   │       │   │       ├── class-fq-name-to-source.tab_i
+│   │   │       │   │       ├── class-fq-name-to-source.tab_i.len
+│   │   │       │   │       ├── constants.tab
+│   │   │       │   │       ├── constants.tab.keystream
+│   │   │       │   │       ├── constants.tab.keystream.len
+│   │   │       │   │       ├── constants.tab.len
+│   │   │       │   │       ├── constants.tab.values.at
+│   │   │       │   │       ├── constants.tab_i
+│   │   │       │   │       ├── constants.tab_i.len
+│   │   │       │   │       ├── internal-name-to-source.tab
+│   │   │       │   │       ├── internal-name-to-source.tab.keystream
+│   │   │       │   │       ├── internal-name-to-source.tab.keystream.len
+│   │   │       │   │       ├── internal-name-to-source.tab.len
+│   │   │       │   │       ├── internal-name-to-source.tab.values.at
+│   │   │       │   │       ├── internal-name-to-source.tab_i
+│   │   │       │   │       ├── internal-name-to-source.tab_i.len
+│   │   │       │   │       ├── package-parts.tab
+│   │   │       │   │       ├── package-parts.tab.keystream
+│   │   │       │   │       ├── package-parts.tab.keystream.len
+│   │   │       │   │       ├── package-parts.tab.len
+│   │   │       │   │       ├── package-parts.tab.values.at
+│   │   │       │   │       ├── package-parts.tab_i
+│   │   │       │   │       ├── package-parts.tab_i.len
+│   │   │       │   │       ├── proto.tab
+│   │   │       │   │       ├── proto.tab.keystream
+│   │   │       │   │       ├── proto.tab.keystream.len
+│   │   │       │   │       ├── proto.tab.len
+│   │   │       │   │       ├── proto.tab.values
+│   │   │       │   │       ├── proto.tab.values.at
+│   │   │       │   │       ├── proto.tab.values.s
+│   │   │       │   │       ├── proto.tab_i
+│   │   │       │   │       ├── proto.tab_i.len
+│   │   │       │   │       ├── source-to-classes.tab
+│   │   │       │   │       ├── source-to-classes.tab.keystream
+│   │   │       │   │       ├── source-to-classes.tab.keystream.len
+│   │   │       │   │       ├── source-to-classes.tab.len
+│   │   │       │   │       ├── source-to-classes.tab.values.at
+│   │   │       │   │       ├── source-to-classes.tab_i
+│   │   │       │   │       ├── source-to-classes.tab_i.len
+│   │   │       │   │       ├── subtypes.tab
+│   │   │       │   │       ├── subtypes.tab.keystream
+│   │   │       │   │       ├── subtypes.tab.keystream.len
+│   │   │       │   │       ├── subtypes.tab.len
+│   │   │       │   │       ├── subtypes.tab.values.at
+│   │   │       │   │       ├── subtypes.tab_i
+│   │   │       │   │       ├── subtypes.tab_i.len
+│   │   │       │   │       ├── supertypes.tab
+│   │   │       │   │       ├── supertypes.tab.keystream
+│   │   │       │   │       ├── supertypes.tab.keystream.len
+│   │   │       │   │       ├── supertypes.tab.len
+│   │   │       │   │       ├── supertypes.tab.values.at
+│   │   │       │   │       ├── supertypes.tab_i
+│   │   │       │   │       └── supertypes.tab_i.len
+│   │   │       │   └── lookups
+│   │   │       │       ├── counters.tab
+│   │   │       │       ├── file-to-id.tab
+│   │   │       │       ├── file-to-id.tab.keystream
+│   │   │       │       ├── file-to-id.tab.keystream.len
+│   │   │       │       ├── file-to-id.tab.len
+│   │   │       │       ├── file-to-id.tab.values.at
+│   │   │       │       ├── file-to-id.tab_i
+│   │   │       │       ├── file-to-id.tab_i.len
+│   │   │       │       ├── id-to-file.tab
+│   │   │       │       ├── id-to-file.tab.keystream
+│   │   │       │       ├── id-to-file.tab.keystream.len
+│   │   │       │       ├── id-to-file.tab.len
+│   │   │       │       ├── id-to-file.tab.values.at
+│   │   │       │       ├── id-to-file.tab_i
+│   │   │       │       ├── id-to-file.tab_i.len
+│   │   │       │       ├── lookups.tab
+│   │   │       │       ├── lookups.tab.keystream
+│   │   │       │       ├── lookups.tab.keystream.len
+│   │   │       │       ├── lookups.tab.len
+│   │   │       │       ├── lookups.tab.values
+│   │   │       │       ├── lookups.tab.values.at
+│   │   │       │       ├── lookups.tab.values.s
+│   │   │       │       ├── lookups.tab_i
+│   │   │       │       └── lookups.tab_i.len
+│   │   │       └── last-build.bin
+│   │   ├── outputs
+│   │   │   ├── apk
+│   │   │   │   └── debug
+│   │   │   │       ├── app-debug.apk
+│   │   │   │       └── output.json
+│   │   │   └── logs
+│   │   │       └── manifest-merger-debug-report.txt
+│   │   └── tmp
+│   │       ├── compileDebugJavaWithJavac
+│   │       ├── kapt3
+│   │       │   ├── classes
+│   │       │   │   └── debug
+│   │       │   ├── incApCache
+│   │       │   │   ├── debug
+│   │       │   │   │   ├── ap-classpath-entries.bin
+│   │       │   │   │   ├── apt-cache.bin
+│   │       │   │   │   ├── classpath-entries.bin
+│   │       │   │   │   ├── classpath-structure.bin
+│   │       │   │   │   └── java-cache.bin
+│   │       │   │   ├── debugAndroidTest
+│   │       │   │   ├── debugUnitTest
+│   │       │   │   ├── release
+│   │       │   │   └── releaseUnitTest
+│   │       │   ├── incrementalData
+│   │       │   │   └── debug
+│   │       │   │       ├── META-INF
+│   │       │   │       │   └── app_debug.kotlin_module
+│   │       │   │       └── com
+│   │       │   │           └── rohit2810
+│   │       │   │               └── leo_kotlin
+│   │       │   │                   ├── Application$Companion.class
+│   │       │   │                   ├── Application.class
+│   │       │   │                   ├── MainActivity.class
+│   │       │   │                   ├── NetworkUtils
+│   │       │   │                   │   ├── NetworkConnectionInterceptor.class
+│   │       │   │                   │   └── NoConnectivityException.class
+│   │       │   │                   ├── database
+│   │       │   │                   │   ├── LeoDatabase.class
+│   │       │   │                   │   ├── NewsDao.class
+│   │       │   │                   │   ├── UserDao.class
+│   │       │   │                   │   └── UserDaoKt.class
+│   │       │   │                   ├── models
+│   │       │   │                   │   ├── Article$Creator.class
+│   │       │   │                   │   ├── Article.class
+│   │       │   │                   │   ├── EmergencyContactsModel.class
+│   │       │   │                   │   ├── OTP.class
+│   │       │   │                   │   ├── Trouble.class
+│   │       │   │                   │   ├── UnMarkTrouble.class
+│   │       │   │                   │   ├── User$Creator.class
+│   │       │   │                   │   ├── User.class
+│   │       │   │                   │   ├── UserDataBaseKt.class
+│   │       │   │                   │   ├── UserDatabaseModule.class
+│   │       │   │                   │   ├── Username.class
+│   │       │   │                   │   └── ValidateOTP.class
+│   │       │   │                   ├── network
+│   │       │   │                   │   ├── NewsApiService.class
+│   │       │   │                   │   ├── UserApi.class
+│   │       │   │                   │   ├── UserServiceApi.class
+│   │       │   │                   │   └── UserServiceApiKt.class
+│   │       │   │                   ├── receivers
+│   │       │   │                   │   ├── LocationUpdatesReceiver.class
+│   │       │   │                   │   ├── NotificationReceiver$Companion.class
+│   │       │   │                   │   ├── NotificationReceiver.class
+│   │       │   │                   │   ├── NotificationReceiverKt.class
+│   │       │   │                   │   ├── PowerButtonReceiver.class
+│   │       │   │                   │   ├── TroubleReceiver.class
+│   │       │   │                   │   ├── UnMarkTroubleReceiver.class
+│   │       │   │                   │   └── WifiP2PReceiver.class
+│   │       │   │                   ├── repository
+│   │       │   │                   │   ├── TroubleRepository$Companion.class
+│   │       │   │                   │   └── TroubleRepository.class
+│   │       │   │                   ├── services
+│   │       │   │                   │   ├── FallDetectionService.class
+│   │       │   │                   │   ├── LocationService$Companion.class
+│   │       │   │                   │   ├── LocationService.class
+│   │       │   │                   │   └── wifidirect
+│   │       │   │                   │       ├── WiFiP2PServiceLeo$ClientClass.class
+│   │       │   │                   │       ├── WiFiP2PServiceLeo$SendReceive.class
+│   │       │   │                   │       ├── WiFiP2PServiceLeo$ServerClass.class
+│   │       │   │                   │       ├── WiFiP2PServiceLeo.class
+│   │       │   │                   │       └── WiFiP2PServiceLeoKt.class
+│   │       │   │                   ├── ui
+│   │       │   │                   │   ├── BottomSheetDialogLeo.class
+│   │       │   │                   │   ├── emergencyContacts
+│   │       │   │                   │   │   ├── EmergencyContactsFragment.class
+│   │       │   │                   │   │   ├── EmergencyContactsFragmentArgs$Companion.class
+│   │       │   │                   │   │   ├── EmergencyContactsFragmentArgs.class
+│   │       │   │                   │   │   ├── EmergencyContactsFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── EmergencyContactsFragmentDirections.class
+│   │       │   │                   │   │   ├── EmergencyContactsViewModel.class
+│   │       │   │                   │   │   └── EmergencyContactsViewModelFactory.class
+│   │       │   │                   │   ├── intro
+│   │       │   │                   │   │   ├── IntroActivity.class
+│   │       │   │                   │   │   ├── IntroViewPageAdapter.class
+│   │       │   │                   │   │   └── ScreenItem.class
+│   │       │   │                   │   ├── login
+│   │       │   │                   │   │   ├── LoginFragment.class
+│   │       │   │                   │   │   ├── LoginFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── LoginFragmentDirections.class
+│   │       │   │                   │   │   ├── LoginViewModel.class
+│   │       │   │                   │   │   └── LoginViewModelFactory.class
+│   │       │   │                   │   ├── main
+│   │       │   │                   │   │   ├── MainFragment.class
+│   │       │   │                   │   │   ├── MainFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── MainFragmentDirections.class
+│   │       │   │                   │   │   ├── MainViewModel.class
+│   │       │   │                   │   │   └── MainViewModelFactory.class
+│   │       │   │                   │   ├── map
+│   │       │   │                   │   │   ├── MapsFragment.class
+│   │       │   │                   │   │   └── MapsViewModel.class
+│   │       │   │                   │   ├── news
+│   │       │   │                   │   │   ├── NewsAdapter$ViewHolder.class
+│   │       │   │                   │   │   ├── NewsAdapter.class
+│   │       │   │                   │   │   └── NewsFragment.class
+│   │       │   │                   │   ├── otp
+│   │       │   │                   │   │   ├── VerifyOtpFragment.class
+│   │       │   │                   │   │   ├── VerifyOtpFragmentArgs$Companion.class
+│   │       │   │                   │   │   ├── VerifyOtpFragmentArgs.class
+│   │       │   │                   │   │   ├── VerifyOtpFragmentDirections$ActionVerifyOtpFragmentToEmergencyContactsFragment.class
+│   │       │   │                   │   │   ├── VerifyOtpFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── VerifyOtpFragmentDirections.class
+│   │       │   │                   │   │   ├── VerifyOtpViewModel.class
+│   │       │   │                   │   │   └── VerifyOtpViewModelFactory.class
+│   │       │   │                   │   ├── permissionRequest
+│   │       │   │                   │   │   ├── PermissionRequestFragment.class
+│   │       │   │                   │   │   ├── PermissionRequestFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── PermissionRequestFragmentDirections.class
+│   │       │   │                   │   │   └── PermissionRequestViewModel.class
+│   │       │   │                   │   ├── quicksettings
+│   │       │   │                   │   │   ├── LeoToggle.class
+│   │       │   │                   │   │   └── NotLoggedIn.class
+│   │       │   │                   │   ├── register
+│   │       │   │                   │   │   ├── RegisterFragment.class
+│   │       │   │                   │   │   ├── RegisterFragmentDirections$ActionRegisterFragmentToVerifyOtpFragment2.class
+│   │       │   │                   │   │   ├── RegisterFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── RegisterFragmentDirections.class
+│   │       │   │                   │   │   ├── RegisterViewModel.class
+│   │       │   │                   │   │   └── RegisterViewModelFactory.class
+│   │       │   │                   │   ├── settings
+│   │       │   │                   │   │   ├── SettingsFragment.class
+│   │       │   │                   │   │   ├── SettingsFragmentDirections$ActionSettingsFragmentToEmergencyContactsFragment2.class
+│   │       │   │                   │   │   ├── SettingsFragmentDirections$Companion.class
+│   │       │   │                   │   │   ├── SettingsFragmentDirections.class
+│   │       │   │                   │   │   ├── SettingsViewModel.class
+│   │       │   │                   │   │   └── SettingsViewModelFactory.class
+│   │       │   │                   │   └── splash
+│   │       │   │                   │       ├── SplashFragment.class
+│   │       │   │                   │       ├── SplashFragmentDirections$Companion.class
+│   │       │   │                   │       ├── SplashFragmentDirections.class
+│   │       │   │                   │       ├── SplashViewModel.class
+│   │       │   │                   │       └── SplashViewModelFactory.class
+│   │       │   │                   └── utils
+│   │       │   │                       ├── AudioKt.class
+│   │       │   │                       ├── FallDetectionKt.class
+│   │       │   │                       ├── FullScreenNotificationKt.class
+│   │       │   │                       ├── HashUtilsKt.class
+│   │       │   │                       ├── NotificationKt.class
+│   │       │   │                       ├── PreferenceKt.class
+│   │       │   │                       ├── SMSUtilsKt.class
+│   │       │   │                       ├── ToastUtilsKt.class
+│   │       │   │                       ├── UnlockKt.class
+│   │       │   │                       └── WifiP2PConnectUtilsKt.class
+│   │       │   └── stubs
+│   │       │       ├── debug
+│   │       │       │   ├── com
+│   │       │       │   │   └── rohit2810
+│   │       │       │   │       └── leo_kotlin
+│   │       │       │   │           ├── Application.java
+│   │       │       │   │           ├── Application.kapt_metadata
+│   │       │       │   │           ├── MainActivity.java
+│   │       │       │   │           ├── MainActivity.kapt_metadata
+│   │       │       │   │           ├── NetworkUtils
+│   │       │       │   │           │   ├── NetworkConnectionInterceptor.java
+│   │       │       │   │           │   ├── NetworkConnectionInterceptor.kapt_metadata
+│   │       │       │   │           │   ├── NoConnectivityException.java
+│   │       │       │   │           │   └── NoConnectivityException.kapt_metadata
+│   │       │       │   │           ├── database
+│   │       │       │   │           │   ├── LeoDatabase.java
+│   │       │       │   │           │   ├── LeoDatabase.kapt_metadata
+│   │       │       │   │           │   ├── NewsDao.java
+│   │       │       │   │           │   ├── NewsDao.kapt_metadata
+│   │       │       │   │           │   ├── UserDao.java
+│   │       │       │   │           │   ├── UserDao.kapt_metadata
+│   │       │       │   │           │   ├── UserDaoKt.java
+│   │       │       │   │           │   └── UserDaoKt.kapt_metadata
+│   │       │       │   │           ├── models
+│   │       │       │   │           │   ├── Article.java
+│   │       │       │   │           │   ├── Article.kapt_metadata
+│   │       │       │   │           │   ├── EmergencyContactsModel.java
+│   │       │       │   │           │   ├── EmergencyContactsModel.kapt_metadata
+│   │       │       │   │           │   ├── OTP.java
+│   │       │       │   │           │   ├── OTP.kapt_metadata
+│   │       │       │   │           │   ├── Trouble.java
+│   │       │       │   │           │   ├── Trouble.kapt_metadata
+│   │       │       │   │           │   ├── UnMarkTrouble.java
+│   │       │       │   │           │   ├── UnMarkTrouble.kapt_metadata
+│   │       │       │   │           │   ├── User.java
+│   │       │       │   │           │   ├── User.kapt_metadata
+│   │       │       │   │           │   ├── UserDataBaseKt.java
+│   │       │       │   │           │   ├── UserDataBaseKt.kapt_metadata
+│   │       │       │   │           │   ├── UserDatabaseModule.java
+│   │       │       │   │           │   ├── UserDatabaseModule.kapt_metadata
+│   │       │       │   │           │   ├── Username.java
+│   │       │       │   │           │   ├── Username.kapt_metadata
+│   │       │       │   │           │   ├── ValidateOTP.java
+│   │       │       │   │           │   └── ValidateOTP.kapt_metadata
+│   │       │       │   │           ├── network
+│   │       │       │   │           │   ├── NewsApiService.java
+│   │       │       │   │           │   ├── NewsApiService.kapt_metadata
+│   │       │       │   │           │   ├── UserApi.java
+│   │       │       │   │           │   ├── UserApi.kapt_metadata
+│   │       │       │   │           │   ├── UserServiceApi.java
+│   │       │       │   │           │   ├── UserServiceApi.kapt_metadata
+│   │       │       │   │           │   ├── UserServiceApiKt.java
+│   │       │       │   │           │   └── UserServiceApiKt.kapt_metadata
+│   │       │       │   │           ├── receivers
+│   │       │       │   │           │   ├── LocationUpdatesReceiver.java
+│   │       │       │   │           │   ├── LocationUpdatesReceiver.kapt_metadata
+│   │       │       │   │           │   ├── NotificationReceiver.java
+│   │       │       │   │           │   ├── NotificationReceiver.kapt_metadata
+│   │       │       │   │           │   ├── NotificationReceiverKt.java
+│   │       │       │   │           │   ├── NotificationReceiverKt.kapt_metadata
+│   │       │       │   │           │   ├── PowerButtonReceiver.java
+│   │       │       │   │           │   ├── PowerButtonReceiver.kapt_metadata
+│   │       │       │   │           │   ├── TroubleReceiver.java
+│   │       │       │   │           │   ├── TroubleReceiver.kapt_metadata
+│   │       │       │   │           │   ├── UnMarkTroubleReceiver.java
+│   │       │       │   │           │   ├── UnMarkTroubleReceiver.kapt_metadata
+│   │       │       │   │           │   ├── WifiP2PReceiver.java
+│   │       │       │   │           │   └── WifiP2PReceiver.kapt_metadata
+│   │       │       │   │           ├── repository
+│   │       │       │   │           │   ├── TroubleRepository.java
+│   │       │       │   │           │   └── TroubleRepository.kapt_metadata
+│   │       │       │   │           ├── services
+│   │       │       │   │           │   ├── FallDetectionService.java
+│   │       │       │   │           │   ├── FallDetectionService.kapt_metadata
+│   │       │       │   │           │   ├── LocationService.java
+│   │       │       │   │           │   ├── LocationService.kapt_metadata
+│   │       │       │   │           │   └── wifidirect
+│   │       │       │   │           │       ├── WiFiP2PServiceLeo.java
+│   │       │       │   │           │       ├── WiFiP2PServiceLeo.kapt_metadata
+│   │       │       │   │           │       ├── WiFiP2PServiceLeoKt.java
+│   │       │       │   │           │       └── WiFiP2PServiceLeoKt.kapt_metadata
+│   │       │       │   │           ├── ui
+│   │       │       │   │           │   ├── BottomSheetDialogLeo.java
+│   │       │       │   │           │   ├── BottomSheetDialogLeo.kapt_metadata
+│   │       │       │   │           │   ├── emergencyContacts
+│   │       │       │   │           │   │   ├── EmergencyContactsFragment.java
+│   │       │       │   │           │   │   ├── EmergencyContactsFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── EmergencyContactsFragmentArgs.java
+│   │       │       │   │           │   │   ├── EmergencyContactsFragmentArgs.kapt_metadata
+│   │       │       │   │           │   │   ├── EmergencyContactsFragmentDirections.java
+│   │       │       │   │           │   │   ├── EmergencyContactsFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── EmergencyContactsViewModel.java
+│   │       │       │   │           │   │   ├── EmergencyContactsViewModel.kapt_metadata
+│   │       │       │   │           │   │   ├── EmergencyContactsViewModelFactory.java
+│   │       │       │   │           │   │   └── EmergencyContactsViewModelFactory.kapt_metadata
+│   │       │       │   │           │   ├── intro
+│   │       │       │   │           │   │   ├── IntroActivity.java
+│   │       │       │   │           │   │   ├── IntroActivity.kapt_metadata
+│   │       │       │   │           │   │   ├── IntroViewPageAdapter.java
+│   │       │       │   │           │   │   ├── IntroViewPageAdapter.kapt_metadata
+│   │       │       │   │           │   │   ├── ScreenItem.java
+│   │       │       │   │           │   │   └── ScreenItem.kapt_metadata
+│   │       │       │   │           │   ├── login
+│   │       │       │   │           │   │   ├── LoginFragment.java
+│   │       │       │   │           │   │   ├── LoginFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── LoginFragmentDirections.java
+│   │       │       │   │           │   │   ├── LoginFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── LoginViewModel.java
+│   │       │       │   │           │   │   ├── LoginViewModel.kapt_metadata
+│   │       │       │   │           │   │   ├── LoginViewModelFactory.java
+│   │       │       │   │           │   │   └── LoginViewModelFactory.kapt_metadata
+│   │       │       │   │           │   ├── main
+│   │       │       │   │           │   │   ├── MainFragment.java
+│   │       │       │   │           │   │   ├── MainFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── MainFragmentDirections.java
+│   │       │       │   │           │   │   ├── MainFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── MainViewModel.java
+│   │       │       │   │           │   │   ├── MainViewModel.kapt_metadata
+│   │       │       │   │           │   │   ├── MainViewModelFactory.java
+│   │       │       │   │           │   │   └── MainViewModelFactory.kapt_metadata
+│   │       │       │   │           │   ├── map
+│   │       │       │   │           │   │   ├── MapsFragment.java
+│   │       │       │   │           │   │   ├── MapsFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── MapsViewModel.java
+│   │       │       │   │           │   │   └── MapsViewModel.kapt_metadata
+│   │       │       │   │           │   ├── news
+│   │       │       │   │           │   │   ├── NewsAdapter.java
+│   │       │       │   │           │   │   ├── NewsAdapter.kapt_metadata
+│   │       │       │   │           │   │   ├── NewsFragment.java
+│   │       │       │   │           │   │   └── NewsFragment.kapt_metadata
+│   │       │       │   │           │   ├── otp
+│   │       │       │   │           │   │   ├── VerifyOtpFragment.java
+│   │       │       │   │           │   │   ├── VerifyOtpFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── VerifyOtpFragmentArgs.java
+│   │       │       │   │           │   │   ├── VerifyOtpFragmentArgs.kapt_metadata
+│   │       │       │   │           │   │   ├── VerifyOtpFragmentDirections.java
+│   │       │       │   │           │   │   ├── VerifyOtpFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── VerifyOtpViewModel.java
+│   │       │       │   │           │   │   ├── VerifyOtpViewModel.kapt_metadata
+│   │       │       │   │           │   │   ├── VerifyOtpViewModelFactory.java
+│   │       │       │   │           │   │   └── VerifyOtpViewModelFactory.kapt_metadata
+│   │       │       │   │           │   ├── permissionRequest
+│   │       │       │   │           │   │   ├── PermissionRequestFragment.java
+│   │       │       │   │           │   │   ├── PermissionRequestFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── PermissionRequestFragmentDirections.java
+│   │       │       │   │           │   │   ├── PermissionRequestFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── PermissionRequestViewModel.java
+│   │       │       │   │           │   │   └── PermissionRequestViewModel.kapt_metadata
+│   │       │       │   │           │   ├── quicksettings
+│   │       │       │   │           │   │   ├── LeoToggle.java
+│   │       │       │   │           │   │   ├── LeoToggle.kapt_metadata
+│   │       │       │   │           │   │   ├── NotLoggedIn.java
+│   │       │       │   │           │   │   └── NotLoggedIn.kapt_metadata
+│   │       │       │   │           │   ├── register
+│   │       │       │   │           │   │   ├── RegisterFragment.java
+│   │       │       │   │           │   │   ├── RegisterFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── RegisterFragmentDirections.java
+│   │       │       │   │           │   │   ├── RegisterFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── RegisterViewModel.java
+│   │       │       │   │           │   │   ├── RegisterViewModel.kapt_metadata
+│   │       │       │   │           │   │   ├── RegisterViewModelFactory.java
+│   │       │       │   │           │   │   └── RegisterViewModelFactory.kapt_metadata
+│   │       │       │   │           │   ├── settings
+│   │       │       │   │           │   │   ├── SettingsFragment.java
+│   │       │       │   │           │   │   ├── SettingsFragment.kapt_metadata
+│   │       │       │   │           │   │   ├── SettingsFragmentDirections.java
+│   │       │       │   │           │   │   ├── SettingsFragmentDirections.kapt_metadata
+│   │       │       │   │           │   │   ├── SettingsViewModel.java
+│   │       │       │   │           │   │   ├── SettingsViewModel.kapt_metadata
+│   │       │       │   │           │   │   ├── SettingsViewModelFactory.java
+│   │       │       │   │           │   │   └── SettingsViewModelFactory.kapt_metadata
+│   │       │       │   │           │   └── splash
+│   │       │       │   │           │       ├── SplashFragment.java
+│   │       │       │   │           │       ├── SplashFragment.kapt_metadata
+│   │       │       │   │           │       ├── SplashFragmentDirections.java
+│   │       │       │   │           │       ├── SplashFragmentDirections.kapt_metadata
+│   │       │       │   │           │       ├── SplashViewModel.java
+│   │       │       │   │           │       ├── SplashViewModel.kapt_metadata
+│   │       │       │   │           │       ├── SplashViewModelFactory.java
+│   │       │       │   │           │       └── SplashViewModelFactory.kapt_metadata
+│   │       │       │   │           └── utils
+│   │       │       │   │               ├── AudioKt.java
+│   │       │       │   │               ├── AudioKt.kapt_metadata
+│   │       │       │   │               ├── FallDetectionKt.java
+│   │       │       │   │               ├── FallDetectionKt.kapt_metadata
+│   │       │       │   │               ├── FullScreenNotificationKt.java
+│   │       │       │   │               ├── FullScreenNotificationKt.kapt_metadata
+│   │       │       │   │               ├── HashUtilsKt.java
+│   │       │       │   │               ├── HashUtilsKt.kapt_metadata
+│   │       │       │   │               ├── NotificationKt.java
+│   │       │       │   │               ├── NotificationKt.kapt_metadata
+│   │       │       │   │               ├── PreferenceKt.java
+│   │       │       │   │               ├── PreferenceKt.kapt_metadata
+│   │       │       │   │               ├── SMSUtilsKt.java
+│   │       │       │   │               ├── SMSUtilsKt.kapt_metadata
+│   │       │       │   │               ├── ToastUtilsKt.java
+│   │       │       │   │               ├── ToastUtilsKt.kapt_metadata
+│   │       │       │   │               ├── UnlockKt.java
+│   │       │       │   │               ├── UnlockKt.kapt_metadata
+│   │       │       │   │               ├── WifiP2PConnectUtilsKt.java
+│   │       │       │   │               └── WifiP2PConnectUtilsKt.kapt_metadata
+│   │       │       │   └── error
+│   │       │       │       └── NonExistentClass.java
+│   │       │       ├── debugAndroidTest
+│   │       │       ├── debugUnitTest
+│   │       │       ├── release
+│   │       │       └── releaseUnitTest
+│   │       └── kotlin-classes
+│   │           └── debug
+│   │               ├── META-INF
+│   │               │   └── app_debug.kotlin_module
+│   │               └── com
+│   │                   └── rohit2810
+│   │                       └── leo_kotlin
+│   │                           ├── Application$Companion.class
+│   │                           ├── Application.class
+│   │                           ├── MainActivity.class
+│   │                           ├── NetworkUtils
+│   │                           │   ├── NetworkConnectionInterceptor.class
+│   │                           │   └── NoConnectivityException.class
+│   │                           ├── database
+│   │                           │   ├── LeoDatabase.class
+│   │                           │   ├── NewsDao.class
+│   │                           │   ├── UserDao.class
+│   │                           │   ├── UserDaoKt$getDatabase$1$1.class
+│   │                           │   └── UserDaoKt.class
+│   │                           ├── models
+│   │                           │   ├── Article$Creator.class
+│   │                           │   ├── Article.class
+│   │                           │   ├── EmergencyContactsModel.class
+│   │                           │   ├── OTP.class
+│   │                           │   ├── Trouble.class
+│   │                           │   ├── UnMarkTrouble.class
+│   │                           │   ├── User$Creator.class
+│   │                           │   ├── User.class
+│   │                           │   ├── UserDataBaseKt.class
+│   │                           │   ├── UserDatabaseModule.class
+│   │                           │   ├── Username.class
+│   │                           │   └── ValidateOTP.class
+│   │                           ├── network
+│   │                           │   ├── NewsApiService.class
+│   │                           │   ├── UserApi.class
+│   │                           │   ├── UserServiceApi.class
+│   │                           │   └── UserServiceApiKt.class
+│   │                           ├── receivers
+│   │                           │   ├── LocationUpdatesReceiver.class
+│   │                           │   ├── NotificationReceiver$Companion.class
+│   │                           │   ├── NotificationReceiver.class
+│   │                           │   ├── NotificationReceiverKt.class
+│   │                           │   ├── PowerButtonReceiver$checkAlert$1.class
+│   │                           │   ├── PowerButtonReceiver.class
+│   │                           │   ├── TroubleReceiver$onReceive$1.class
+│   │                           │   ├── TroubleReceiver.class
+│   │                           │   ├── UnMarkTroubleReceiver.class
+│   │                           │   └── WifiP2PReceiver.class
+│   │                           ├── repository
+│   │                           │   ├── TroubleRepository$Companion$getInstance$1$1.class
+│   │                           │   ├── TroubleRepository$Companion.class
+│   │                           │   ├── TroubleRepository$checkLogin$1.class
+│   │                           │   ├── TroubleRepository$checkUsername$1.class
+│   │                           │   ├── TroubleRepository$loginUser$1.class
+│   │                           │   ├── TroubleRepository$logoutUser$2.class
+│   │                           │   ├── TroubleRepository$markTrouble$1.class
+│   │                           │   ├── TroubleRepository$markTroubleP2P$1.class
+│   │                           │   ├── TroubleRepository$registerUser$1.class
+│   │                           │   ├── TroubleRepository$sendOtp$1.class
+│   │                           │   ├── TroubleRepository$unMarkTrouble$1.class
+│   │                           │   ├── TroubleRepository$updateUser$1.class
+│   │                           │   ├── TroubleRepository$verifyOtp$1.class
+│   │                           │   └── TroubleRepository.class
+│   │                           ├── services
+│   │                           │   ├── FallDetectionService$onSensorChanged$$inlined$let$lambda$1.class
+│   │                           │   ├── FallDetectionService.class
+│   │                           │   ├── LocationService$Companion.class
+│   │                           │   ├── LocationService$onCreate$2.class
+│   │                           │   ├── LocationService$unsubscribeToLocationUpdates$1.class
+│   │                           │   ├── LocationService.class
+│   │                           │   └── wifidirect
+│   │                           │       ├── WiFiP2PServiceLeo$ClientClass.class
+│   │                           │       ├── WiFiP2PServiceLeo$SendReceive.class
+│   │                           │       ├── WiFiP2PServiceLeo$ServerClass.class
+│   │                           │       ├── WiFiP2PServiceLeo$discoverPeers$1$onFailure$1.class
+│   │                           │       ├── WiFiP2PServiceLeo$discoverPeers$1.class
+│   │                           │       ├── WiFiP2PServiceLeo$handler$1$handleMessage$1.class
+│   │                           │       ├── WiFiP2PServiceLeo$handler$1$handleMessage$2.class
+│   │                           │       ├── WiFiP2PServiceLeo$handler$1.class
+│   │                           │       ├── WiFiP2PServiceLeo$onCreate$1.class
+│   │                           │       ├── WiFiP2PServiceLeo$onCreate$2.class
+│   │                           │       ├── WiFiP2PServiceLeo.class
+│   │                           │       └── WiFiP2PServiceLeoKt.class
+│   │                           ├── ui
+│   │                           │   ├── BottomSheetDialogLeo.class
+│   │                           │   ├── emergencyContacts
+│   │                           │   │   ├── EmergencyContactsFragment$onCreateView$1.class
+│   │                           │   │   ├── EmergencyContactsFragment$onCreateView$2.class
+│   │                           │   │   ├── EmergencyContactsFragment$onCreateView$3.class
+│   │                           │   │   ├── EmergencyContactsFragment.class
+│   │                           │   │   ├── EmergencyContactsFragmentArgs$Companion.class
+│   │                           │   │   ├── EmergencyContactsFragmentArgs.class
+│   │                           │   │   ├── EmergencyContactsFragmentDirections$Companion.class
+│   │                           │   │   ├── EmergencyContactsFragmentDirections.class
+│   │                           │   │   ├── EmergencyContactsViewModel$addUserAndNavigateToMain$1.class
+│   │                           │   │   ├── EmergencyContactsViewModel.class
+│   │                           │   │   └── EmergencyContactsViewModelFactory.class
+│   │                           │   ├── intro
+│   │                           │   │   ├── IntroActivity$onCreate$1.class
+│   │                           │   │   ├── IntroActivity$onCreate$2.class
+│   │                           │   │   ├── IntroActivity$onCreate$3.class
+│   │                           │   │   ├── IntroActivity$onCreate$4.class
+│   │                           │   │   ├── IntroActivity.class
+│   │                           │   │   ├── IntroViewPageAdapter.class
+│   │                           │   │   └── ScreenItem.class
+│   │                           │   ├── login
+│   │                           │   │   ├── LoginFragment$onCreateView$1.class
+│   │                           │   │   ├── LoginFragment$onCreateView$2.class
+│   │                           │   │   ├── LoginFragment$onCreateView$3.class
+│   │                           │   │   ├── LoginFragment$onCreateView$4.class
+│   │                           │   │   ├── LoginFragment$onCreateView$callback$1.class
+│   │                           │   │   ├── LoginFragment.class
+│   │                           │   │   ├── LoginFragmentDirections$Companion.class
+│   │                           │   │   ├── LoginFragmentDirections.class
+│   │                           │   │   ├── LoginViewModel$navigateToMain$$inlined$let$lambda$1.class
+│   │                           │   │   ├── LoginViewModel.class
+│   │                           │   │   └── LoginViewModelFactory.class
+│   │                           │   ├── main
+│   │                           │   │   ├── MainFragment$buildAlertMessageNoGps$1.class
+│   │                           │   │   ├── MainFragment$buildAlertMessageNoGps$2.class
+│   │                           │   │   ├── MainFragment$onCreateView$1.class
+│   │                           │   │   ├── MainFragment$onCreateView$2.class
+│   │                           │   │   ├── MainFragment$onCreateView$3.class
+│   │                           │   │   ├── MainFragment$onCreateView$4.class
+│   │                           │   │   ├── MainFragment$onCreateView$5.class
+│   │                           │   │   ├── MainFragment$onCreateView$6.class
+│   │                           │   │   ├── MainFragment$onCreateView$7$1.class
+│   │                           │   │   ├── MainFragment$onCreateView$7.class
+│   │                           │   │   ├── MainFragment$onCreateView$8.class
+│   │                           │   │   ├── MainFragment$onCreateView$callback$1.class
+│   │                           │   │   ├── MainFragment.class
+│   │                           │   │   ├── MainFragmentDirections$Companion.class
+│   │                           │   │   ├── MainFragmentDirections.class
+│   │                           │   │   ├── MainViewModel$markTrouble$1.class
+│   │                           │   │   ├── MainViewModel$unMarkTrouble$1.class
+│   │                           │   │   ├── MainViewModel.class
+│   │                           │   │   └── MainViewModelFactory.class
+│   │                           │   ├── map
+│   │                           │   │   ├── MapsFragment$buildAlertMessageNoGps$1.class
+│   │                           │   │   ├── MapsFragment$buildAlertMessageNoGps$2.class
+│   │                           │   │   ├── MapsFragment$callback$1.class
+│   │                           │   │   ├── MapsFragment.class
+│   │                           │   │   └── MapsViewModel.class
+│   │                           │   ├── news
+│   │                           │   │   ├── NewsAdapter$ViewHolder$bind$1.class
+│   │                           │   │   ├── NewsAdapter$ViewHolder.class
+│   │                           │   │   ├── NewsAdapter.class
+│   │                           │   │   └── NewsFragment.class
+│   │                           │   ├── otp
+│   │                           │   │   ├── VerifyOtpFragment$onCreateView$1.class
+│   │                           │   │   ├── VerifyOtpFragment$onCreateView$2.class
+│   │                           │   │   ├── VerifyOtpFragment.class
+│   │                           │   │   ├── VerifyOtpFragmentArgs$Companion.class
+│   │                           │   │   ├── VerifyOtpFragmentArgs.class
+│   │                           │   │   ├── VerifyOtpFragmentDirections$ActionVerifyOtpFragmentToEmergencyContactsFragment.class
+│   │                           │   │   ├── VerifyOtpFragmentDirections$Companion.class
+│   │                           │   │   ├── VerifyOtpFragmentDirections.class
+│   │                           │   │   ├── VerifyOtpViewModel$resendOTP$1.class
+│   │                           │   │   ├── VerifyOtpViewModel$verifyOTP$1.class
+│   │                           │   │   ├── VerifyOtpViewModel.class
+│   │                           │   │   └── VerifyOtpViewModelFactory.class
+│   │                           │   ├── permissionRequest
+│   │                           │   │   ├── PermissionRequestFragment$onCreateView$1$$special$$inlined$let$lambda$1.class
+│   │                           │   │   ├── PermissionRequestFragment$onCreateView$1.class
+│   │                           │   │   ├── PermissionRequestFragment$onCreateView$2.class
+│   │                           │   │   ├── PermissionRequestFragment$onCreateView$3.class
+│   │                           │   │   ├── PermissionRequestFragment$onCreateView$4.class
+│   │                           │   │   ├── PermissionRequestFragment.class
+│   │                           │   │   ├── PermissionRequestFragmentDirections$Companion.class
+│   │                           │   │   ├── PermissionRequestFragmentDirections.class
+│   │                           │   │   └── PermissionRequestViewModel.class
+│   │                           │   ├── quicksettings
+│   │                           │   │   ├── LeoToggle$onClick$1.class
+│   │                           │   │   ├── LeoToggle$showNotLoggedInPrompt$1.class
+│   │                           │   │   ├── LeoToggle$showSuccessPrompt$1.class
+│   │                           │   │   ├── LeoToggle.class
+│   │                           │   │   └── NotLoggedIn.class
+│   │                           │   ├── register
+│   │                           │   │   ├── RegisterFragment$onCreateView$1.class
+│   │                           │   │   ├── RegisterFragment$onCreateView$2.class
+│   │                           │   │   ├── RegisterFragment$onCreateView$3.class
+│   │                           │   │   ├── RegisterFragment.class
+│   │                           │   │   ├── RegisterFragmentDirections$ActionRegisterFragmentToVerifyOtpFragment2.class
+│   │                           │   │   ├── RegisterFragmentDirections$Companion.class
+│   │                           │   │   ├── RegisterFragmentDirections.class
+│   │                           │   │   ├── RegisterViewModel$navigateToEmergencyNumbers$1.class
+│   │                           │   │   ├── RegisterViewModel.class
+│   │                           │   │   └── RegisterViewModelFactory.class
+│   │                           │   ├── settings
+│   │                           │   │   ├── SettingsFragment$onCreateView$1.class
+│   │                           │   │   ├── SettingsFragment$onCreateView$2.class
+│   │                           │   │   ├── SettingsFragment$onCreateView$3.class
+│   │                           │   │   ├── SettingsFragment$onCreateView$4.class
+│   │                           │   │   ├── SettingsFragment.class
+│   │                           │   │   ├── SettingsFragmentDirections$ActionSettingsFragmentToEmergencyContactsFragment2.class
+│   │                           │   │   ├── SettingsFragmentDirections$Companion.class
+│   │                           │   │   ├── SettingsFragmentDirections.class
+│   │                           │   │   ├── SettingsViewModel$logoutUser$1.class
+│   │                           │   │   ├── SettingsViewModel.class
+│   │                           │   │   └── SettingsViewModelFactory.class
+│   │                           │   └── splash
+│   │                           │       ├── SplashFragment$onCreateView$1.class
+│   │                           │       ├── SplashFragment.class
+│   │                           │       ├── SplashFragmentDirections$Companion.class
+│   │                           │       ├── SplashFragmentDirections.class
+│   │                           │       ├── SplashViewModel$checkLogin$1.class
+│   │                           │       ├── SplashViewModel.class
+│   │                           │       └── SplashViewModelFactory.class
+│   │                           └── utils
+│   │                               ├── AudioKt.class
+│   │                               ├── FallDetectionKt.class
+│   │                               ├── FullScreenNotificationKt.class
+│   │                               ├── HashUtilsKt.class
+│   │                               ├── NotificationKt.class
+│   │                               ├── PreferenceKt.class
+│   │                               ├── SMSUtilsKt.class
+│   │                               ├── ToastUtilsKt.class
+│   │                               ├── UnlockKt.class
+│   │                               ├── WifiP2PConnectUtilsKt$connectP2P$$inlined$also$lambda$1.class
+│   │                               └── WifiP2PConnectUtilsKt.class
+│   ├── build.gradle
+│   ├── debug
+│   │   ├── app-debug.apk
+│   │   └── output.json
+│   ├── libs
+│   ├── proguard-rules.pro
+│   ├── release
+│   │   ├── app-release.apk
+│   │   ├── leo.apk
+│   │   └── output.json
+│   └── src
+│       ├── androidTest
+│       │   └── java
+│       │       └── com
+│       │           └── rohit2810
+│       │               └── leo_kotlin
+│       │                   └── ExampleInstrumentedTest.kt
+│       ├── debug
+│       │   └── res
+│       │       └── values
+│       │           └── google_maps_api.xml
+│       ├── main
+│       │   ├── AndroidManifest.xml
+│       │   ├── java
+│       │   │   └── com
+│       │   │       └── rohit2810
+│       │   │           └── leo_kotlin
+│       │   │               ├── Application.kt
+│       │   │               ├── MainActivity.kt
+│       │   │               ├── database
+│       │   │               │   ├── NewsDao.kt
+│       │   │               │   └── UserDao.kt
+│       │   │               ├── models
+│       │   │               │   ├── Article.kt
+│       │   │               │   ├── Trouble.kt
+│       │   │               │   ├── User.kt
+│       │   │               │   ├── UserDataBase.kt
+│       │   │               │   └── UserNetworkModels.kt
+│       │   │               ├── network
+│       │   │               │   ├── NetworkUtils
+│       │   │               │   │   ├── NetworkConnectionInterceptor.kt
+│       │   │               │   │   └── NoConnectivityException.kt
+│       │   │               │   ├── NewsServiceApi.kt
+│       │   │               │   └── UserServiceApi.kt
+│       │   │               ├── receivers
+│       │   │               │   ├── LocationUpdatesReceiver.kt
+│       │   │               │   ├── NotificationReceiver.kt
+│       │   │               │   ├── PowerButtonReceiver.kt
+│       │   │               │   ├── TroubleReceiver.kt
+│       │   │               │   ├── UnMarkTroubleReceiver.kt
+│       │   │               │   └── WifiP2PReceiver.kt
+│       │   │               ├── repository
+│       │   │               │   └── TroubleRepository.kt
+│       │   │               ├── services
+│       │   │               │   ├── FallDetectionService.kt
+│       │   │               │   ├── LocationService.kt
+│       │   │               │   └── wifidirect
+│       │   │               │       ├── SendReceive.kt
+│       │   │               │       └── WiFiP2PServiceLeo.kt
+│       │   │               ├── ui
+│       │   │               │   ├── BottomSheetDialogLeo.kt
+│       │   │               │   ├── emergencyContacts
+│       │   │               │   │   ├── EmergencyContactsFragment.kt
+│       │   │               │   │   ├── EmergencyContactsViewModel.kt
+│       │   │               │   │   └── EmergencyContactsViewModelFactory.kt
+│       │   │               │   ├── intro
+│       │   │               │   │   ├── IntroActivity.kt
+│       │   │               │   │   ├── IntroViewPageAdapter.kt
+│       │   │               │   │   └── ScreenItem.kt
+│       │   │               │   ├── login
+│       │   │               │   │   ├── LoginFragment.kt
+│       │   │               │   │   ├── LoginViewModel.kt
+│       │   │               │   │   └── LoginViewModelFactory.kt
+│       │   │               │   ├── main
+│       │   │               │   │   ├── MainFragment.kt
+│       │   │               │   │   ├── MainViewModel.kt
+│       │   │               │   │   └── MainViewModelFactory.kt
+│       │   │               │   ├── map
+│       │   │               │   │   ├── MapsFragment.kt
+│       │   │               │   │   └── MapsViewModel.kt
+│       │   │               │   ├── news
+│       │   │               │   │   ├── NewsAdapter.kt
+│       │   │               │   │   └── NewsFragment.kt
+│       │   │               │   ├── otp
+│       │   │               │   │   ├── VerifyOtpFragment.kt
+│       │   │               │   │   ├── VerifyOtpViewModel.kt
+│       │   │               │   │   └── VerifyOtpViewModelFactory.kt
+│       │   │               │   ├── permissionRequest
+│       │   │               │   │   ├── PermissionRequestFragment.kt
+│       │   │               │   │   └── PermissionRequestViewModel.kt
+│       │   │               │   ├── quicksettings
+│       │   │               │   │   ├── LeoToggle.kt
+│       │   │               │   │   └── NotLoggedIn.kt
+│       │   │               │   ├── register
+│       │   │               │   │   ├── RegisterFragment.kt
+│       │   │               │   │   ├── RegisterViewModel.kt
+│       │   │               │   │   └── RegisterViewModelFactory.kt
+│       │   │               │   ├── settings
+│       │   │               │   │   ├── SettingsFragment.kt
+│       │   │               │   │   ├── SettingsViewModel.kt
+│       │   │               │   │   └── SettingsViewModelFactory.kt
+│       │   │               │   └── splash
+│       │   │               │       ├── SplashFragment.kt
+│       │   │               │       ├── SplashViewModel.kt
+│       │   │               │       └── SplashViewModelFactory.kt
+│       │   │               └── utils
+│       │   │                   ├── Audio.kt
+│       │   │                   ├── FallDetection.kt
+│       │   │                   ├── FullScreenNotification.kt
+│       │   │                   ├── Notification.kt
+│       │   │                   ├── Preference.kt
+│       │   │                   ├── SMSUtils.kt
+│       │   │                   ├── ServiceUtil.kt
+│       │   │                   ├── Unlock.kt
+│       │   │                   ├── WifiP2PConnectUtils.kt
+│       │   │                   ├── hashUtils.kt
+│       │   │                   └── toastUtils.kt
+│       │   └── res
+│       │       ├── anim
+│       │       │   ├── button_animation.xml
+│       │       │   ├── fade_in.xml
+│       │       │   ├── slide_in_left.xml
+│       │       │   ├── slide_in_right.xml
+│       │       │   ├── slide_out_left.xml
+│       │       │   └── slide_out_right.xml
+│       │       ├── drawable
+│       │       │   ├── btn_gradient_style.xml
+│       │       │   ├── disable_button_style.xml
+│       │       │   ├── edit_text_style.xml
+│       │       │   ├── i_am_in_trouble_button_style.xml
+│       │       │   ├── i_am_not_in_trouble_button.xml
+│       │       │   ├── ic_baseline_arrow_forward_24.xml
+│       │       │   ├── ic_settings_black_24dp.xml
+│       │       │   ├── indicator_default.xml
+│       │       │   ├── indicator_selected.xml
+│       │       │   ├── indicator_selector.xml
+│       │       │   ├── leo2.png
+│       │       │   ├── leo_logout_24.xml
+│       │       │   ├── leo_settings_24.xml
+│       │       │   ├── leo_share.xml
+│       │       │   ├── leo_update_24.xml
+│       │       │   ├── login_button_style.xml
+│       │       │   ├── login_mail.xml
+│       │       │   ├── login_password.xml
+│       │       │   ├── login_person.xml
+│       │       │   ├── login_phone.xml
+│       │       │   ├── not_in_trouble_main.xml
+│       │       │   ├── precautions_main.xml
+│       │       │   ├── recent_crime_news_main.xml
+│       │       │   ├── settings_fall.xml
+│       │       │   ├── side_nav_bar.xml
+│       │       │   ├── success_button_style.xml
+│       │       │   ├── travel_safe.xml
+│       │       │   └── trouble_button_style.xml
+│       │       ├── drawable-v21
+│       │       │   ├── ic_menu_camera.xml
+│       │       │   ├── ic_menu_gallery.xml
+│       │       │   └── ic_menu_slideshow.xml
+│       │       ├── drawable-v24
+│       │       ├── layout
+│       │       │   ├── activity_full_screen.xml
+│       │       │   ├── activity_main.xml
+│       │       │   ├── fragment_emergency_contacts.xml
+│       │       │   ├── fragment_intro.xml
+│       │       │   ├── fragment_login.xml
+│       │       │   ├── fragment_main.xml
+│       │       │   ├── fragment_maps.xml
+│       │       │   ├── fragment_news.xml
+│       │       │   ├── fragment_permission_request.xml
+│       │       │   ├── fragment_register.xml
+│       │       │   ├── fragment_settings.xml
+│       │       │   ├── fragment_splash.xml
+│       │       │   ├── fragment_splash_anim.xml
+│       │       │   ├── fragment_verify_otp.xml
+│       │       │   ├── layour_main.xml
+│       │       │   ├── layout_screen.xml
+│       │       │   ├── news_item.xml
+│       │       │   ├── precautions_dialog.xml
+│       │       │   ├── quick_settings_user_not_available_dialog.xml
+│       │       │   └── toast_dialog.xml
+│       │       ├── menu
+│       │       │   ├── activity_main_drawer.xml
+│       │       │   ├── drawer.xml
+│       │       │   └── main_menu.xml
+│       │       ├── mipmap-anydpi-v26
+│       │       ├── mipmap-hdpi
+│       │       ├── mipmap-mdpi
+│       │       ├── mipmap-xhdpi
+│       │       ├── mipmap-xxhdpi
+│       │       ├── mipmap-xxxhdpi
+│       │       ├── navigation
+│       │       │   └── nav_graph.xml
+│       │       ├── raw
+│       │       │   └── trouble_loading.json
+│       │       ├── values
+│       │       │   ├── colors.xml
+│       │       │   ├── dimens.xml
+│       │       │   ├── drawables.xml
+│       │       │   ├── google_maps_api.xml
+│       │       │   ├── strings.xml
+│       │       │   └── styles.xml
+│       │       └── xml
+│       │           ├── fragment_splash_anim_scene.xml
+│       │           └── network_security_config.xml
+│       ├── release
+│       │   └── res
+│       │       └── values
+│       │           └── google_maps_api.xml
+│       └── test
+│           └── java
+│               └── com
+│                   └── rohit2810
+│                       └── leo_kotlin
+│                           └── ExampleUnitTest.kt
+├── build
+│   ├── debug
+│   │   ├── app-debug.apk
+│   │   └── output.json
+│   └── kotlin
+│       └── sessions
+├── build.gradle
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+├── local.properties
+├── settings.gradle
+└── tree.txt
+
+426 directories, 1900 files

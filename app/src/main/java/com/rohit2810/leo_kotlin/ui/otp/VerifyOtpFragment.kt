@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.rohit2810.leo_kotlin.R
 import com.rohit2810.leo_kotlin.databinding.FragmentVerifyOtpBinding
-import com.rohit2810.leo_kotlin.models.User
-import com.rohit2810.leo_kotlin.ui.emergencyContacts.EmergencyContactsFragmentArgs
+import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.utils.showToast
 import timber.log.Timber
 
