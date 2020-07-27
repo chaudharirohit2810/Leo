@@ -3,25 +3,33 @@ package com.rohit2810.leo_kotlin.ui.map
 import android.content.Context
 import android.content.Intent
 import android.location.LocationManager
-import androidx.fragment.app.Fragment
-
 import android.os.Bundle
 import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
-import com.rohit2810.leo_kotlin.R
-import com.rohit2810.leo_kotlin.utils.getLatitudeFromCache
-import com.rohit2810.leo_kotlin.utils.getLongitudeFromCache
-
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+import com.rohit2810.leo_kotlin.R
+import com.rohit2810.leo_kotlin.database.getDatabase
+import com.rohit2810.leo_kotlin.utils.getLatitudeFromCache
+import com.rohit2810.leo_kotlin.utils.getLongitudeFromCache
+import timber.log.Timber
 
 class MapsFragment : Fragment() {
+
+    private lateinit var mapsViewModel: MapsViewModel
+    private lateinit var mapsViewModelFactory: MapsViewModelFactory
+    private lateinit var mMap: GoogleMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +43,37 @@ class MapsFragment : Fragment() {
     }
 
     private val callback = OnMapReadyCallback { googleMap ->
+        mMap = googleMap
         val latitude = getLatitudeFromCache(activity?.applicationContext!!)
         val longitude = getLongitudeFromCache(activity?.applicationContext!!)
-        val sydney = LatLng(latitude.toDouble(), longitude.toDouble())
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16f))
+        val current = LatLng(latitude.toDouble(), longitude.toDouble())
+        val current2 = LatLng(latitude.toDouble(), longitude + 0.008)
+        val current3 = LatLng(latitude + 0.01, longitude.toDouble())
+        googleMap.addMarker(MarkerOptions().position(current).title("Current Location"))
+//        markHeatmap(googleMap, current2)
+//        markHeatmap(googleMap, current3)
+        getDatabase(requireContext()).heatmapDao.getAllHeatmaps()
+            .observe(viewLifecycleOwner, Observer {
+                it?.let {
+                    it.map { it2 ->
+                        Timber.d(it2.toString())
+                        val loc = LatLng(it2.latitude, it2.longitude)
+                        markHeatmap(mMap, loc)
+                    }
+                }
+            })
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(current, 14.5f))
+    }
+
+    private fun markHeatmap(
+        googleMap: GoogleMap,
+        current: LatLng,
+        radius: Double = 400.0
+    ) {
+        googleMap.addCircle(
+            CircleOptions().center(current).radius(radius).fillColor(R.color.colorAccent)
+                .clickable(true)
+        )
     }
 
     override fun onCreateView(
@@ -47,6 +81,9 @@ class MapsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        mapsViewModelFactory = MapsViewModelFactory(requireContext())
+        mapsViewModel = ViewModelProvider(this, mapsViewModelFactory).get(MapsViewModel::class.java)
+
         return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
