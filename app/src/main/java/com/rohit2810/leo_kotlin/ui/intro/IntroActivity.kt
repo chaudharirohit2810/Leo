@@ -57,15 +57,29 @@ class IntroActivity : AppCompatActivity() {
         )
         list.add(
             ScreenItem(
-                "Scream Detection",
-                "Catching the trouble when the power button is pressed at least 5 times",
+                "Travel Safe",
+                "Intuitive map of crime hotspots in your region.",
+                R.drawable.leo2
+            )
+        )
+        list.add(
+            ScreenItem(
+                "Recent Crime News",
+                "Get to know recent crime incidents in your region.",
                 R.drawable.leo2
             )
         )
         list.add(
             ScreenItem(
                 "Wifi P2P",
-                "Catching the trouble when the power button is pressed at least 5 times",
+                "Trouble detection works seamlessly even when there is no cellular reception using WiFi P2P.",
+                R.drawable.leo2
+            )
+        )
+        list.add(
+            ScreenItem(
+                "Quick Settings Tile",
+                "Quick settings tile in system panel to easily notify when you are in trouble.",
                 R.drawable.leo2
             )
         )

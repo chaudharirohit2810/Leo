@@ -195,7 +195,11 @@ class EmergencyContactsFragment : Fragment() {
                             if(cNumber.startsWith("+91")) {
                                 cNumber = cNumber.replaceFirst("+91", "")
                             }
+                            if(cNumber.startsWith("0")) {
+                                cNumber = cNumber.replaceFirst("0", "")
+                            }
                             cNumber = cNumber.replace("\\s".toRegex(), "")
+                            cNumber = cNumber.replace("[\\-+.^:,]".toRegex(), "")
                             Timber.d("Phone number: ${cNumber}")
                             when(requestCode) {
                                 1001 -> viewModel.phone1.value = cNumber

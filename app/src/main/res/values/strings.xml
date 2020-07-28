@@ -33,4 +33,8 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="i_agree_to_terms_amp_conditions"><![CDATA[I agree to Terms & Conditions]]></string>
+    <string name="leo_platfrom">Leo Platfrom</string>
+    <string name="about_us_team">► Prajwal Adsul\n► Mayank Jain\n► Gouri Nangliya\n► Priyanka Kankal\n► Rohit Chaudhari\n► Aakansha Mahajan</string>
+    <string name="about_us_quote">Inspired by \n\'Coming together is the beginning. Keeping together is progress. Working together is success.\' — Henry Ford</string>
+    <string name="about_us_info">Just over a few months ago, we started working on making cities safe. We were encouraged by our college COEP to take part in the Smart India Hackathon - World\'s Biggest Open Innovation Model. We are a group of students from Computer Engineering with different interests and skills who came to work and collaborate together to find the solution for Crimes in cities.</string>
 </resources>

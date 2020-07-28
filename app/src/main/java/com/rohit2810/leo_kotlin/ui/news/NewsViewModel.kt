@@ -13,13 +13,11 @@ class NewsViewModel(var context: Context): ViewModel() {
     private var viewModelJob = Job()
     private var coroutineScope = CoroutineScope(viewModelJob + Dispatchers.Main)
     private var newsRepository = NewsRepository.getInstance(context)
-    init {
-        insertNews()
-    }
+    var city: String = "pune"
 
     fun insertNews() {
         coroutineScope.launch {
-            newsRepository.insertNews()
+            newsRepository.insertNews(city)
         }
     }
 

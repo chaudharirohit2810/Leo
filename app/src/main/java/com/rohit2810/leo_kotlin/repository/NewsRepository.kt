@@ -3,6 +3,7 @@ package com.rohit2810.leo_kotlin.repository
 import android.content.Context
 import com.rohit2810.leo_kotlin.database.getDatabase
 import com.rohit2810.leo_kotlin.models.news.News
+import com.rohit2810.leo_kotlin.models.news.asDatabaseModule
 import com.rohit2810.leo_kotlin.network.MineApi
 import com.rohit2810.leo_kotlin.network.UserApi
 import kotlinx.coroutines.Dispatchers
@@ -12,18 +13,22 @@ import java.lang.Exception
 
 class NewsRepository private constructor(var context: Context) {
     private val service = MineApi.retrofitService(context)
-    private val database = getDatabase(context)
-    suspend fun insertNews() {
+    private val database = getDatabase(context).newsDao
+    suspend fun insertNews(city: String) {
         withContext(Dispatchers.IO) {
             try {
-                var def = service.getNews("pune")
-//                Timber.d(def.toString())
-                database.newsDao.deleteAllNews()
-                database.newsDao.insertAllNews(def)
+                var def = service.getNews(city)
+                Timber.d(def.toString())
+                if(def.isEmpty()) {
+                    def = service.getNews("pune")
+                }
+                database.deleteAllNews()
+                def.map { it ->
+                    database.insertNews(it.asDatabaseModule())
+                }
             }catch (e: Exception) {
                 Timber.d(e.localizedMessage)
             }
-
         }
     }
 

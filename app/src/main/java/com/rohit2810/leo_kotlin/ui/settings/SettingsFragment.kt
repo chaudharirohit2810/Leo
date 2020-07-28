@@ -86,6 +86,13 @@ class SettingsFragment : Fragment() {
             }
         })
 
+        viewModel.goToAboutUs.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                this.findNavController().navigate(SettingsFragmentDirections.actionSettingsFragmentToAboutFragment())
+                viewModel.doneGoToAboutUs()
+            }
+        })
+
 
 
 

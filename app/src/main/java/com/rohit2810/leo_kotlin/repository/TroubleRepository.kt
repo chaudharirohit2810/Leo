@@ -18,7 +18,9 @@ class TroubleRepository private constructor(private val context: Context) {
     suspend fun loginUser(user: User) {
         try {
             var pass = user.password
-            user.password = sha256(pass)
+            var msg = "${user.username}${pass}"
+            user.password = sha256(msg)
+            Timber.d(user.password)
             val deferredUser = service.loginUser(user)
             val user2 = deferredUser.await()
             user2.password = pass
@@ -37,7 +39,7 @@ class TroubleRepository private constructor(private val context: Context) {
         try {
             Timber.d(user.toString())
             var pass = user.password
-            user.password = sha256(pass)
+            user.password = sha256(user.username+pass)
             val deferredUser = service.createUser(user)
             val user2 = deferredUser.await()
             user2.password = pass
@@ -162,7 +164,7 @@ class TroubleRepository private constructor(private val context: Context) {
     suspend fun checkLogin(user: User) {
         try {
             Timber.d(user.toString())
-            user.password = sha256(user.password)
+            user.password = sha256(user.username+user.password)
             val deferredUser = service.loginUser(user)
             val user2 = deferredUser.await()
             Timber.d(user2.toString())

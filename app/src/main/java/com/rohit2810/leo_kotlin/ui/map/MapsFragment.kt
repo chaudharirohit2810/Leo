@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -35,6 +36,8 @@ class MapsFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val manager: LocationManager =
             activity?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        var acti = requireActivity() as AppCompatActivity
+        acti.supportActionBar?.hide()
 
         if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             buildAlertMessageNoGps();

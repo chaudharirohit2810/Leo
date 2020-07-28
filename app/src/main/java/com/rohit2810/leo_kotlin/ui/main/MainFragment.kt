@@ -40,6 +40,9 @@ class MainFragment : Fragment() {
         val manager: LocationManager =
             activity?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
+        var acti = requireActivity() as AppCompatActivity
+        acti.supportActionBar?.show()
+
         if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
             buildAlertMessageNoGps();
         }

@@ -1,22 +1,27 @@
 package com.rohit2810.leo_kotlin.ui.news
 
 import android.content.Intent
+import android.location.Address
+import android.location.Geocoder
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.rohit2810.leo_kotlin.R
 import com.rohit2810.leo_kotlin.database.getDatabase
-import com.rohit2810.leo_kotlin.models.news.News
+import com.rohit2810.leo_kotlin.models.news.NewsDatabaseModule
+import com.rohit2810.leo_kotlin.utils.getLatitudeFromCache
+import com.rohit2810.leo_kotlin.utils.getLongitudeFromCache
 import kotlinx.android.synthetic.main.fragment_news.*
-import kotlinx.coroutines.coroutineScope
 import timber.log.Timber
+import java.util.*
+
 
 class NewsFragment : Fragment() {
 
@@ -38,11 +43,23 @@ class NewsFragment : Fragment() {
         var view = inflater.inflate(R.layout.fragment_news, container, false)
         newsViewModelFactory = NewsViewModelFactory(requireContext())
         newsViewModel = ViewModelProvider(this, newsViewModelFactory).get(NewsViewModel::class.java)
-        adapter = NewsAdapter(requireContext()) {
-                news -> newsArticleClicked(news)
+        val gcd = Geocoder(requireActivity(), Locale.getDefault())
+        val addresses: List<Address> =
+            gcd.getFromLocation(
+                getLatitudeFromCache(requireContext()).toDouble(),
+                getLongitudeFromCache(requireContext()).toDouble(),
+                1
+            )
+        if (addresses.size > 0) {
+            newsViewModel.city = addresses[0].getLocality()
+            newsViewModel.insertNews()
+        }
+        adapter = NewsAdapter(requireContext()) { news ->
+            newsArticleClicked(news)
         }
         recyclerView = view.findViewById(R.id.news_rv)
-        val dividerItemDecoration = DividerItemDecoration(view.context, DividerItemDecoration.VERTICAL)
+        val dividerItemDecoration =
+            DividerItemDecoration(view.context, DividerItemDecoration.VERTICAL)
         recyclerView.addItemDecoration(dividerItemDecoration)
         recyclerView.adapter = adapter
         getDatabase(requireContext()).newsDao.getAllNews().observe(viewLifecycleOwner, Observer {
@@ -57,8 +74,8 @@ class NewsFragment : Fragment() {
         return view
     }
 
-    fun newsArticleClicked(news: News) {
-        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(news.url)))
+    fun newsArticleClicked(news: NewsDatabaseModule) {
+        startActivity (Intent(Intent.ACTION_VIEW, Uri.parse(news.url)))
     }
 
 }

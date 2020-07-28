@@ -30,6 +30,10 @@ class SettingsViewModel(
     val navigateToEmergencyContacts: LiveData<Boolean>
         get() = _navigateToEmergencyContacts
 
+    private val _goToAboutUs = MutableLiveData<Boolean>()
+    val goToAboutUs: LiveData<Boolean>
+        get() = _goToAboutUs
+
     private val _toggleFallDetection = MutableLiveData<Boolean>()
     val toggleFallDetection: LiveData<Boolean>
         get() = _toggleFallDetection
@@ -40,6 +44,10 @@ class SettingsViewModel(
 
     fun doneGoToEmergencyContacts() {
         _navigateToEmergencyContacts.value = null
+    }
+
+    fun goToAboutUs() {
+        _goToAboutUs.value = true
     }
 
 
@@ -59,6 +67,10 @@ class SettingsViewModel(
             }
 
         }
+    }
+
+    fun doneGoToAboutUs() {
+        _goToAboutUs.value = null
     }
 
     fun doneShowingSnackbarMsg() {
