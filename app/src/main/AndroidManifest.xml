@@ -58,21 +58,19 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".MainActivity"></activity>
-
         <service android:name=".services.FallDetectionService" />
         <service android:name=".services.LocationService" />
         <service android:name=".services.wifidirect.WiFiP2PServiceLeo" />
 
         <service
             android:name=".ui.quicksettings.LeoToggle"
-            android:icon="@drawable/leo2"
+            android:icon="@drawable/red_transparent_quick_settings"
             android:label="@string/i_am_in_trouble"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
                 <action android:name="android.intent.action.INPUT_METHOD_CHANGED"/>
             </intent-filter>
-
             <meta-data
                 android:name="android.service.quicksettings.ACTIVE_TILE"
                 android:value="true" />

@@ -18,9 +18,9 @@ class BottomSheetDialogLeo : BottomSheetDialogFragment() {
         var textView = v.findViewById<TextView>(R.id.tv_Prec)
         var list = mutableListOf<String>()
         list.add("Do not wear headphones or be consumed with your cell phone unless you are in a familiar place or a secure area.")
-        list.add("Do not standout by wearing clothes and jewelry that are culturally inappropriate and draw attention to you.")
-        list.add(" Do not be a soft target for a robbery or people that would bring harm to you.")
-        list.add("do not show your itinerary to anyone that does not need to know.")
+        list.add("Do not be a soft target for a robbery or people that would bring harm to you.")
+        list.add("Do not accept drinks gum cigars cigarettes or food from people that you are not familiar with.")
+        list.add("Never leave keys under doormats, flowerpots, mailboxes or other secret hiding places -- burglars know where to look for hidden keys.")
 
         var text = ""
         var count = 1

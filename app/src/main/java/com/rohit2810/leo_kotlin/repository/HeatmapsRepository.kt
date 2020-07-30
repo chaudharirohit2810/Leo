@@ -24,7 +24,6 @@ class HeatmapsRepository private constructor(var context: Context) {
                 val n = def.size
                 if(database.getAllHeatmaps().value?.size !== 14) {
                     database.deleteAllHeatmaps()
-//                    Timber.d("My Location: ${latitude},${longitude}")
                     generateHeatmaps(n)
                     def.map { it ->
                         Timber.d(
@@ -53,9 +52,8 @@ class HeatmapsRepository private constructor(var context: Context) {
             var lat = getLatitudeFromCache(context).toDouble() + (random * 0.0002)
             random = (-1000..1000).random()
             var long = getLongitudeFromCache(context).toDouble() + random * 0.0002
-//            Timber.d("Your location: ${lat}, ${long}")
-//            Timber.d(n1.toString())
-            database.insertHeattmap(HeatmapDatabaseModule(0, lat, long))
+            var count = (1..50).random()
+            database.insertHeattmap(HeatmapDatabaseModule(count, lat, long))
             n1++
         }
     }

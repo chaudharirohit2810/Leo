@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -43,17 +44,7 @@ class NewsFragment : Fragment() {
         var view = inflater.inflate(R.layout.fragment_news, container, false)
         newsViewModelFactory = NewsViewModelFactory(requireContext())
         newsViewModel = ViewModelProvider(this, newsViewModelFactory).get(NewsViewModel::class.java)
-        val gcd = Geocoder(requireActivity(), Locale.getDefault())
-        val addresses: List<Address> =
-            gcd.getFromLocation(
-                getLatitudeFromCache(requireContext()).toDouble(),
-                getLongitudeFromCache(requireContext()).toDouble(),
-                1
-            )
-        if (addresses.size > 0) {
-            newsViewModel.city = addresses[0].getLocality()
-            newsViewModel.insertNews()
-        }
+        var textViewError = view.findViewById<TextView>(R.id.tv_news_error)
         adapter = NewsAdapter(requireContext()) { news ->
             newsArticleClicked(news)
         }
@@ -62,9 +53,31 @@ class NewsFragment : Fragment() {
             DividerItemDecoration(view.context, DividerItemDecoration.VERTICAL)
         recyclerView.addItemDecoration(dividerItemDecoration)
         recyclerView.adapter = adapter
+
+        newsViewModel.isLoading.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                if(it) {
+                    progressBar3.visibility = View.VISIBLE
+                }else {
+                    progressBar3.visibility = View.INVISIBLE
+                }
+            }
+        })
+
+        newsViewModel.isError.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                if (it) {
+                    textViewError.visibility = View.VISIBLE
+                }else {
+                    textViewError.visibility = View.INVISIBLE
+                }
+            }
+        })
+
         getDatabase(requireContext()).newsDao.getAllNews().observe(viewLifecycleOwner, Observer {
             it?.let {
                 if (it.isNotEmpty()) {
+                    newsViewModel.isError.value = false
                     progressBar3.visibility = View.INVISIBLE
                     recyclerView.visibility = View.VISIBLE
                     adapter.setArray(it)

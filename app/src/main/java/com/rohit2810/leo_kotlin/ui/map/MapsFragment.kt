@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -61,7 +62,7 @@ class MapsFragment : Fragment() {
                     it.map { it2 ->
                         Timber.d(it2.toString())
                         val loc = LatLng(it2.latitude, it2.longitude)
-                        markHeatmap(mMap, loc)
+                        markHeatmap(mMap, loc, count = it2.count)
                     }
                 }
             })
@@ -71,12 +72,29 @@ class MapsFragment : Fragment() {
     private fun markHeatmap(
         googleMap: GoogleMap,
         current: LatLng,
-        radius: Double = 400.0
+        radius: Double = 500.0,
+        count: Int = 25
     ) {
+        var color : Int = colorUtil(count)
+
         googleMap.addCircle(
-            CircleOptions().center(current).radius(radius).fillColor(R.color.colorAccent)
+            CircleOptions().center(current).radius(radius).fillColor(ContextCompat.getColor(requireContext(), color))
+                .strokeWidth(0f)
                 .clickable(true)
         )
+    }
+
+    fun colorUtil( count: Int): Int {
+        if(count < 10) {
+            return R.color.leo_maps_red_color1
+        }else if (count < 20) {
+            return R.color.leo_maps_red_color2
+        }else if(count < 30) {
+            return R.color.leo_maps_red_color3
+        }else if (count < 40) {
+            return R.color.leo_maps_red_color4
+        }
+        return R.color.leo_maps_red_color5
     }
 
     override fun onCreateView(
