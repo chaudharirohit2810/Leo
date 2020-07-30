@@ -35,30 +35,30 @@ object UserApi {
 
 interface UserServiceApi{
     //To add new user
-    @POST("addUser")
+    @POST("user/add")
     fun createUser(@Body user: User): Deferred<User>
 
     //for Login
-    @POST("loginIn")
+    @POST("user/login")
     fun loginUser(@Body user: User): Deferred<User>
 
     //Mark Trouble
-    @PUT("markTrouble")
+    @PUT("user/mark_trouble")
     fun markTrouble(@Body trouble: Trouble): Deferred<Any>
 
-    @PUT("unmarkTrouble")
+    @PUT("user/unmark_trouble")
     fun unmarkTrouble(@Body username: UnMarkTrouble): Deferred<Any>
 
     @POST("otp")
     fun sendOtp(@Body otp: OTP): Deferred<Any>
 
-    @POST("validateOTP")
+    @POST("validate/otp")
     fun validateOtp(@Body validateOTP: ValidateOTP): Deferred<Any>
 
-    @POST("user_nameExists")
+    @POST("user/exists")
     fun validateUserName(@Body username: Username): Deferred<Any>
 
-    @PUT("updateEC")
+    @PUT("user/update/emergency_contacts")
     fun updateEmergencyContacts(@Body emergencyContactsModel: EmergencyContactsModel): Deferred<Any>
 
 }

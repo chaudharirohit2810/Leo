@@ -20,6 +20,7 @@ class RegisterViewModel(var context: Context) : ViewModel() {
     val phone = MutableLiveData<String>()
     val name = MutableLiveData<String>()
     var isTermsConditionsAgreed = MutableLiveData<Boolean>()
+    var isPrivacyPolicyAgreed = MutableLiveData<Boolean>()
 
     private val _navigateToLogin = MutableLiveData<Boolean>()
     val navigateToLogin: LiveData<Boolean>
@@ -32,6 +33,7 @@ class RegisterViewModel(var context: Context) : ViewModel() {
     init {
         _isProgressBarVisible.value = false
         isTermsConditionsAgreed.value = false
+        isPrivacyPolicyAgreed.value = false
     }
 
     private val viewModelJob = Job()
@@ -106,6 +108,10 @@ class RegisterViewModel(var context: Context) : ViewModel() {
 
     fun setTermsConditions() {
         isTermsConditionsAgreed.value = !isTermsConditionsAgreed.value!!
+    }
+
+    fun setPrivacyPolicy() {
+        isPrivacyPolicyAgreed.value = !isPrivacyPolicyAgreed.value!!
     }
 
 

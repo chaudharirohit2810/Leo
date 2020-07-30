@@ -44,7 +44,8 @@ class TroubleRepository private constructor(private val context: Context) {
             val user2 = deferredUser.await()
             user2.password = pass
             sendIntroMessage(user.name!!, user.emergencyContacts)
-            addUserToCache(context, user2)
+            loginUser(user2)
+//            addUserToCache(context, user2)
         } catch (e: NoConnectivityException) {
             throw Exception("No Internet Connection")
         } catch (e: Exception) {

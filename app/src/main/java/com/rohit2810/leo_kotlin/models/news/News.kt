@@ -3,6 +3,7 @@ package com.rohit2810.leo_kotlin.models.news
 
 import android.annotation.SuppressLint
 import android.os.Parcelable
+import androidx.annotation.Keep
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -12,6 +13,7 @@ import kotlinx.android.parcel.RawValue
 import java.sql.Date
 import java.util.*
 
+@Keep
 data class News(
     var headline: String,
     var url: String = " ",

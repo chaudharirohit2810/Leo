@@ -38,7 +38,7 @@
         android:roundIcon="@drawable/leo2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".ui.intro.IntroActivity">
+        <activity android:name=".ui.intro.AppIntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

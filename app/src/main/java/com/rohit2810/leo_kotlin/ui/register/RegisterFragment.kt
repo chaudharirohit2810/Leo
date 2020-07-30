@@ -3,6 +3,7 @@ package com.rohit2810.leo_kotlin.ui.register
 import android.app.Activity
 import android.content.Intent
 import android.database.Cursor
+import android.net.Uri
 import android.os.Bundle
 import android.provider.ContactsContract
 import android.provider.ContactsContract.CommonDataKinds.Phone
@@ -67,11 +68,28 @@ class RegisterFragment : Fragment() {
             }
         })
 
-        viewModel.isTermsConditionsAgreed.observe(viewLifecycleOwner, Observer {
-            it?.let {
-                button_register.isEnabled = it
-            }
+        viewModel.isTermsConditionsAgreed.observe(viewLifecycleOwner, Observer {it1 ->
+
+            viewModel.isPrivacyPolicyAgreed.observe(viewLifecycleOwner, Observer { it2 ->
+                it1?.let {it1 ->
+                    it2?.let { it2 ->
+                        button_register.isEnabled = it1 && it2
+                    }
+                }
+
+            })
+
         })
+
+        binding.tvTermsAndConditions.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/file/d/1W5GDYjWCFIj_dfbctg0iA_9Unp8gkoKU/view?usp=sharing"))
+            startActivity(intent)
+        }
+
+        binding.tvPrivacyPolicy.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/file/d/1auANTHv5d-9phggss4s0SRCl5_wmepu_/view?usp=sharing"))
+            startActivity(intent)
+        }
 
 
 //        binding.buttonRegister.setOnClickListener {

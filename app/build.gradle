@@ -19,6 +19,8 @@ android {
         versionName "1.1"
         multiDexEnabled true
 
+        vectorDrawables.useSupportLibrary = true
+
 
 
         def secretsProperties = new Properties()
@@ -57,8 +59,10 @@ android {
         experimental = true
     }
 
+}
 
-
+repositories {
+    maven { url "https://jitpack.io" }
 }
 
 dependencies {
@@ -80,7 +84,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    android.defaultConfig.vectorDrawables.useSupportLibrary = true
 
     //Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
@@ -128,5 +131,9 @@ dependencies {
     kapt "androidx.room:room-compiler:$rootProject.roomVersion"
     implementation 'androidx.room:room-ktx:2.2.5'
     androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+
+    //App Intro Activity
+    implementation 'com.github.AppIntro:AppIntro:6.0.0'
+
 
 }

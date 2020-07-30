@@ -1,7 +1,9 @@
 package com.rohit2810.leo_kotlin.models.user
 
+import androidx.annotation.Keep
 import com.squareup.moshi.Json
 
+@Keep
 data class Trouble(
     @Json(name = "user_name")
     val username: String,

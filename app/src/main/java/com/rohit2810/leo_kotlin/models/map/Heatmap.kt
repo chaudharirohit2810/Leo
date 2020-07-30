@@ -1,9 +1,11 @@
 package com.rohit2810.leo_kotlin.models.map
 
+import androidx.annotation.Keep
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
+@Keep
 data class Heatmap(
     var region: String,
     var city: String,

@@ -44,7 +44,7 @@ class VerifyOtpViewModel(var context: Context, var user: User) : ViewModel() {
             try {
                 if(otp.value.isNullOrEmpty()) throw Exception("Please enter OTP")
                 _isProgressBarVisible.value = true
-                user.otp = otp.value
+                user.otp = otp.value!!
                 repository.verifyOtp(otp.value!!.toInt(), user)
                 _registeredUser.value = user
                 _navigateToNext.value = true

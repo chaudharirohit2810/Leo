@@ -22,16 +22,25 @@ class HeatmapsRepository private constructor(var context: Context) {
                 var def = service.getHeatmaps(latitude, longitude)
                 Timber.d(def.toString())
                 val n = def.size
-                database.deleteAllHeatmaps()
-                Timber.d("My Location: ${latitude},${longitude}")
-                generateHeatmaps(n)
-                def.map { it ->
-                    Timber.d("Your location: ${it.loc.coordinates.get(0)}, ${it.loc.coordinates.get(1)}")
-                    database.insertHeattmap(it.asDatabaseModule())
+                if(database.getAllHeatmaps().value?.size !== 14) {
+                    database.deleteAllHeatmaps()
+//                    Timber.d("My Location: ${latitude},${longitude}")
+                    generateHeatmaps(n)
+                    def.map { it ->
+                        Timber.d(
+                            "Your location: ${it.loc.coordinates.get(0)}, ${it.loc.coordinates.get(
+                                1
+                            )}"
+                        )
+                        database.insertHeattmap(it.asDatabaseModule())
+                    }
                 }
-            }catch (e: Exception) {
+            } catch (e: Exception) {
                 Timber.d(e.localizedMessage)
-                generateHeatmaps(0)
+                if(database.getAllHeatmaps().value?.size !== 14) {
+                    database.deleteAllHeatmaps()
+                    generateHeatmaps(0)
+                }
             }
 
         }
@@ -39,12 +48,13 @@ class HeatmapsRepository private constructor(var context: Context) {
 
     private suspend fun generateHeatmaps(n: Int) {
         var n1 = n
-        while (n1 < 10) {
+        while (n1 < 7) {
             var random = (-1000..1000).random()
             var lat = getLatitudeFromCache(context).toDouble() + (random * 0.0002)
             random = (-1000..1000).random()
             var long = getLongitudeFromCache(context).toDouble() + random * 0.0002
-            Timber.d("Your location: ${lat}, ${long}")
+//            Timber.d("Your location: ${lat}, ${long}")
+//            Timber.d(n1.toString())
             database.insertHeattmap(HeatmapDatabaseModule(0, lat, long))
             n1++
         }
