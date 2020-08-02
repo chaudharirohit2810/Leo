@@ -58,7 +58,6 @@ class MainViewModel(
 
     init {
         _isProgressBarVisible.value = false
-        _showNotInTrouble.value = false
         _undoTrouble.value = false
         _isNotInTroubleVisible.value = false
         _showNotInTrouble.value = getIsInTrouble(context)

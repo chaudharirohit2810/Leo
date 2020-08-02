@@ -140,6 +140,7 @@ class TroubleRepository private constructor(private val context: Context) {
             Timber.d(user2.toString())
         }
         catch (e: Exception) {
+            context.connectP2P()
             Timber.d(e.localizedMessage)
         }
     }

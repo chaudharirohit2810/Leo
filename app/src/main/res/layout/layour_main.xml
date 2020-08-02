@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -28,6 +29,7 @@
                 android:layout_height="150dp"
                 android:background="@drawable/i_am_not_in_trouble_button"
                 android:text="You are currently marked in trouble"
+                tools:visibility="gone"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:textColor="#fff"
                 android:visibility="@{!viewmodel.showNotInTrouble ? view.GONE: view.VISIBLE}"
@@ -51,6 +53,7 @@
                 android:id="@+id/animationView"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
+                tools:visibility="gone"
                 android:visibility="@{viewmodel.isProgressBarVisible ? view.VISIBLE : view.INVISIBLE}"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_untrouble"
                 app:layout_constraintEnd_toEndOf="@+id/btn_untrouble"
@@ -255,6 +258,7 @@
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="0dp"
                         android:layout_height="160dp"
+                        tools:visibility="gone"
                         android:visibility="@{!(viewmodel.showNotInTrouble || viewmodel.isNotInTroubleVisible) ? view.VISIBLE : view.GONE}"
                         android:layout_weight="1"
                         >

@@ -2,7 +2,6 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/indicator_selected"
         android:state_selected="true" />
-
     <item android:drawable="@drawable/indicator_default" />
 
 </selector>

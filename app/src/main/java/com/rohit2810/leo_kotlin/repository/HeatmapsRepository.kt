@@ -22,7 +22,7 @@ class HeatmapsRepository private constructor(var context: Context) {
                 var def = service.getHeatmaps(latitude, longitude)
                 Timber.d(def.toString())
                 val n = def.size
-                if(database.getAllHeatmaps().value?.size !== 14) {
+                if(database.getAllHeatmaps().value?.size !== 10) {
                     database.deleteAllHeatmaps()
                     generateHeatmaps(n)
                     def.map { it ->
@@ -36,7 +36,7 @@ class HeatmapsRepository private constructor(var context: Context) {
                 }
             } catch (e: Exception) {
                 Timber.d(e.localizedMessage)
-                if(database.getAllHeatmaps().value?.size !== 14) {
+                if(database.getAllHeatmaps().value?.size !== 10) {
                     database.deleteAllHeatmaps()
                     generateHeatmaps(0)
                 }
@@ -47,7 +47,7 @@ class HeatmapsRepository private constructor(var context: Context) {
 
     private suspend fun generateHeatmaps(n: Int) {
         var n1 = n
-        while (n1 < 7) {
+        while (n1 < 10) {
             var random = (-1000..1000).random()
             var lat = getLatitudeFromCache(context).toDouble() + (random * 0.0002)
             random = (-1000..1000).random()

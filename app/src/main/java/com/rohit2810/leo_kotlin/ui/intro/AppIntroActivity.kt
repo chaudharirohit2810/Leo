@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.github.appintro.AppIntro
+import com.github.appintro.AppIntroBaseFragment
 import com.github.appintro.AppIntroFragment
 import com.github.appintro.AppIntroPageTransformerType
 import com.rohit2810.leo_kotlin.Application
@@ -11,6 +12,7 @@ import com.rohit2810.leo_kotlin.MainActivity
 import com.rohit2810.leo_kotlin.R
 import com.rohit2810.leo_kotlin.utils.getIntroPrefs
 import com.rohit2810.leo_kotlin.utils.saveIntroPrefs
+import timber.log.Timber
 
 class AppIntroActivity : AppIntro() {
 
@@ -23,6 +25,7 @@ class AppIntroActivity : AppIntro() {
             finish()
         }
 
+        try {
         addSlide(AppIntroFragment.newInstance(
             title = "Welcome To Leo!",
             description = "Your safety is our responsibility",
@@ -70,7 +73,9 @@ class AppIntroActivity : AppIntro() {
             imageParallaxFactor = -1.0,
             descriptionParallaxFactor = 2.0
         ))
-//        setTransformer(AppIntroPageTransformerType.Depth)
+        }catch (e: Exception) {
+            Timber.d(e.localizedMessage)
+        }
     }
 
     override fun onPageSelected(position: Int) {

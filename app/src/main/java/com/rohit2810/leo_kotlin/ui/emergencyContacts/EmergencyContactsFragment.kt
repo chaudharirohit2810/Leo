@@ -21,6 +21,7 @@ import com.rohit2810.leo_kotlin.models.user.User
 import com.rohit2810.leo_kotlin.repository.TroubleRepository
 import com.rohit2810.leo_kotlin.utils.showToast
 import timber.log.Timber
+import java.lang.Exception
 
 class EmergencyContactsFragment : Fragment() {
 
@@ -175,41 +176,48 @@ class EmergencyContactsFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK) {
             if(requestCode > 1000 && requestCode < 1006) {
-                    var contactData: Uri = data?.data!!
-                    var cursor = activity?.contentResolver?.query(contactData, null, null, null, null)
-                    if(cursor?.moveToFirst()!!) {
-                        val id: String =
-                            cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.Contacts._ID))
+                    try {
+                        var contactData: Uri = data?.data!!
 
-                        val hasPhone: String =
-                            cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
+                        var cursor = activity?.contentResolver?.query(contactData, null, null, null, null)
+                        if(cursor?.moveToFirst()!!) {
+                            val id: String =
+                                cursor.getString(cursor.getColumnIndexOrThrow(ContactsContract.Contacts._ID))
 
-                        if (hasPhone.equals("1", ignoreCase = true)) {
-                            val phones: Cursor = activity?.contentResolver!!?.query(
-                                ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
-                                ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id,
-                                null, null
-                            )!!
-                            phones.moveToFirst()
-                            var cNumber = phones.getString(phones.getColumnIndex("data1"))
-                            if(cNumber.startsWith("+91")) {
-                                cNumber = cNumber.replaceFirst("+91", "")
-                            }
-                            if(cNumber.startsWith("0")) {
-                                cNumber = cNumber.replaceFirst("0", "")
-                            }
-                            cNumber = cNumber.replace("\\s".toRegex(), "")
-                            cNumber = cNumber.replace("[\\-+.^:,]".toRegex(), "")
-                            Timber.d("Phone number: ${cNumber}")
-                            when(requestCode) {
-                                1001 -> viewModel.phone1.value = cNumber
-                                1002 -> viewModel.phone2.value = cNumber
-                                1003 -> viewModel.phone3.value = cNumber
-                                1004 -> viewModel.phone4.value = cNumber
-                                1005 -> viewModel.phone5.value = cNumber
+                            val hasPhone: String =
+                                cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER))
+
+                            if (hasPhone.equals("1", ignoreCase = true)) {
+                                val phones: Cursor = activity?.contentResolver!!?.query(
+                                    ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null,
+                                    ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id,
+                                    null, null
+                                )!!
+                                phones.moveToFirst()
+                                var cNumber = phones.getString(phones.getColumnIndex("data1"))
+                                if(cNumber.startsWith("+91")) {
+                                    cNumber = cNumber.replaceFirst("+91", "")
+                                }
+                                if(cNumber.startsWith("0")) {
+                                    cNumber = cNumber.replaceFirst("0", "")
+                                }
+                                cNumber = cNumber.replace("\\s".toRegex(), "")
+                                cNumber = cNumber.replace("[\\-+.^:,]".toRegex(), "")
+                                Timber.d("Phone number: ${cNumber}")
+                                when(requestCode) {
+                                    1001 -> viewModel.phone1.value = cNumber
+                                    1002 -> viewModel.phone2.value = cNumber
+                                    1003 -> viewModel.phone3.value = cNumber
+                                    1004 -> viewModel.phone4.value = cNumber
+                                    1005 -> viewModel.phone5.value = cNumber
+                                }
                             }
                         }
+                    }catch (e: Exception) {
+                        Timber.d(e.localizedMessage)
+                        requireContext().showToast("Invalid Phone number")
                     }
+
             }
         }
     }

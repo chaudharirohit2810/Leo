@@ -41,8 +41,7 @@ android {
     buildTypes {
 
         debug{
-            minifyEnabled true
-            shrinkResources true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
@@ -140,6 +139,9 @@ dependencies {
 
     //App Intro Activity
     implementation 'com.github.AppIntro:AppIntro:6.0.0'
+
+    //Work Manager
+    implementation "androidx.work:work-runtime-ktx:$work_version"
 
 
 }

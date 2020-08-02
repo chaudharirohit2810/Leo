@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.PagerAdapter
 import com.rohit2810.leo_kotlin.R
 
@@ -18,6 +19,7 @@ class IntroViewPageAdapter(
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         var inflater : LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var layoutScreen: View = inflater.inflate(R.layout.layout_screen, null)
+        layoutScreen.background = ContextCompat.getDrawable(context, mListScreen.get(position).backgroundDrawable)
 
         var imgSlide = layoutScreen.findViewById<ImageView>(R.id.intro_img)
         var title = layoutScreen.findViewById<TextView>(R.id.intro_title)
@@ -25,7 +27,7 @@ class IntroViewPageAdapter(
 
         title.text = mListScreen.get(position).title
         description.text = mListScreen.get(position).description
-        imgSlide.setImageResource(mListScreen.get(position).screenImg)
+        imgSlide.setImageResource(mListScreen.get(position).imageDrawable)
 
         container.addView(layoutScreen)
         return layoutScreen

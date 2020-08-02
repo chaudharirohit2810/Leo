@@ -54,8 +54,6 @@ class MapsFragment : Fragment() {
         val current2 = LatLng(latitude.toDouble(), longitude + 0.008)
         val current3 = LatLng(latitude + 0.01, longitude.toDouble())
         googleMap.addMarker(MarkerOptions().position(current).title("Current Location"))
-//        markHeatmap(googleMap, current2)
-//        markHeatmap(googleMap, current3)
         getDatabase(requireContext()).heatmapDao.getAllHeatmaps()
             .observe(viewLifecycleOwner, Observer {
                 it?.let {
@@ -75,13 +73,22 @@ class MapsFragment : Fragment() {
         radius: Double = 500.0,
         count: Int = 25
     ) {
-        var color : Int = colorUtil(count)
+        var color : Int = secondColorUtil(count)
 
         googleMap.addCircle(
             CircleOptions().center(current).radius(radius).fillColor(ContextCompat.getColor(requireContext(), color))
-                .strokeWidth(0f)
+                .strokeWidth(1f)
                 .clickable(true)
         )
+    }
+
+    fun secondColorUtil(count: Int): Int {
+        if (count < 20) {
+            return R.color.leo_maps_yellow_color
+        }else if(count < 35) {
+            return R.color.leo_maps_orange_color
+        }
+        return R.color.leo_maps_red_color2
     }
 
     fun colorUtil( count: Int): Int {

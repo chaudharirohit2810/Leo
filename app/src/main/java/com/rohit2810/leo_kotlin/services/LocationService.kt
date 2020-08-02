@@ -70,6 +70,7 @@ class LocationService : Service() {
             priority = LocationRequest.PRIORITY_HIGH_ACCURACY
         }
 
+
         //Use callback to get location
         locationCallback = object: LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {

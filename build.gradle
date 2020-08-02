@@ -18,6 +18,7 @@ buildscript {
         version_recyclerview = "1.0.0"
         navigationVersion = '1.0.0-alpha08'
         roomVersion = "2.2.5"
+        work_version = "2.4.0"
     }
     repositories {
         google()

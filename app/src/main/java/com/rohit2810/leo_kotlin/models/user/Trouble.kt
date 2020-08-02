@@ -11,5 +11,6 @@ data class Trouble(
     val longitude: Double? = 0.0,
     val inTrouble: Boolean,
     var emergencyContacts : MutableList<String?> = mutableListOf<String?>(),
-    val token: String
+    val token: String,
+    var type: String = "app"
 )

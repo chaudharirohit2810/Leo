@@ -1,20 +1,23 @@
 package com.rohit2810.leo_kotlin.ui.intro
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.rohit2810.leo_kotlin.Application
 import com.rohit2810.leo_kotlin.MainActivity
 import com.rohit2810.leo_kotlin.R
+import com.rohit2810.leo_kotlin.ui.intro.ParallaxPageTransformer.ParallaxTransformInformation
+import com.rohit2810.leo_kotlin.ui.intro.ParallaxPageTransformer.ParallaxTransformInformation.Companion.PARALLAX_EFFECT_DEFAULT
 import com.rohit2810.leo_kotlin.utils.getIntroPrefs
 import com.rohit2810.leo_kotlin.utils.saveIntroPrefs
 import kotlinx.android.synthetic.main.fragment_intro.*
+
 
 class IntroActivity : AppCompatActivity() {
     private lateinit var btnAnim: Animation
@@ -36,56 +39,73 @@ class IntroActivity : AppCompatActivity() {
         val list = mutableListOf<ScreenItem>()
         list.add(
             ScreenItem(
-                "Leo",
-                "Your saviour in trouble",
-                R.drawable.leo2
+                title = "Welcome To Leo!",
+                description = "Protecting you like family",
+                backgroundDrawable = R.drawable.back_slide6,
+                imageDrawable = R.drawable.white_leo2
             )
         )
         list.add(
             ScreenItem(
-                "Fall Detection",
-                "Fall is detected based on analyzing acceleration patterns generated during various activities",
-                R.drawable.leo2
+                title = "Power Button Detection",
+                description = "Catching the trouble when the power button is pressed at least 5 times",
+                imageDrawable = R.drawable.intro_power_button_detection,
+                backgroundDrawable = R.drawable.back_slide2
             )
         )
         list.add(
             ScreenItem(
-                "Power Button Detection",
-                "Catching the trouble when the power button is pressed at least 5 times",
-                R.drawable.leo2
+                title = "Travel Safe",
+                description = "Intuitive map of crime hotspots in your region.",
+                imageDrawable = R.drawable.intro_travel_safe,
+                backgroundDrawable = R.drawable.intro_wifi_p2p_back
             )
         )
         list.add(
             ScreenItem(
-                "Travel Safe",
-                "Intuitive map of crime hotspots in your region.",
-                R.drawable.leo2
+                title = "Recent Crime News",
+                description = "Get to know recent crime incidents in your region.",
+                imageDrawable = R.drawable.intro_recent_crime_news,
+                backgroundDrawable = R.drawable.back_slide3
             )
         )
         list.add(
             ScreenItem(
-                "Recent Crime News",
-                "Get to know recent crime incidents in your region.",
-                R.drawable.leo2
+                title = "Wifi P2P",
+                description = "Trouble detection works seamlessly even when there is no cellular reception using WiFi P2P.",
+                imageDrawable = R.drawable.intro_wifi_p2p,
+                backgroundDrawable = R.drawable.back_slide5
             )
         )
         list.add(
             ScreenItem(
-                "Wifi P2P",
-                "Trouble detection works seamlessly even when there is no cellular reception using WiFi P2P.",
-                R.drawable.leo2
+                title = "Fall Detection",
+                description = "Fall is detected based on analyzing acceleration patterns generated during various activities",
+                imageDrawable = R.drawable.intro_fall_detection,
+                backgroundDrawable = R.drawable.back_slide1
             )
         )
         list.add(
             ScreenItem(
-                "Quick Settings Tile",
-                "Quick settings tile in system panel to easily notify when you are in trouble.",
-                R.drawable.leo2
+                title = "Quick Settings Tile",
+                description = "Quick settings tile in system panel to easily notify when you are in trouble.",
+                imageDrawable = R.drawable.intro_quick_settings_tool,
+                backgroundDrawable = R.drawable.back_slide4
             )
         )
 
+        val pageTransformer = ParallaxPageTransformer()
+            .addViewToParallax(ParallaxTransformInformation(R.id.intro_img, -1.0f, -1.0f))
+            .addViewToParallax(
+                ParallaxTransformInformation(
+                    R.id.intro_title, 1.0f,
+                    1.0f
+                )
+            ).addViewToParallax(ParallaxTransformInformation(R.id.intro_description, 2.0f, 2.0f))
+
         val introViewPageAdapter = IntroViewPageAdapter(this, list)
         screen_viewpager.adapter = introViewPageAdapter
+        screen_viewpager.setPageTransformer(true, pageTransformer)
 
         tab_indicator.setupWithViewPager(screen_viewpager)
 

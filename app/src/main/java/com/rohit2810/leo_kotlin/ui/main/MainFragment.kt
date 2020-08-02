@@ -138,7 +138,7 @@ class MainFragment : Fragment() {
 
         viewmodel.showNotInTrouble.observe(viewLifecycleOwner, Observer { trou ->
             viewmodel.isProgressBarVisible.observe(viewLifecycleOwner, Observer { prog ->
-                if (!(prog || trou)) {
+                if (!prog && !trou) {
                     binding.btnTrouble.visibility = View.VISIBLE
                 } else {
                     binding.btnTrouble.visibility = View.GONE
@@ -191,10 +191,10 @@ class MainFragment : Fragment() {
     }
 
     private fun startService() {
-        if (getFallDetectionPrefs(activity?.applicationContext!!)) {
-            val intent = Intent(activity?.applicationContext, FallDetectionService::class.java)
-            ContextCompat.startForegroundService(activity?.applicationContext!!, intent)
-        }
+//        if (getFallDetectionPrefs(activity?.applicationContext!!)) {
+//            val intent = Intent(activity?.applicationContext, FallDetectionService::class.java)
+//            ContextCompat.startForegroundService(activity?.applicationContext!!, intent)
+//        }
         val intent2 = Intent(activity?.applicationContext, LocationService::class.java)
         ContextCompat.startForegroundService(activity?.applicationContext!!, intent2)
         val intent3 = Intent(activity?.applicationContext, WiFiP2PServiceLeo::class.java)

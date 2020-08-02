@@ -10,7 +10,7 @@ import java.util.Base64.getEncoder
 @RequiresApi(Build.VERSION_CODES.KITKAT)
 fun sha256(text: String) : String {
     val bytes = text.toString().toByteArray()
-    val md = MessageDigest.getInstance("SHA-256")
+    val md : MessageDigest = MessageDigest.getInstance("SHA-256")
     val digest = md.digest(bytes)
     return digest.fold("", { str, it -> str + "%02x".format(it) })
 }
