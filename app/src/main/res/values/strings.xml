@@ -42,4 +42,5 @@
     <string name="about_us_quote">Inspired by \n\'Coming together is the beginning. Keeping together is progress. Working together is success.\' — Henry Ford</string>
     <string name="about_us_info">Just over a few months ago, we started working on making cities safe. We were encouraged by our college COEP to take part in the Smart India Hackathon - World\'s Biggest Open Innovation Model. We are a group of students from Computer Engineering with different interests and skills who came to work and collaborate together to find the solution for Crimes in cities.</string>
     <string name="your_safety_is_our_responsibility">Protecting you like family</string>
+    <string name="schedule_fall_detection">Schedule Fall Detection</string>
 </resources>

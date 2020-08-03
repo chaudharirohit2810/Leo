@@ -99,12 +99,19 @@ class SettingsFragment : Fragment() {
             }
         })
 
-        //Work Manager Request
-        val workRequest = PeriodicWorkRequestBuilder<StartScheduler>(10, TimeUnit.MINUTES)
-            .setInitialDelay(20, TimeUnit.SECONDS).addTag("FALL_DETECTION_START").build()
+//        viewModel.fallDetectionService.observe(viewLifecycleOwner,  Observer{
+//            it?.let {
+//
+//                viewModel.doneFallDetectionScheduling()
+//            }
+//        })
 
-        WorkManager.getInstance(requireContext())
-            .enqueueUniquePeriodicWork("FALL_DETECTION_START", ExistingPeriodicWorkPolicy.REPLACE, workRequest);
+//        //Work Manager Request
+//        val workRequest = PeriodicWorkRequestBuilder<StartScheduler>(10, TimeUnit.MINUTES)
+//            .setInitialDelay(20, TimeUnit.SECONDS).addTag("FALL_DETECTION_START").build()
+//
+//        WorkManager.getInstance(requireContext())
+//            .enqueueUniquePeriodicWork("FALL_DETECTION_START", ExistingPeriodicWorkPolicy.REPLACE, workRequest);
 
 
 

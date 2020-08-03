@@ -16,12 +16,14 @@ import timber.log.Timber
 class VerifyOtpFragment : Fragment() {
 
     private lateinit var user: User
+    private var isFromForgot: Boolean = false
     private lateinit var viewModel: VerifyOtpViewModel
     private lateinit var viewModelFactory: VerifyOtpViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         user = VerifyOtpFragmentArgs.fromBundle(requireArguments()).registeredUser
+        isFromForgot = VerifyOtpFragmentArgs.fromBundle(requireArguments()).isFromForgot
     }
 
     override fun onCreateView(
@@ -38,12 +40,18 @@ class VerifyOtpFragment : Fragment() {
         viewModel.registeredUser.observe(viewLifecycleOwner, Observer {
             it?.let {
                 Timber.d(it.toString())
-                this.findNavController().navigate(
-                    VerifyOtpFragmentDirections.actionVerifyOtpFragmentToEmergencyContactsFragment(
-                        it,
-                        false
+                if (isFromForgot) {
+                    this.findNavController().navigate(
+                        VerifyOtpFragmentDirections.actionVerifyOtpFragmentToChangePasswordFragment(it)
                     )
-                )
+                }else {
+                    this.findNavController().navigate(
+                        VerifyOtpFragmentDirections.actionVerifyOtpFragmentToEmergencyContactsFragment(
+                            it,
+                            false
+                        )
+                    )
+                }
             }
         })
 

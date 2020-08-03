@@ -48,7 +48,7 @@ class RegisterFragment : Fragment() {
             it?.let {
 //                this.findNavController().navigate()
                 this.findNavController().navigate(
-                    RegisterFragmentDirections.actionRegisterFragmentToVerifyOtpFragment2(it)
+                    RegisterFragmentDirections.actionRegisterFragmentToVerifyOtpFragment2(it, false)
                 )
                 viewModel.doneNavigateToEmergencyNumbers()
             }

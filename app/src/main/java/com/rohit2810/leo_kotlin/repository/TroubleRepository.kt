@@ -193,6 +193,18 @@ class TroubleRepository private constructor(private val context: Context) {
         }
     }
 
+    suspend fun forgotPassword(user: User) {
+        try {
+            var pass = sha256(user.username+user.password)
+            Timber.d(pass)
+            var def = service.forgotPassword(ChangePassword(user.username, pass))
+            var value = def.await()
+            Timber.d(value.toString())
+        }catch (e: Exception) {
+            throw Exception(e.localizedMessage)
+        }
+    }
+
     suspend fun verifyOtp(otp: Int, user: User) {
         try {
             var otp = ValidateOTP(

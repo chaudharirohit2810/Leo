@@ -4,6 +4,8 @@ import android.content.Context
 import com.rohit2810.leo_kotlin.database.getDatabase
 import com.rohit2810.leo_kotlin.models.map.HeatmapDatabaseModule
 import com.rohit2810.leo_kotlin.models.map.asDatabaseModule
+import com.rohit2810.leo_kotlin.models.news.UnsafeNews
+import com.rohit2810.leo_kotlin.models.news.asDatabaseModule
 import com.rohit2810.leo_kotlin.network.MineApi
 import com.rohit2810.leo_kotlin.utils.getLatitudeFromCache
 import com.rohit2810.leo_kotlin.utils.getLongitudeFromCache
@@ -42,6 +44,29 @@ class HeatmapsRepository private constructor(var context: Context) {
                 }
             }
 
+        }
+    }
+
+    suspend fun getDirections(lat1: Double, long1: Double, lat2: Double, long2: Double) {
+        database.deleteAllDirections()
+        var list = service.getDirections(lat1, long1, lat2, long2)
+        var newList = list.asDatabaseModule()
+        for (route in newList) {
+            database.insertDirections(route)
+        }
+        getUnsafe()
+    }
+
+    suspend fun getUnsafe() {
+        database.deleteAllUnsafe()
+        var list  = service.getUnsafe().news
+        var i = 0
+        for (ele in list) {
+            Timber.d(ele.toString())
+            ele.Latitude += 0.008
+            ele.Longitude += 0.008
+            Timber.d(ele.toString())
+            database.insertUnsafe(ele.asDatabaseModule())
         }
     }
 

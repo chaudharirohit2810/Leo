@@ -61,4 +61,7 @@ interface UserServiceApi{
     @PUT("user/update/emergency_contacts")
     fun updateEmergencyContacts(@Body emergencyContactsModel: EmergencyContactsModel): Deferred<Any>
 
+    @PUT("user/recreate_password")
+    fun forgotPassword(@Body user: ChangePassword): Deferred<Any>
+
 }

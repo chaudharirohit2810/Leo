@@ -86,7 +86,7 @@ class MainFragment : Fragment() {
         viewmodel.navigateToMaps.observe(viewLifecycleOwner, Observer {
             it?.let {
                 this.findNavController()
-                    .navigate(MainFragmentDirections.actionMainFragmentToMapsFragment())
+                    .navigate(MainFragmentDirections.actionMainFragmentToRoutesFragment())
                 viewmodel.doneNavigateToMaps()
             }
         })
@@ -191,10 +191,10 @@ class MainFragment : Fragment() {
     }
 
     private fun startService() {
-//        if (getFallDetectionPrefs(activity?.applicationContext!!)) {
-//            val intent = Intent(activity?.applicationContext, FallDetectionService::class.java)
-//            ContextCompat.startForegroundService(activity?.applicationContext!!, intent)
-//        }
+        if (getFallDetectionPrefs(activity?.applicationContext!!)) {
+            val intent = Intent(activity?.applicationContext, FallDetectionService::class.java)
+            ContextCompat.startForegroundService(activity?.applicationContext!!, intent)
+        }
         val intent2 = Intent(activity?.applicationContext, LocationService::class.java)
         ContextCompat.startForegroundService(activity?.applicationContext!!, intent2)
         val intent3 = Intent(activity?.applicationContext, WiFiP2PServiceLeo::class.java)

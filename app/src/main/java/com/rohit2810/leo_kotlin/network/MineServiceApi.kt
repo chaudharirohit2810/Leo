@@ -4,7 +4,10 @@ import android.content.Context
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.rohit2810.leo_kotlin.NetworkUtils.NetworkConnectionInterceptor
 import com.rohit2810.leo_kotlin.models.map.Heatmap
+import com.rohit2810.leo_kotlin.models.map.Route
 import com.rohit2810.leo_kotlin.models.news.News
+import com.rohit2810.leo_kotlin.models.news.TempNews
+import com.rohit2810.leo_kotlin.models.news.UnsafeNews
 import com.rohit2810.leo_kotlin.models.user.*
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -42,5 +45,11 @@ interface MineServiceApi{
     @GET("/crimes")
     suspend fun getHeatmaps(@Query("latitude") latitude: Double,
     @Query("longitude") longitude: Double): List<Heatmap>
+
+    @GET("directions/{lat1}/{long1}/{lat2}/{long2}")
+    suspend fun getDirections(@Path("lat1") lat1: Double, @Path("long1") long1: Double, @Path("lat2") lat2: Double, @Path("long2") long2: Double): Route
+
+    @GET("getnews")
+    suspend fun getUnsafe(): TempNews
 
 }

@@ -26,17 +26,17 @@ class PowerButtonReceiver : BroadcastReceiver() {
     }
 
     private fun checkAlert(context: Context) {
-        if(((System.currentTimeMillis() - lastTriggerTime) <= THREE_SECONDS || count <= 1) && count <= 5 && !isTriggerInProgress)
+        if(((System.currentTimeMillis() - lastTriggerTime) <= THREE_SECONDS || count <= 1)  && !isTriggerInProgress)
         {
 
             count++
             isTriggerInProgress = false
             lastTriggerTime = System.currentTimeMillis()
-//            Timber.d("Power Button Pressed %s", count.toString())
+            Timber.d("Power Button Pressed %s", count.toString())
         }else{
             count = 0;
         }
-        if(count >= 5){
+        if(count >= 3){
             isTriggerInProgress = true
             Timber.d("Alert User")
             val user = getUserFromCache(context) ?: throw Exception("User not available in cache")

@@ -38,6 +38,10 @@ class SettingsViewModel(
     val toggleFallDetection: LiveData<Boolean>
         get() = _toggleFallDetection
 
+    private val _fallDetectionScheduling = MutableLiveData<Boolean>()
+    val fallDetectionService: LiveData<Boolean>
+        get() = _fallDetectionScheduling
+
     fun goToEmergencyContacts() {
         _navigateToEmergencyContacts.value = true
     }
@@ -48,6 +52,10 @@ class SettingsViewModel(
 
     fun goToAboutUs() {
         _goToAboutUs.value = true
+    }
+
+    fun openFallDetectionScheduling() {
+        _fallDetectionScheduling.value = true
     }
 
 
@@ -79,6 +87,10 @@ class SettingsViewModel(
 
     fun doneNavigateToLogin() {
         _navigateToLogin.value = null
+    }
+
+    fun doneFallDetectionScheduling() {
+        _fallDetectionScheduling.value = null
     }
 
     fun toggleFallDetection() {

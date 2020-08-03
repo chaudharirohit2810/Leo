@@ -39,7 +39,7 @@ class AboutFragment : Fragment() {
             try {
                 val url =
                     "https://api.whatsapp.com/send?phone=" + "+1 (415) 523-8886" + "&text=" + URLEncoder.encode(
-                        "join calm-social",
+                        "join able-sitting",
                         "UTF-8"
                     )
                 i.setPackage("com.whatsapp")

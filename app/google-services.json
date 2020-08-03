@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "68224159936",
+    "firebase_url": "https://leoplatform-5ea56.firebaseio.com",
+    "project_id": "leoplatform-5ea56",
+    "storage_bucket": "leoplatform-5ea56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68224159936:android:6e251e663638d1be705d25",
+        "android_client_info": {
+          "package_name": "com.rohit2810.leo_kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68224159936-mqmlu2r32ivuretpd5tic5l6rudtr31s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rohit2810.leo_kotlin",
+            "certificate_hash": "d68477f2fe2ade10a027ae7cb46618619eba4aa6"
+          }
+        },
+        {
+          "client_id": "68224159936-hmcna74124hluudbahj0q9gfg92dng8i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_BtVxythgYDG__Cl6QJaJrDaqy6Q5Ww8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68224159936-hmcna74124hluudbahj0q9gfg92dng8i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

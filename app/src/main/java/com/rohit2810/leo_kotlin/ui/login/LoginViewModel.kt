@@ -36,6 +36,10 @@ class LoginViewModel(private val context: Context) : ViewModel() {
     val navigateToRegister: LiveData<Boolean>
         get() = _navigateToRegister
 
+    private val _navigateToForgot = MutableLiveData<Boolean>()
+    val navigateToForgot: LiveData<Boolean>
+        get() = _navigateToForgot
+
     private val _navigateToMain = MutableLiveData<Boolean>()
     val navigateToMain: LiveData<Boolean>
         get() = _navigateToMain
@@ -46,6 +50,14 @@ class LoginViewModel(private val context: Context) : ViewModel() {
 
     init {
         _isProgressVisible.value = false
+    }
+
+    fun navigateToForgot() {
+        _navigateToForgot.value = true
+    }
+
+    fun doneNavigateToForgot() {
+        _navigateToForgot.value = null
     }
 
 

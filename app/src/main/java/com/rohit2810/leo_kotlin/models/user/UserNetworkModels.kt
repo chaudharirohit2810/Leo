@@ -43,3 +43,10 @@ data class EmergencyContactsModel(
     var ec5: String? = "",
     var token: String
 )
+
+@Keep
+data class ChangePassword(
+    @Json(name = "user_name")
+    var username: String,
+    var password: String
+)

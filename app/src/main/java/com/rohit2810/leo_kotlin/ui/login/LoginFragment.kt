@@ -33,7 +33,7 @@ class LoginFragment : Fragment() {
             }
         }
 
-        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
 
         val binding = FragmentLoginBinding.inflate(inflater, container, false)
         binding.lifecycleOwner = this
@@ -70,6 +70,13 @@ class LoginFragment : Fragment() {
                     this.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainFragment())
                 }
                 viewmodel.doneNavigateToMain()
+            }
+        })
+
+        viewmodel.navigateToForgot.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                this.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment())
+                viewmodel.doneNavigateToForgot()
             }
         })
 

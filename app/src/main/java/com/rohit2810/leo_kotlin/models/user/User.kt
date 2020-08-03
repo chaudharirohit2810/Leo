@@ -10,7 +10,7 @@ import kotlinx.android.parcel.Parcelize
 data class User(
     @Json(name = "user_name")
     val username: String,
-    var password: String,
+    var password: String = " ",
     var email: String? = "",
     val name: String? = "",
     var otp: String? = "",

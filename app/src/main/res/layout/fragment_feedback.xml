@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.rohit2810.leo_kotlin.ui.feedback.FeedbackViewModel" />
+
+        <variable
+            name="view"
+            type="android.view.View" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/intro_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Feedback Form"
+                    android:textColor="@color/intro_title_color"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/intro_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Provide your suggestions to Designated resposible operator"
+                    android:textSize="16sp"
+                    app:layout_constraintVertical_bias="0.13" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edit_text_category"
+                android:text="@={viewmodel.category}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:drawablePadding="10dp"
+                android:elevation="10dp"
+                android:ems="10"
+                android:hint="Category"
+                android:inputType="textPersonName"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            <EditText
+                android:id="@+id/editTextTextMultiLine"
+                android:layout_width="0dp"
+                android:text="@{viewmodel.description}"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:background="@drawable/edit_text_style"
+                android:hint="Description"
+                android:textColor="@color/colorAccent"
+                android:lines="8"
+                android:elevation="10dp"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_category" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/login_button_style"
+                android:text="Submit"
+                android:onClick="@{() -> viewmodel.onSubmit()}"
+                android:textColor="#fff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_select" />
+
+            <ProgressBar
+                app:layout_constraintBottom_toBottomOf="@+id/btn_submit"
+                app:layout_constraintEnd_toEndOf="@+id/btn_submit"
+                app:layout_constraintStart_toStartOf="@+id/btn_submit"
+                app:layout_constraintTop_toTopOf="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 />
+
+            <Button
+                android:id="@+id/btn_select"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:onClick="@{() -> viewmodel.onFileUpload()}"
+                android:visibility="@{viewmodel.isFileSelected ? view.INVISIBLE : view.VISIBLE}"
+                android:text="Select File"
+                android:elevation="10dp"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/fall_scheduling_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="File Selected"
+                android:textColor="@color/colorPrimary"
+                android:visibility="@{viewmodel.isFileSelected ? view.VISIBLE : view.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_select"
+                app:layout_constraintEnd_toStartOf="@+id/btn_upload"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btn_select" />
+
+
+            <Button
+                android:id="@+id/btn_upload_cancel"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:onClick="@{() -> viewmodel.doneFileSelection()}"
+                android:text="Cancel"
+                android:textColor="#ff0000"
+                android:visibility="@{viewmodel.isFileSelected ? view.VISIBLE : view.INVISIBLE}"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView15" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
