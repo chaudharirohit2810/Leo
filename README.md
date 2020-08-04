@@ -2,11 +2,7 @@
 
 Leo App consists of an Android app for both users and Designated responsible operator.
 
-### Leo App for Users
 The app is written in Kotlin and based on [MVVM(Model-View-ViewModel)](https://developer.android.com/jetpack/guide) architecture. Users can view crime precautions and news in their region and can mark or unmark themselves in trouble. The app also provides crime hotspots in particular region.
-
-### Leo App for Designated Responsible Operators
-The app is written in Java and provides designated responsible operator list of users in trouble. The designated responsible operator can see user details and unmark user from trouble.
 
 
 
@@ -32,7 +28,6 @@ Include logo/demo screenshot etc.
 
 ## Features
 
-### Leo App for Users
 
 - Travel Safe
   - Intuitive map of crime hotspots in your region.
@@ -54,20 +49,7 @@ Include logo/demo screenshot etc.
   - Detecting trouble when mobile falls using algorithm applied on data received through accelerometer sensor.
 - Quick Settings Tile
   - Quick settings tile in system panel to easily notify when you are in trouble.
-  
-### Leo App for Designated Responsible Operators
 
-- All Marked Users
-  - Shows list of all users in trouble
-  - Notifies when new user is detected in trouble
-- Unmark Trouble
-  - Unmark trouble when certain actions are taken
-- SMS Receiver
-  - Marks trouble when sms message is received with specific leo format on DRO phone.
-
-## API Documentation
-
-Not available
 
 ## Directory structure
 
@@ -141,17 +123,7 @@ Click on the icon on the right with the 3 dots ("..."), which will open up a nav
 
 To be filled later
 
-## Authors
-
-- [Mayank Jain](https://github.com/mayank-02)
-- [Rohit Chaudhari](https://github.com/chaudharirohit2810)
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
