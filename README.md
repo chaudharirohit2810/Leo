@@ -2,6 +2,9 @@
 
 The user safety app written in Kotlin and based on [MVVM(Model-View-ViewModel)](https://developer.android.com/jetpack/guide) architecture. Users can view crime precautions and news in their region and can mark or unmark themselves in trouble using various methods. The app also provides crime hotspots in particular region.
 
+## Download
+<a href="https://github.com/chaudharirohit2810/Leo/raw/master/apk/leo.apk"><img src="screenshots/download.png" width="100"></a>
+
 
 
 ## Installation
