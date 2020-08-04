@@ -1,8 +1,6 @@
 # Leo App
 
-Leo App consists of an Android app for both users and Designated responsible operator.
-
-The app is written in Kotlin and based on [MVVM(Model-View-ViewModel)](https://developer.android.com/jetpack/guide) architecture. Users can view crime precautions and news in their region and can mark or unmark themselves in trouble. The app also provides crime hotspots in particular region.
+The user safety app written in Kotlin and based on [MVVM(Model-View-ViewModel)](https://developer.android.com/jetpack/guide) architecture. Users can view crime precautions and news in their region and can mark or unmark themselves in trouble using various methods. The app also provides crime hotspots in particular region.
 
 
 
