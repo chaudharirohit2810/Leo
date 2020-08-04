@@ -86,7 +86,7 @@ class MainFragment : Fragment() {
         viewmodel.navigateToMaps.observe(viewLifecycleOwner, Observer {
             it?.let {
                 this.findNavController()
-                    .navigate(MainFragmentDirections.actionMainFragmentToRoutesFragment())
+                    .navigate(MainFragmentDirections.actionMainFragmentToMapsFragment())
                 viewmodel.doneNavigateToMaps()
             }
         })
