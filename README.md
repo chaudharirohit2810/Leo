@@ -128,10 +128,6 @@ Click on the icon on the right with the 3 dots ("..."), which will open up a nav
 - [Room Persistence](https://developer.android.com/topic/libraries/architecture/room) - Provides an abstraction layer over SQLite.
 - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - Support library that allows to bind UI components in layouts to data sources in app
 
-## Contributing
-
-To be filled later
-
 ## License
     Leo
     Copyright (C) 2020  Rohit Kailas Chaudhari
